@@ -1,0 +1,87 @@
+#= 3D character model: -ハオラン-HAOLAN =
+URL: https://booth.pm/ja/items/3818504
+URL: https://drive.google.com/drive/folders/1YUDZYWJyZPLCqWOkAFrlyIGkYGs4dVMV
+Licence: CC BY 
+Proprietor: かなリぁ
+
+#= 3D revolver model: [３Dモデル]リボルバー =
+URL: https://booth.pm/ja/items/2375829
+Licence: CC0 
+
+
+#= 3D furniture model: Coquelicotz＿Plants =
+https://coquelicotz.booth.pm/items/2634073
+License: CC0 
+Proprietor: coquelicotz
+
+#= 3D furniture model: VRChat向け家具セット(２) =
+URL: https://coquelicotz.booth.pm/items/1573249
+License: CC0 
+Proprietor: coquelicotz
+
+#= 3D furniture model: VRChat向け家具セット(３) =
+URL: https://booth.pm/ja/items/1680527
+License: CC0 
+Proprietor: coquelicotz
+
+#= 3D furniture model: VRChat向け家具セット(４) =
+URL: https://coquelicotz.booth.pm/items/2301250
+License: CC0 
+Proprietor: coquelicotz
+
+#= Wood Cutting board with knife and Red Meat =
+URL: https://sketchfab.com/3d-models/wood-cutting-board-with-knife-and-red-meat-89bfbe6008b143819a40f9c57a131fc5
+License: CC Attribution
+Proprietor: KendeMrena
+
+#= Eggplant =
+URL:https://sketchfab.com/3d-models/eggplant-ea40f2d2a4ff4b18b61a0d3b7870bc59
+License: CC Attribution
+Proprietor: Simal Mai
+
+#= Mushroom =
+URL:https://sketchfab.com/3d-models/mushroom-cd881b6c9e1f4691b1c6c0d4cbb5feb7
+License: CC Attribution
+Proprietor: Moshe Caine 
+
+#= Red onion =
+URL: https://sketchfab.com/3d-models/red-onion-2e546b2c6a4c4e698fa203c7302ea3a6
+License: CC Attribution
+Proprietor: Lassi Kaukonen
+
+#= Purple Onion =
+URL: https://sketchfab.com/3d-models/purple-onion-70fdef1abc1744e3a3e0a828d6821fbf
+License: CC Attribution
+Proprietor: mjk
+
+
+#= Low Poly Potato Game Ready =
+URL: https://sketchfab.com/3d-models/low-poly-potato-game-ready-e5184bb3bf2a455c8872e759bb97e13b
+License: CC Attribution
+Proprietor: Arthur.Zim
+
+
+#= Bacon =
+URL: https://sketchfab.com/3d-models/bacon-7a515b7cc7c0480facd94209b27e40a9
+License: CC Attribution
+Proprietor: Jeremy E. Grayson
+
+#= (Game-Ready Free) Broccoli =
+URL: https://sketchfab.com/3d-models/game-ready-free-broccoli-37831c39556e472cbd722846573b0e38
+License: CC Attribution
+Proprietor: HaVe
+
+#= Handpainted Lowpoly Tomatoes =
+URL: https://sketchfab.com/3d-models/handpainted-lowpoly-tomatoes-f8564545b9f449d9a796fbae15649e42
+License: CC Attribution
+Proprietor: Meow-Vortex
+
+#= Napa cabbage =
+URL: https://sketchfab.com/3d-models/napa-cabbage-fcf07936bd664903bf4a99508208b442
+License: CC Attribution
+Proprietor: Napa cabbage
+
+#= Napa cabbage =
+URL: https://sketchfab.com/3d-models/napa-cabbage-fcf07936bd664903bf4a99508208b442
+License: CC Attribution
+Proprietor: Napa cabbage

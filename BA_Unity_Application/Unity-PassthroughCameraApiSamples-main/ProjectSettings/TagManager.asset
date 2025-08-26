@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - QDSUIIcon
+  - QDSUIBackplateGradient
+  - QDSUITextSecondaryColor
+  - QDSUIToggleBorderlessButton
+  - QDSUISharedThemeColor
+  - QDSUISecondaryButton
+  - QDSUIToggleButton
+  - QDSUIBorderlessButton
+  - QDSUITooltip
+  - QDSUIDestructiveButton
+  - QDSUISection
+  - QDSUIToggleSwitch
+  - QDSUIToggleCheckboxRadio
+  - QDSUIAccentColor
+  - QDSUIPrimaryButton
+  - QDSUITextInvertedColor
+  - QDSUITextSecondaryInvertedColor
+  - QDSUITextInputField
+  - Spanner
+  - BrokenPart
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Internal_EditorOnly_LLM_Ignore
+  - Selectable
+  - Selected
+  - Ingredients
+  - Kitchen facilities
+  - Cookware
+  - Ingredients_cut
+  - ParticleCollideIgnore
+  - Spanner
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

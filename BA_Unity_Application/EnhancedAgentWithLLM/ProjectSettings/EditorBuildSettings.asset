@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/LightBake.unity
+    guid: 81b86b4c39d01d641b9e253ab3947740
+  - enabled: 0
+    path: Assets/Scenes/Passthrough+EffectMesh.unity
+    guid: c5ea0b03ef9d3a14eb2c11dcba936be3
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f1a26b89521fc6043a1709465ec881a1, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: c86c127d10cfe784298828760f39904c, type: 2}
