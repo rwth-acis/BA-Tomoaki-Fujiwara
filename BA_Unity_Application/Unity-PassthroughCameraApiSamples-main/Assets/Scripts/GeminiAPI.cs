@@ -189,25 +189,25 @@ public class GeminiAPI : MonoBehaviour {
 
                 functionDeclarations.Add(new FunctionDeclaration
                 {
-                    name = "putWheelOnConvyorMachine",
+                    name = "putWheelConvyor2",
                     description = "Commands the robot arm pick up the wheel from Milling machine and carry it to the belt conyor. If this action is success, the convyor will carry the wheel.",
                     parameters = new Parameters { type = "object" }
                 });
 
                 functionDeclarations.Add(new FunctionDeclaration
                 {
-                    name = "getRobotArmStatus",
-                    description = "Get the current status of the robot arm and any errors or alerts.",
+                    name = "scanRobotArmStatus",
+                    description = "scan the any errors of the robot arm that hinder the robot arm movement. If the error exists, the error section will be marked, so the user can use the spanner to fix the error.",
                     parameters = new Parameters { type = "object" }
                 });
-
+                /*
                 functionDeclarations.Add(new FunctionDeclaration
                 {
                     name = "scanMachineError",
                     description = "This will scann all machine and get any errors or alerts from machine.",
                     parameters = new Parameters { type = "object" }
                 });
-
+                */
                 // Add other factory-specific functions here
                 break;
         }

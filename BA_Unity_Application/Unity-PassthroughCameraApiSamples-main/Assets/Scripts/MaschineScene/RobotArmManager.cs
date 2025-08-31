@@ -19,13 +19,22 @@ public class RobotArmManager : MonoBehaviour
 
     public BrokenPart foundationBrokenPart;
     public BrokenPart lowerArmBrokenPart;
+    public BrokenPart lowerUpperArmBrokenPart;
     public BrokenPart handGrabberBrokenPart;
 
-    public BoxCollider boxColliderHandGrabber;
+
+
+    public GameObject foundationBrokenMarker;
+    public GameObject lowerArmBrokenMarker;
+    public GameObject lowerUpperArmBrokenMarker;
+    public GameObject handGrabberBrokenMarker;
+
+
+    //public BoxCollider boxColliderHandGrabber;
 
 
 
-    public void PutOnProLathe()
+    public Dictionary<string, object> PutWheelInLatheMachine()
     {
         Debug.Log("ProLathe Button");
         if (robotArmStatus == RobotArmStatus.Running) {
@@ -33,7 +42,10 @@ public class RobotArmManager : MonoBehaviour
 
             Debug.Log("Robot Arm is busy now");
 
-            return;
+            return new Dictionary<string, object> {
+                { "status", "error" },
+                { "message", "The robot arm is carrying wheel, please wait until the current process finish." }
+            };
         }
 
         ProLatheMachine.LatheMachineStatus currentStatus = proLatheMachine.ReturnStatus();
@@ -43,7 +55,10 @@ public class RobotArmManager : MonoBehaviour
 
             Debug.Log("ProLathe is busy now");
 
-            return;
+            return new Dictionary<string, object> {
+                { "status", "error" },
+                { "message", "The lather machine is running, please wait until the current process finish." }
+            };
         }
 
         robotArmStatus = RobotArmStatus.Running;
@@ -59,6 +74,13 @@ public class RobotArmManager : MonoBehaviour
             robotArmAnimator.Play("RobotArm_LowerArmBroke_Lathe");
             Debug.Log("Robot Arm LowerArm broke");
         }
+
+        else if (lowerUpperArmBrokenPart.brokenStatus())
+        {
+            robotArmAnimator.Play("RobotArm_LowerUpperArmBroke_Lathe");
+            Debug.Log("Robot Arm lower upper arm broke");
+        }
+
         else if (handGrabberBrokenPart.brokenStatus())
         {
             robotArmAnimator.Play("RobotArm_Hand_GrabberBroke_Lathe");
@@ -71,21 +93,28 @@ public class RobotArmManager : MonoBehaviour
             Debug.Log("Robot Arm moved");
         }
 
-            
+        return new Dictionary<string, object> {
+                { "status", "success" },
+                { "message", "The robot arm has carryed wheel to lather machine." }
+        };
+
     }
 
     public void StartProLathe() {
         proLatheMachine.StartLatheMachine();
     }
 
-    public void PutOnFlipTable()
+    public Dictionary<string, object> PutWheelInFlipTable()
     {
         Debug.Log("FlipTable Button");
         if (robotArmStatus == RobotArmStatus.Running)
         {
             Debug.Log("Robot Arm is busy now");
             // RobotArm is doing other action
-            return;
+            return new Dictionary<string, object> {
+                { "status", "error" },
+                { "message", "The robot arm is carrying wheel, please wait until the current process finish." }
+            };
         }
 
         FlipTable.FlipTableStatus currentStatus = flipTableMachine.ReturnStatus();
@@ -96,11 +125,20 @@ public class RobotArmManager : MonoBehaviour
 
             Debug.Log("FlipTable is busy now");
 
-            return;
+            return new Dictionary<string, object> {
+                { "status", "error" },
+                { "message", "The flip table is running, please wait until the current process finish." }
+            };
         }
 
         robotArmStatus = RobotArmStatus.Running;
         robotArmAnimator.Play("RobotArm_PlaceWheelInTable");
+
+        return new Dictionary<string, object> {
+                { "status", "success" },
+                { "message", "The robot arm has carryed wheel to flip table machine." }
+        };
+
     }
 
     public void StartFlipTable()
@@ -108,13 +146,16 @@ public class RobotArmManager : MonoBehaviour
         flipTableMachine.StartFlipTable();
     }
 
-    public void PutOnMilling()
+    public Dictionary<string, object> PutWheelInMillingMachine()
     {
         Debug.Log("Mill Button");
         if (robotArmStatus == RobotArmStatus.Running)
         {
             Debug.Log("Robot Arm is busy now");
-            return;
+            return new Dictionary<string, object> {
+                { "status", "error" },
+                { "message", "The robot arm is carrying wheel, please wait until the current process finish." }
+            };
         }
 
         ProMill.ProMillStatus currentStatus = proMill.ReturnStatus();
@@ -124,11 +165,19 @@ public class RobotArmManager : MonoBehaviour
 
             Debug.Log("ProMil is busy now");
             // ProLathe is running, cannot put wheel on it
-            return;
+            return new Dictionary<string, object> {
+                { "status", "error" },
+                { "message", "The Milling Machine is running, please wait until the current process finish." }
+            };
         }
 
         robotArmStatus = RobotArmStatus.Running;
         robotArmAnimator.Play("RobotArm_PlaceWheelInMill");
+
+        return new Dictionary<string, object> {
+                { "status", "success" },
+                { "message", "The robot arm has carryed wheel to milling machine." }
+        };
 
     }
 
@@ -137,13 +186,16 @@ public class RobotArmManager : MonoBehaviour
         proMill.StartProMill();
     }
 
-    public void PutOnConvyor2()
+    public Dictionary<string, object> PutWheelConvyor2()
     {
         Debug.Log("OnConvyor");
         if (robotArmStatus == RobotArmStatus.Running)
         {
             Debug.Log("Robot Arm is busy now");
-            return;
+            return new Dictionary<string, object> {
+                { "status", "error" },
+                { "message", "The robot arm is carrying wheel, please wait until the current process finish." }
+            };
         }
 
         Convyor2.ConvyerStatus currentStatus = convyor2.ReturnStatus();
@@ -152,11 +204,19 @@ public class RobotArmManager : MonoBehaviour
         {
             Debug.Log("Conyor is busy now");
             // ProLathe is running, cannot put wheel on it
-            return;
+            return new Dictionary<string, object> {
+                { "status", "error" },
+                { "message", "The convyor2 is running, please wait until the current process finish." }
+            };
         }
 
         robotArmStatus = RobotArmStatus.Running;
         robotArmAnimator.Play("RobotArm_PlaceWheelOnBand");
+
+        return new Dictionary<string, object> {
+                { "status", "success" },
+                { "message", "The robot arm has carryed wheel to convyor." }
+        };
 
 
     }
@@ -191,6 +251,58 @@ public class RobotArmManager : MonoBehaviour
         holdWheel = null;
     }
 
+    public void ScanButton()
+    {
+        // Scan for broken parts
+        ScanRobotArmStatus();
+    }
+
+    // This is for LLM
+    public Dictionary<string, object> ScanRobotArmStatus()
+    {
+
+        string brokenParts = "";
+
+        if (foundationBrokenPart.brokenStatus())
+        {
+            foundationBrokenMarker.SetActive(true);
+            brokenParts = brokenParts + " Foundation ";
+        }
+
+        if (lowerArmBrokenPart.brokenStatus())
+        {
+            lowerArmBrokenMarker.SetActive(true);
+            brokenParts = brokenParts + " Lower Arm ";
+        }
+
+        if (lowerUpperArmBrokenPart.brokenStatus())
+        {
+            lowerUpperArmBrokenMarker.SetActive(true);
+            brokenParts = brokenParts + " Lower Upper Arm ";
+        }
+
+        if (handGrabberBrokenPart.brokenStatus())
+        {
+            handGrabberBrokenMarker.SetActive(true);
+            brokenParts = brokenParts + " Hand Grabber ";
+        }
+
+        if (brokenParts == "")
+        {
+            return new Dictionary<string, object> {
+                { "status", "success" },
+                { "message", "No errors are found by scanning" }
+            };
+        }
+
+        return new Dictionary<string, object> {
+                { "status", "success" },
+                { "message", "There is an error in robot arm at part {brokenParts}." }
+        };
+
+
+    }
+
 
     public void PartsBreakeFoundation() { 
         foundationBrokenPart.BrokeTheJoint();
@@ -200,8 +312,12 @@ public class RobotArmManager : MonoBehaviour
         lowerArmBrokenPart.BrokeTheJoint();
     }
 
+    public void PartsBreakeLowerUpperArm() {
+        lowerUpperArmBrokenPart.BrokeTheJoint();
+    }
+
     public void PartsBreakeHandGrabber(){
-        boxColliderHandGrabber.enabled = false;
+        //boxColliderHandGrabber.enabled = false;
         handGrabberBrokenPart.BrokeTheJoint();
     }
 

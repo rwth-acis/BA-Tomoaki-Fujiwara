@@ -13,6 +13,8 @@ public class FunctionCaller : MonoBehaviour {
 
     public ModifyAgentNavigationController agentController;
 
+    public RobotArmManager robotArmManager;
+
     public Dictionary<string, object> CallFunction(string functionName, Dictionary<string, object> parameters) {
         switch (functionName) {
             case "getObjectInformation":
@@ -39,6 +41,22 @@ public class FunctionCaller : MonoBehaviour {
             case "pointVirtualAgentArmToTarget":
                 string targetToPointName = parameters["objectName"] as string;
                 return PointAgentArmToTarget(targetToPointName);
+
+
+            case "putWheelInLatheMachine":
+                return PutWheelInLatheMachine();
+
+            case "putWheelInFlipTable":
+                return PutWheelInFlipTable();
+
+            case "putWheelInMillingMachine":
+                return PutWheelInMillingMachine();
+
+            case "putWheelConvyor2":
+                return PutWheelConvyor2();
+
+            case "scanRobotArmStatus":
+                return ScanRobotArmStatus();
 
 
             default:
@@ -308,6 +326,7 @@ public class FunctionCaller : MonoBehaviour {
 
     public Dictionary<string, object> PutWheelInLatheMachine()
     {
+        return robotArmManager.PutWheelInLatheMachine();
         /*
         GameObject targetObject = GameObject.Find("");
         if (targetObject == null)
@@ -341,7 +360,24 @@ public class FunctionCaller : MonoBehaviour {
         };
     }
 
+    public Dictionary<string, object> PutWheelInFlipTable() {
+        return robotArmManager.PutWheelInFlipTable();
+    }
 
+    public Dictionary<string, object> PutWheelInMillingMachine()
+    {
+        return robotArmManager.PutWheelInMillingMachine();
+    }
+
+    public Dictionary<string, object> PutWheelConvyor2()
+    {
+        return robotArmManager.PutWheelConvyor2();
+    }
+
+    public Dictionary<string, object> ScanRobotArmStatus()
+    {
+        return robotArmManager.ScanRobotArmStatus();
+    }
 }
 
 

@@ -14,6 +14,8 @@ public class Convyor2 : MonoBehaviour
     public Transform wheel;
     public Transform convyor1WheelSpawn;
 
+    public MaschineSceneManager maschinesceneManager;
+
     public void StartConvyor()
     {
         hasWheelOnIt = true;
@@ -30,6 +32,8 @@ public class Convyor2 : MonoBehaviour
         // Rolle of wheel is finish. Now reset it from all
         wheel.SetParent(convyor1WheelSpawn);
         wheel.localPosition = Vector3.zero;
+
+        maschinesceneManager.DeliveryFinishedWheel();
 
     }
 

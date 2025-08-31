@@ -17,6 +17,9 @@ public class BrokenPart : MonoBehaviour
 
     public bool isSpannerInPlace = false;
 
+    public BoxCollider boxCollider;
+
+
     void Update() {
         
         if (isSpannerInPlace) {
@@ -42,6 +45,13 @@ public class BrokenPart : MonoBehaviour
         //canvas.SetActive(true);
         brokeParticle.SetActive(true);
         isBroken = true;
+        currentFixedAmount = 0.0f;
+
+        if (boxCollider != null)
+        {
+            boxCollider.enabled = false;
+        }
+
     }
 
     public void VisibleTheCollider()
@@ -56,6 +66,11 @@ public class BrokenPart : MonoBehaviour
         brokeParticle.SetActive(false);
         gameObject.SetActive(false);
         isBroken = false;
+
+        if (boxCollider != null) { 
+            boxCollider.enabled = true;
+        }
+
     }
 
     public void FixingJoint()
