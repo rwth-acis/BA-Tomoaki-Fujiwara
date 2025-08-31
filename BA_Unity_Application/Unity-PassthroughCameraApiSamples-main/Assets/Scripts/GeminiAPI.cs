@@ -36,6 +36,7 @@ public class GeminiAPI : MonoBehaviour
     public static GeminiAPI unityAndGeminiInstance;
 
     private List<Content> chatHistory = new List<Content>(); // Stores conversation history
+    private string logFilePath;
 
     [SerializeField]
     [TextArea(3, 15)]
@@ -49,6 +50,17 @@ public class GeminiAPI : MonoBehaviour
     {
         unityAndGeminiInstance = this;
         InitializeTools(); // Set up your functions here
+
+        // Initialize the log file for the new session
+        logFilePath = Path.Combine(Application.persistentDataPath, "gemini_chat_log.txt");
+        try
+        {
+            File.WriteAllText(logFilePath, $"--- New Session Started: {DateTime.Now} ---\n\n");
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Failed to create log file: {e.Message}");
+        }
     }
 
     private void Start()
@@ -305,7 +317,7 @@ public class GeminiAPI : MonoBehaviour
             chatHistory.Add(userContent);
         }
 
-        SaveChatHistoryToFile(); // Save history after adding user message
+        LogConversationTurn(chatHistory[chatHistory.Count - 1]);
 
 
         // Prepare the request body for the LLM
@@ -346,7 +358,7 @@ public class GeminiAPI : MonoBehaviour
                 {
                     Content modelResponseContent = geminiResponse.candidates[0].content;
                     chatHistory.Add(modelResponseContent); // Add model's response to history
-                    SaveChatHistoryToFile(); // Save history after adding model response
+                    LogConversationTurn(modelResponseContent, geminiResponse.usageMetadata);
 
                     ProcessModelResponse(modelResponseContent);
                 }
@@ -448,10 +460,10 @@ public class GeminiAPI : MonoBehaviour
     private IEnumerator ExecuteAndSendAllFunctionResponses(List<FunctionCall> functionCalls) {
         List<FunctionResponse> responsesToGemini = new List<FunctionResponse>();
 
-        foreach (FunctionCall functionCall in functionCalls) {
+        foreach (FunctionCall functionCall in functionCalls {
             Dictionary<string, object> functionResult = new Dictionary<string, object>();
 
-            
+
             switch (functionCall.name) {
                 case "setObjectColor":
                     if (functionCall.args.TryGetValue("objectName", out string colorObjName) && colorObjName is string cObjName &&
@@ -524,7 +536,7 @@ public class GeminiAPI : MonoBehaviour
             parts = parts.ToArray()
         };
         chatHistory.Add(functionResponseContent);
-        SaveChatHistoryToFile(); // Save history after adding function response
+        LogConversationTurn(functionResponseContent);
 
 
         ChatRequest chatRequest = new ChatRequest
@@ -560,7 +572,7 @@ public class GeminiAPI : MonoBehaviour
                 {
                     Content modelFollowUpContent = geminiResponse.candidates[0].content;
                     chatHistory.Add(modelFollowUpContent);// Add model's follow-up to history
-                    SaveChatHistoryToFile(); // Save history after model's follow-up
+                    LogConversationTurn(modelFollowUpContent, geminiResponse.usageMetadata);
 
                     ProcessModelResponse(modelFollowUpContent); // Process the model's follow-up (text or another function call)
                 }
@@ -632,94 +644,109 @@ public class GeminiAPI : MonoBehaviour
 
 
     /// <summary>
-    /// Saves the entire chat history to a text file in a human-readable format.
+    /// Appends a single turn of the conversation to the log file.
     /// </summary>
-    private void SaveChatHistoryToFile()
+    /// <param name="content">The content of the conversation turn.</param>
+    /// <param name="usage">Optional token usage data associated with a model's response.</param>
+    private void LogConversationTurn(Content content, UsageMetadata usage = null)
     {
-        // Define the path for the log file within a directory that can be written to at runtime
-        string filePath = Path.Combine(Application.persistentDataPath, "gemini_chat_log.txt");
         StringBuilder sb = new StringBuilder();
-        Debug.Log(Application.persistentDataPath);
 
-        sb.AppendLine($"--- Chat Log: {DateTime.Now} ---");
-        sb.AppendLine();
-
-        foreach (var content in chatHistory)
+        sb.AppendLine($"[{content.role.ToUpper()}]");
+        if (content.parts != null)
         {
-            sb.AppendLine($"[{content.role.ToUpper()}]");
-            if (content.parts != null)
+            foreach (var part in content.parts)
             {
-                foreach (var part in content.parts)
+                if (!string.IsNullOrEmpty(part.text))
                 {
-                    if (!string.IsNullOrEmpty(part.text))
-                    {
-                        sb.AppendLine(part.text);
-                    }
-                    if (part.inlineData != null)
-                    {
-                        sb.AppendLine($"<Image Data: {part.inlineData.mimeType}>");
-                    }
-                    if (part.functionCall != null)
-                    {
-                        sb.AppendLine($"-> Function Call: {part.functionCall.name}");
-                        sb.AppendLine($"   Args: {JsonConvert.SerializeObject(part.functionCall.args)}");
-                    }
-                    if (part.functionResponse != null)
-                    {
-                        sb.AppendLine($"<- Function Response: {part.functionResponse.name}");
-                        sb.AppendLine($"   Result: {JsonConvert.SerializeObject(part.functionResponse.response)}");
-                    }
+                    sb.AppendLine(part.text);
+                }
+                if (part.inlineData != null)
+                {
+                    sb.AppendLine($"<Image Data: {part.inlineData.mimeType}>");
+                }
+                if (part.functionCall != null)
+                {
+                    sb.AppendLine($"-> Function Call: {part.functionCall.name}");
+                    sb.AppendLine($"   Args: {JsonConvert.SerializeObject(part.functionCall.args)}");
+                }
+                if (part.functionResponse != null)
+                {
+                    sb.AppendLine($"<- Function Response: {part.functionResponse.name}");
+                    sb.AppendLine($"   Result: {JsonConvert.SerializeObject(part.functionResponse.response)}");
                 }
             }
-            sb.AppendLine("-----------------------------------");
-            sb.AppendLine();
         }
+
+        // If token usage data is provided, append it
+        if (usage != null)
+        {
+            sb.AppendLine($"   (Tokens: Prompt={usage.promptTokenCount}, Response={usage.candidatesTokenCount}, Total={usage.totalTokenCount})");
+        }
+
+        sb.AppendLine("-----------------------------------");
+        sb.AppendLine();
 
         try
         {
-            File.WriteAllText(filePath, sb.ToString());
-            Debug.Log($"Chat history successfully saved to: {filePath}");
+            File.AppendAllText(logFilePath, sb.ToString());
         }
         catch (Exception e)
         {
-            Debug.LogError($"Failed to save chat history: {e.Message}");
+            Debug.LogError($"Failed to write to chat log: {e.Message}");
         }
     }
 
 }
 
+// Data structures for JSON serialization/deserialization
+
+
+
 // Class for deserializing the response from the Gemini API
-public class Response {
+public class Response
+{
     public Candidate[] candidates;
+    public UsageMetadata usageMetadata;
 }
 
 
 // Structure of the request body to send to the Gemini API
-public class ChatRequest {
+public class ChatRequest
+{
     public Content[] contents; // List of contents (messages, images, result of functions)
     public Tool[] tools; // List of tools (function declarations)
 }
 
-
-
+// Represents usage metadata from the model
+[System.Serializable]
+public class UsageMetadata
+{
+    public int promptTokenCount;
+    public int candidatesTokenCount;
+    public int totalTokenCount;
+}
 
 
 // Represents a candidate (response) from the model
 [System.Serializable]
-public class Candidate {
+public class Candidate
+{
     public Content content;
 }
 
 // Represents the content of a conversation (user or model utterance)
 [System.Serializable]
-public class Content {
+public class Content
+{
     public string role; // "user", "model", or "function"
     public Part[] parts;
 }
 
 // Represents a part of the conversation content (text, image, function call, etc.)
 [System.Serializable]
-public class Part {
+public class Part
+{
     public string text;
     public InlineData inlineData; // Represents inline data (e.g., images)
     public FileData fileData; // Represents file data (File API)
@@ -729,41 +756,47 @@ public class Part {
 
 // Represents inline data (e.g., images)
 [System.Serializable]
-public class InlineData {
+public class InlineData
+{
     public string mimeType;
     public string data;
 }
 
 // Represents file data (File API)
 [System.Serializable]
-public class FileData {
+public class FileData
+{
     public string fileUri;
     public string mimeType;
 }
 
 // Represents a function call
 [System.Serializable]
-public class FunctionCall {
+public class FunctionCall
+{
     public string name;
     public Dictionary<string, string> args; // Use object to handle various types
 }
 
 // Represents a function response
 [System.Serializable]
-public class FunctionResponse {
+public class FunctionResponse
+{
     public string name;
     public Dictionary<string, object> response; // Use object to handle various types
 }
 
 // Top-level class for tools (FunctionDeclaration)
 [System.Serializable]
-public class Tool {
+public class Tool
+{
     public FunctionDeclaration[] functionDeclarations;
 }
 
 // Class representing a function declaration
 [System.Serializable]
-public class FunctionDeclaration {
+public class FunctionDeclaration
+{
     public string name;
     public string description;
     public Parameters parameters;
@@ -771,7 +804,8 @@ public class FunctionDeclaration {
 
 // Class representing function arguments (parameters)
 [System.Serializable]
-public class Parameters {
+public class Parameters
+{
     public string type; // "object"
     public Dictionary<string, Property> properties;
     public string[] required;
@@ -779,7 +813,8 @@ public class Parameters {
 
 // Class representing an argument property
 [System.Serializable]
-public class Property {
+public class Property
+{
     public string type;
     public string description;
     public Items items; // Required if type is "array"
@@ -787,7 +822,8 @@ public class Property {
 
 // Class representing the type of array elements
 [System.Serializable]
-public class Items {
+public class Items
+{
     public string type;
 }
 
