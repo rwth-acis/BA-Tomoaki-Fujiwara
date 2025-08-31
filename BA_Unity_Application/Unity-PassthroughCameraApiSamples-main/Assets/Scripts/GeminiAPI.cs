@@ -37,6 +37,7 @@ public class GeminiAPI : MonoBehaviour
 
     private List<Content> chatHistory = new List<Content>(); // Stores conversation history
     private string logFilePath;
+    private string chatImagesPath;
 
     [SerializeField]
     [TextArea(3, 15)]
@@ -51,15 +52,24 @@ public class GeminiAPI : MonoBehaviour
         unityAndGeminiInstance = this;
         InitializeTools(); // Set up your functions here
 
-        // Initialize the log file for the new session
-        logFilePath = Path.Combine(Application.persistentDataPath, "gemini_chat_log.txt");
+        // Initialize paths for logging
+        string persistentPath = Application.persistentDataPath;
+        logFilePath = Path.Combine(persistentPath, "gemini_chat_log.txt");
+        chatImagesPath = Path.Combine(persistentPath, "ChatImages");
+
         try
         {
+            // Create the directory for images if it doesn't exist
+            if (!Directory.Exists(chatImagesPath))
+            {
+                Directory.CreateDirectory(chatImagesPath);
+            }
+            // Initialize the log file for the new session
             File.WriteAllText(logFilePath, $"--- New Session Started: {DateTime.Now} ---\n\n");
         }
         catch (Exception e)
         {
-            Debug.LogError($"Failed to create log file: {e.Message}");
+            Debug.LogError($"Failed to create log file or directory: {e.Message}");
         }
     }
 
@@ -252,13 +262,13 @@ public class GeminiAPI : MonoBehaviour
     private IEnumerator SendRequestToGemini(string userInput)
     {
         string url = $"{apiEndpoint}?key={apiKey}";
-
+        string imagePathForLog = null;
 
         //Check if user took an image
         if (UIMessageHandler.instance.isPictureTaken())
         {
-            // Convert the RenderTexture to Base64
-            string base64Image = ConvertRenderTextureToBase64();
+            // Convert the RenderTexture to Base64 and save the image file
+            string base64Image = SaveImageAndGetBase64(out imagePathForLog);
             if (string.IsNullOrEmpty(base64Image))
             {
                 Debug.LogError("Error converting RenderTexture to Base64.");
@@ -317,7 +327,7 @@ public class GeminiAPI : MonoBehaviour
             chatHistory.Add(userContent);
         }
 
-        LogConversationTurn(chatHistory[chatHistory.Count - 1]);
+        LogConversationTurn(chatHistory[chatHistory.Count - 1], imagePath: imagePathForLog);
 
 
         // Prepare the request body for the LLM
@@ -460,10 +470,10 @@ public class GeminiAPI : MonoBehaviour
     private IEnumerator ExecuteAndSendAllFunctionResponses(List<FunctionCall> functionCalls) {
         List<FunctionResponse> responsesToGemini = new List<FunctionResponse>();
 
-        foreach (FunctionCall functionCall in functionCalls {
+        foreach (FunctionCall functionCall in functionCalls) {
             Dictionary<string, object> functionResult = new Dictionary<string, object>();
 
-
+            
             switch (functionCall.name) {
                 case "setObjectColor":
                     if (functionCall.args.TryGetValue("objectName", out string colorObjName) && colorObjName is string cObjName &&
@@ -572,7 +582,7 @@ public class GeminiAPI : MonoBehaviour
                 {
                     Content modelFollowUpContent = geminiResponse.candidates[0].content;
                     chatHistory.Add(modelFollowUpContent);// Add model's follow-up to history
-                    LogConversationTurn(modelFollowUpContent, geminiResponse.usageMetadata);
+                    LogConversationTurn(modelFollowUpContent, usage: geminiResponse.usageMetadata);
 
                     ProcessModelResponse(modelFollowUpContent); // Process the model's follow-up (text or another function call)
                 }
@@ -597,49 +607,61 @@ public class GeminiAPI : MonoBehaviour
 
     }
 
-    public string ConvertRenderTextureToBase64()
+    /// <summary>
+    /// Converts a RenderTexture to a Base64 string and saves the image to a file.
+    /// </summary>
+    /// <param name="savedImagePath">The full path where the image was saved.</param>
+    /// <returns>The Base64 encoded string of the image.</returns>
+    public string SaveImageAndGetBase64(out string savedImagePath)
     {
-
-
+        savedImagePath = null;
         RenderTexture renderImage = UIMessageHandler.instance.GetRenderTextureFromUserMessage();
 
-        // Create a new Texture2D with the same dimensions as the Render Texture
         Texture2D texture2D = new Texture2D(renderImage.width, renderImage.height, TextureFormat.RGB24, false);
-
-        // Render Texture to Texture2D Pixel
+        RenderTexture.active = renderImage;
         texture2D.ReadPixels(new Rect(0, 0, renderImage.width, renderImage.height), 0, 0);
         texture2D.Apply();
-
-
         RenderTexture.active = null;
 
         byte[] bytes;
+        string fileExtension;
 
-        // Convert Texture2D to byte array based on the selected format
         if (outputFormat == ImageFormat.PNG)
         {
             bytes = texture2D.EncodeToPNG();
+            fileExtension = ".png";
         }
         else // JPG
         {
             bytes = texture2D.EncodeToJPG(jpgQuality);
+            fileExtension = ".jpg";
         }
 
-        // Texture2D destroy
         Destroy(texture2D);
 
-        if (bytes != null && bytes.Length > 0)
-        {
-            // Convert byte array to Base64 string
-            string base64String = Convert.ToBase64String(bytes);
-            Debug.Log("Encoded. Size: " + base64String.Length + "Letter");
-            return base64String;
-        }
-        else
+        if (bytes == null || bytes.Length == 0)
         {
             Debug.LogError("Encode error");
             return null;
         }
+
+        // Save the image to a file
+        string fileName = $"image_{DateTime.Now:yyyyMMdd_HHmmss_fff}{fileExtension}";
+        savedImagePath = Path.Combine(chatImagesPath, fileName);
+        try
+        {
+            File.WriteAllBytes(savedImagePath, bytes);
+            Debug.Log($"Image saved to: {savedImagePath}");
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Failed to save image: {e.Message}");
+            savedImagePath = null; // Invalidate path if saving failed
+        }
+
+        // Convert byte array to Base64 string
+        string base64String = Convert.ToBase64String(bytes);
+        return base64String;
     }
 
 
@@ -648,7 +670,8 @@ public class GeminiAPI : MonoBehaviour
     /// </summary>
     /// <param name="content">The content of the conversation turn.</param>
     /// <param name="usage">Optional token usage data associated with a model's response.</param>
-    private void LogConversationTurn(Content content, UsageMetadata usage = null)
+    /// <param name="imagePath">Optional path to an image file associated with the turn.</param>
+    private void LogConversationTurn(Content content, UsageMetadata usage = null, string imagePath = null)
     {
         StringBuilder sb = new StringBuilder();
 
@@ -663,7 +686,15 @@ public class GeminiAPI : MonoBehaviour
                 }
                 if (part.inlineData != null)
                 {
-                    sb.AppendLine($"<Image Data: {part.inlineData.mimeType}>");
+                    // If an image path is provided, log the reference to the file
+                    if (!string.IsNullOrEmpty(imagePath))
+                    {
+                        sb.AppendLine($"<Image File: {Path.GetFileName(imagePath)}>");
+                    }
+                    else
+                    {
+                        sb.AppendLine($"<Image Data: {part.inlineData.mimeType}>");
+                    }
                 }
                 if (part.functionCall != null)
                 {
