@@ -2,13 +2,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 //using TMPro.Examples;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using static RenderTextureToBase64Converter;
-public class GeminiAPI : MonoBehaviour {
+public class GeminiAPI : MonoBehaviour
+{
     [SerializeField]
     public TMPro.TextMeshProUGUI uiText;
 
@@ -43,12 +45,14 @@ public class GeminiAPI : MonoBehaviour {
     // Define the tools (functions) available to the LLM
     private Tool[] infoFunctionCallingLists;
 
-    private void Awake() {
+    private void Awake()
+    {
         unityAndGeminiInstance = this;
         InitializeTools(); // Set up your functions here
     }
 
-    private void Start() {
+    private void Start()
+    {
         // Start an initial conversation with the LLM
         //string initConversationPrompt = "When a user asks about an object and doesn't provide a specific name, first attempt to use getAllObjectsWithDocumentation to identify relevant objects. Then, if more detail is needed, use getObjectInformation with the identified object names." +
         //    "There is a faucet in this scene. Can you tell me how many handle does it has?";
@@ -58,7 +62,6 @@ public class GeminiAPI : MonoBehaviour {
         //"There is a faucet in this scene. Can you tell me the information from faucet_handle_cold and faucet_handle_hot and faucet_handle_normal? Can you tell me what parent object does faucet has? Can you tell me what the water status from faucet is?";
         //string initConversationPrompt = "When a user asks about an object and doesn't provide a specific name, first attempt to use getAllObjectsWithDocumentation to identify relevant objects. Then, if more detail is needed, use getObjectInformation with the identified object names." +
         //    "There is a faucet in this scene. Can you tell me the information from faucet_handle_cold and faucet_handle_hot and faucet_handle_normal? Can you tell me what parent object does faucet has?";
-
         //string initConversationPrompt = "Hello!";
         //string initConversationPrompt = "Can you tell me the informaton of highlighted objects? What documentation does it has?";
 
@@ -226,28 +229,33 @@ public class GeminiAPI : MonoBehaviour {
     /// Sends a user message to the Gemini LLM.
     /// </summary>
     /// <param name="userInput">The user's message.</param>
-    public void SendChatRequest(string userInput) {
+    public void SendChatRequest(string userInput)
+    {
         StartCoroutine(SendRequestToGemini(userInput));
     }
 
     /// <summary>
     /// Coroutine to send a chat request to the Gemini LLM.
     /// </summary>
-    private IEnumerator SendRequestToGemini(string userInput) {
+    private IEnumerator SendRequestToGemini(string userInput)
+    {
         string url = $"{apiEndpoint}?key={apiKey}";
 
 
         //Check if user took an image
-        if (UIMessageHandler.instance.isPictureTaken()) {
+        if (UIMessageHandler.instance.isPictureTaken())
+        {
             // Convert the RenderTexture to Base64
             string base64Image = ConvertRenderTextureToBase64();
-            if (string.IsNullOrEmpty(base64Image)) {
+            if (string.IsNullOrEmpty(base64Image))
+            {
                 Debug.LogError("Error converting RenderTexture to Base64.");
                 yield break;
             }
             // Create an inline data part for the image
 
-            Content userContent = new Content {
+            Content userContent = new Content
+            {
                 role = "user",
                 parts = new Part[] {
                 new Part {
@@ -274,10 +282,13 @@ public class GeminiAPI : MonoBehaviour {
 
             chatHistory.Add(userContent);
 
-        } else {
+        }
+        else
+        {
 
             // Add the user's message to chat history
-            Content userContent = new Content {
+            Content userContent = new Content
+            {
                 role = "user",
                 parts = new Part[] {
                 new Part {
@@ -294,13 +305,12 @@ public class GeminiAPI : MonoBehaviour {
             chatHistory.Add(userContent);
         }
 
-
-
-
+        SaveChatHistoryToFile(); // Save history after adding user message
 
 
         // Prepare the request body for the LLM
-        ChatRequest chatRequest = new ChatRequest {
+        ChatRequest chatRequest = new ChatRequest
+        {
             contents = chatHistory.ToArray(), // Contains user, LLM and function responses
             tools = infoFunctionCallingLists // Always send available functions with user messages
         };
@@ -313,27 +323,35 @@ public class GeminiAPI : MonoBehaviour {
         // Convert the JSON string to a byte array
         byte[] jsonToSend = Encoding.UTF8.GetBytes(jsonData);
 
-        using (UnityWebRequest www = new UnityWebRequest(url, "POST")) {
+        using (UnityWebRequest www = new UnityWebRequest(url, "POST"))
+        {
             www.uploadHandler = new UploadHandlerRaw(jsonToSend);
             www.downloadHandler = new DownloadHandlerBuffer();
             www.SetRequestHeader("Content-Type", "application/json");
 
             yield return www.SendWebRequest();
 
-            if (www.result != UnityWebRequest.Result.Success) {
+            if (www.result != UnityWebRequest.Result.Success)
+            {
                 Debug.LogError($"Gemini Request Error: {www.error}");
                 Debug.LogError($"Gemini Response: {www.downloadHandler.text}");
-            } else {
+            }
+            else
+            {
                 Debug.Log($"Gemini Response Received: {www.downloadHandler.text}");
                 //Response geminiResponse = JsonUtility.FromJson<Response>(www.downloadHandler.text);
                 Response geminiResponse = JsonConvert.DeserializeObject<Response>(www.downloadHandler.text);
 
-                if (geminiResponse.candidates != null && geminiResponse.candidates.Length > 0 && geminiResponse.candidates[0].content != null) {
+                if (geminiResponse.candidates != null && geminiResponse.candidates.Length > 0 && geminiResponse.candidates[0].content != null)
+                {
                     Content modelResponseContent = geminiResponse.candidates[0].content;
                     chatHistory.Add(modelResponseContent); // Add model's response to history
+                    SaveChatHistoryToFile(); // Save history after adding model response
 
                     ProcessModelResponse(modelResponseContent);
-                } else {
+                }
+                else
+                {
                     Debug.Log("No valid candidates or content found in Gemini response.");
                 }
             }
@@ -361,17 +379,23 @@ public class GeminiAPI : MonoBehaviour {
     /// </summary>
     /// 
     /// <param name="content">The content from the LLM.</param>
-    private void ProcessModelResponse(Content content) {
-        if (content.parts != null) {
+    private void ProcessModelResponse(Content content)
+    {
+        if (content.parts != null)
+        {
 
             List<FunctionCall> functionCallsToExecute = new List<FunctionCall>();
 
-            foreach (Part part in content.parts) {
-                if (!string.IsNullOrEmpty(part.text)) {
+            foreach (Part part in content.parts)
+            {
+                if (!string.IsNullOrEmpty(part.text))
+                {
                     // If the LLM responds with text, display it to the user
                     Debug.Log($"LLM Text: {part.text}");
                     UIMessageHandler.instance.GenerateLLMTextBubble(part.text);
-                } else if (part.functionCall != null) {
+                }
+                else if (part.functionCall != null)
+                {
                     // If the LLM wants to call a function
                     // Debug.Log($"LLM wants to call function: {part.functionCall.name} with args: {JsonUtility.ToJson(part.functionCall.args)}"); // Need to use other method, because we use Newtonsoft.Json
                     Debug.Log($"LLM wants to call function: {part.functionCall.name} with args: {JsonConvert.SerializeObject(part.functionCall.args)}");
@@ -379,29 +403,36 @@ public class GeminiAPI : MonoBehaviour {
                 }
             }
 
-            if (functionCallsToExecute.Count > 0) {
+            if (functionCallsToExecute.Count > 0)
+            {
                 StartCoroutine(ExecuteAndSendAllFunctionResponses(functionCallsToExecute));
-            } else {
+            }
+            else
+            {
                 Debug.Log("No function calls found in content parts.");
             }
 
         }
     }
 
-    private IEnumerator ExecuteAndSendAllFunctionResponses(List<FunctionCall> functionCalls) {
+    private IEnumerator ExecuteAndSendAllFunctionResponses(List<FunctionCall> functionCalls)
+    {
         List<FunctionResponse> responsesToGemini = new List<FunctionResponse>();
 
-        foreach (FunctionCall functionCall in functionCalls) {
+        foreach (FunctionCall functionCall in functionCalls)
+        {
             Dictionary<string, object> functionResult = new Dictionary<string, object>();
 
             Dictionary<string, object> parameters = new Dictionary<string, object>();
-            foreach (var arg in functionCall.args) {
+            foreach (var arg in functionCall.args)
+            {
                 parameters[arg.Key] = arg.Value;
             }
 
             functionResult = functionCaller.CallFunction(functionCall.name, parameters);
 
-            responsesToGemini.Add(new FunctionResponse {
+            responsesToGemini.Add(new FunctionResponse
+            {
                 name = functionCall.name,
                 response = functionResult
             });
@@ -468,13 +499,16 @@ public class GeminiAPI : MonoBehaviour {
 
     */
 
-    private IEnumerator SendFunctionResponsesToGemini(List<FunctionResponse> functionResponses) {
+    private IEnumerator SendFunctionResponsesToGemini(List<FunctionResponse> functionResponses)
+    {
         string url = $"{apiEndpoint}?key={apiKey}";
 
 
         List<Part> parts = new List<Part>();
-        foreach (FunctionResponse response in functionResponses) {
-            parts.Add(new Part {
+        foreach (FunctionResponse response in functionResponses)
+        {
+            parts.Add(new Part
+            {
                 functionResponse = response,
                 text = null,
                 inlineData = null,
@@ -484,14 +518,17 @@ public class GeminiAPI : MonoBehaviour {
         }
 
 
-        Content functionResponseContent = new Content {
+        Content functionResponseContent = new Content
+        {
             role = "function",
             parts = parts.ToArray()
         };
         chatHistory.Add(functionResponseContent);
+        SaveChatHistoryToFile(); // Save history after adding function response
 
 
-        ChatRequest chatRequest = new ChatRequest {
+        ChatRequest chatRequest = new ChatRequest
+        {
             contents = chatHistory.ToArray(),
             tools = infoFunctionCallingLists
         };
@@ -501,26 +538,34 @@ public class GeminiAPI : MonoBehaviour {
 
         byte[] jsonToSend = Encoding.UTF8.GetBytes(jsonData);
 
-        using (UnityWebRequest www = new UnityWebRequest(url, "POST")) {
+        using (UnityWebRequest www = new UnityWebRequest(url, "POST"))
+        {
             www.uploadHandler = new UploadHandlerRaw(jsonToSend);
             www.downloadHandler = new DownloadHandlerBuffer();
             www.SetRequestHeader("Content-Type", "application/json");
 
             yield return www.SendWebRequest();
 
-            if (www.result != UnityWebRequest.Result.Success) {
+            if (www.result != UnityWebRequest.Result.Success)
+            {
                 Debug.LogError($"Function Response Error: {www.error}");
                 Debug.LogError($"Function Response Detail: {www.downloadHandler.text}");
-            } else {
+            }
+            else
+            {
                 Debug.Log($"Function Response Sent. Model's follow-up: {www.downloadHandler.text}");
                 Response geminiResponse = JsonConvert.DeserializeObject<Response>(www.downloadHandler.text);
 
-                if (geminiResponse.candidates != null && geminiResponse.candidates.Length > 0 && geminiResponse.candidates[0].content != null) {
+                if (geminiResponse.candidates != null && geminiResponse.candidates.Length > 0 && geminiResponse.candidates[0].content != null)
+                {
                     Content modelFollowUpContent = geminiResponse.candidates[0].content;
                     chatHistory.Add(modelFollowUpContent);// Add model's follow-up to history
+                    SaveChatHistoryToFile(); // Save history after model's follow-up
 
                     ProcessModelResponse(modelFollowUpContent); // Process the model's follow-up (text or another function call)
-                } else {
+                }
+                else
+                {
                     Debug.Log("No valid candidates or content in model's follow-up response.");
                 }
             }
@@ -529,8 +574,10 @@ public class GeminiAPI : MonoBehaviour {
 
 
 
-    public void PNGToBase64Converter() {
-        if (!UIMessageHandler.instance.isPictureTaken()) {
+    public void PNGToBase64Converter()
+    {
+        if (!UIMessageHandler.instance.isPictureTaken())
+        {
             return;
         }
 
@@ -538,7 +585,8 @@ public class GeminiAPI : MonoBehaviour {
 
     }
 
-    public string ConvertRenderTextureToBase64() {
+    public string ConvertRenderTextureToBase64()
+    {
 
 
         RenderTexture renderImage = UIMessageHandler.instance.GetRenderTextureFromUserMessage();
@@ -556,35 +604,89 @@ public class GeminiAPI : MonoBehaviour {
         byte[] bytes;
 
         // Convert Texture2D to byte array based on the selected format
-        if (outputFormat == ImageFormat.PNG) {
+        if (outputFormat == ImageFormat.PNG)
+        {
             bytes = texture2D.EncodeToPNG();
-        } else // JPG
-          {
+        }
+        else // JPG
+        {
             bytes = texture2D.EncodeToJPG(jpgQuality);
         }
 
         // Texture2D destroy
         Destroy(texture2D);
 
-        if (bytes != null && bytes.Length > 0) {
+        if (bytes != null && bytes.Length > 0)
+        {
             // Convert byte array to Base64 string
             string base64String = Convert.ToBase64String(bytes);
             Debug.Log("Encoded. Size: " + base64String.Length + "Letter");
             return base64String;
-        } else {
+        }
+        else
+        {
             Debug.LogError("Encode error");
             return null;
         }
     }
 
 
+    /// <summary>
+    /// Saves the entire chat history to a text file in a human-readable format.
+    /// </summary>
+    private void SaveChatHistoryToFile()
+    {
+        // Define the path for the log file within a directory that can be written to at runtime
+        string filePath = Path.Combine(Application.persistentDataPath, "gemini_chat_log.txt");
+        StringBuilder sb = new StringBuilder();
+        Debug.Log(Application.persistentDataPath);
 
+        sb.AppendLine($"--- Chat Log: {DateTime.Now} ---");
+        sb.AppendLine();
+
+        foreach (var content in chatHistory)
+        {
+            sb.AppendLine($"[{content.role.ToUpper()}]");
+            if (content.parts != null)
+            {
+                foreach (var part in content.parts)
+                {
+                    if (!string.IsNullOrEmpty(part.text))
+                    {
+                        sb.AppendLine(part.text);
+                    }
+                    if (part.inlineData != null)
+                    {
+                        sb.AppendLine($"<Image Data: {part.inlineData.mimeType}>");
+                    }
+                    if (part.functionCall != null)
+                    {
+                        sb.AppendLine($"-> Function Call: {part.functionCall.name}");
+                        sb.AppendLine($"   Args: {JsonConvert.SerializeObject(part.functionCall.args)}");
+                    }
+                    if (part.functionResponse != null)
+                    {
+                        sb.AppendLine($"<- Function Response: {part.functionResponse.name}");
+                        sb.AppendLine($"   Result: {JsonConvert.SerializeObject(part.functionResponse.response)}");
+                    }
+                }
+            }
+            sb.AppendLine("-----------------------------------");
+            sb.AppendLine();
+        }
+
+        try
+        {
+            File.WriteAllText(filePath, sb.ToString());
+            Debug.Log($"Chat history successfully saved to: {filePath}");
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Failed to save chat history: {e.Message}");
+        }
+    }
 
 }
-
-// Data structures for JSON serialization/deserialization
-
-
 
 // Class for deserializing the response from the Gemini API
 public class Response {
