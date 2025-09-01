@@ -40,8 +40,8 @@ TagManager:
   - Ingredients_cut
   - ParticleCollideIgnore
   - Spanner
-  - 
-  - 
+  - Maschine
+  - SelectableObjectsComponent
   - 
   - 
   - 

@@ -23,9 +23,15 @@ public class LaserPointerParticle : MonoBehaviour
                 uiText.text = currentCollidedObject.name;
         }
 
+        /*
         var highlight = currentCollidedObject.GetComponent<HighLightObject>();
         if (highlight != null) {
             highlight.Highlight();
+        }*/
+        var highlight = currentCollidedObject.GetComponent<selectableObjectComponent>();
+        if (highlight != null)
+        {
+            highlight.NoticeParent();
         }
     }
 

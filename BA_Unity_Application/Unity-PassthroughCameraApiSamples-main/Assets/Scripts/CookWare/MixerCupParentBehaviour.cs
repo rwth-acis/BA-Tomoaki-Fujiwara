@@ -28,7 +28,7 @@ public class MixerCupParentBehaviour : MonoBehaviour
         {
             grabbableScript.enabled = false;
             transform.localPosition = Vector3.zero;
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
+            transform.localRotation = Quaternion.Euler(90, 0, 180);
 
 
             grabbableScript.enabled = true;

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/AddVideoClip.unity
+    guid: 3c17c7a4a51f27949a7ebfa51b310879
+  - enabled: 1
     path: Assets/Scenes/MachineArchive/31.08.MaschineScene.unity
     guid: 6bd4fb9f9f860d04d9d52b94efe05273
   m_configObjects:

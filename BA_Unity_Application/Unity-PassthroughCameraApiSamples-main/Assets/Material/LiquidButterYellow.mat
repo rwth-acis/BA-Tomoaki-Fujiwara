@@ -131,6 +131,6 @@ Material:
     - _LiquidColorBack: {r: 1.15, g: 1.1059226, b: 0.15, a: 0.24705882}
     - _LiquidColorForward: {r: 1, g: 0.9559226, b: 0, a: 0.24705882}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _WaveCenter: {r: -1.342991, g: 1.8476944, b: 1.7478533, a: 0}
-    - _WaveParams: {r: 0, g: 0, b: 12, a: 0}
+    - _WaveCenter: {r: -0.28279996, g: 2.267215, b: 1.7084501, a: 0}
+    - _WaveParams: {r: 0.00092028064, g: 0.23439546, b: 12, a: 0}
   m_BuildTextureStacks: []

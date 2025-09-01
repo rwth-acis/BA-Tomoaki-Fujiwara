@@ -55,6 +55,7 @@ public class GeminiAPI : MonoBehaviour
         // Initialize paths for logging
         string persistentPath = Application.persistentDataPath;
         logFilePath = Path.Combine(persistentPath, "gemini_chat_log.txt");
+        Debug.Log(logFilePath);
         chatImagesPath = Path.Combine(persistentPath, "ChatImages");
 
         try
@@ -470,10 +471,10 @@ public class GeminiAPI : MonoBehaviour
     private IEnumerator ExecuteAndSendAllFunctionResponses(List<FunctionCall> functionCalls) {
         List<FunctionResponse> responsesToGemini = new List<FunctionResponse>();
 
-        foreach (FunctionCall functionCall in functionCalls) {
+        foreach (FunctionCall functionCall in functionCalls {
             Dictionary<string, object> functionResult = new Dictionary<string, object>();
 
-            
+
             switch (functionCall.name) {
                 case "setObjectColor":
                     if (functionCall.args.TryGetValue("objectName", out string colorObjName) && colorObjName is string cObjName &&
@@ -675,7 +676,7 @@ public class GeminiAPI : MonoBehaviour
     {
         StringBuilder sb = new StringBuilder();
 
-        sb.AppendLine($"[{content.role.ToUpper()}]");
+        sb.AppendLine($"[{content.role.ToUpper()}] {DateTime.Now}");
         if (content.parts != null)
         {
             foreach (var part in content.parts)
