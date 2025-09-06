@@ -188,7 +188,22 @@ public class GeminiAPI : MonoBehaviour
                         required = new string[] { "objectName" }
                     }
                 });
-                // Add other kitchen-specific functions here
+
+                functionDeclarations.Add(new FunctionDeclaration
+                {
+                    name = "playVideoClip",
+                    description = "Displays a video clip to demonstrate a specific tutorial step. This function requires one argument: the name of the video clip to be played.",
+                    parameters = new Parameters
+                    {
+                        type = "object",
+                        properties = new Dictionary<string, Property>
+                        {
+                            { "videoName", new Property { type = "string", description = "The name of the video clip to play. You must choose one of the available video names: 'AddButterInBowl', 'AddEggInBowl', 'BakeCake', 'BeatTheEgg', 'MixTheBatter', 'PourBatterInPlate', 'PourButterInCup', 'PourEggInCup', 'PourFlourInCup'." } }
+                        },
+                        required = new string[] { "videoName" }
+                    }
+                });
+
                 break;
 
             case SceneContext.Factory:

@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using Oculus.Interaction;
+using i5.Toolkit.Core.SceneDocumentation;
 using TMPro;
 public class OvenParentBehaviour : MonoBehaviour
 {
 
     public CustomOneGrabRotateTransformer tempHandle;
     public CustomOneGrabRotateTransformer timeHandle;
-    
-    
+
+    // Get Rerefence to the documentation object
+    public DocumentationObject ovenDocumentation;
 
     private int inputTemp = 0; // Temperature in degrees Celsius
     private int inputTime = 0; // Time in minutes
@@ -76,6 +78,21 @@ public class OvenParentBehaviour : MonoBehaviour
             // Example of updating temperature text
             uiTempText.text = inputTemp.ToString();
         }
+
+        ovenDocumentation.description = "This is an oven for baking cakes. " +
+            "To use it, the user needs to set the temperature and time, place the baking plate inside, and start the oven." +
+            "Here are the steps to bake a cake: Set the temperature and time correctly: " +
+            "The temperature should be between 170-180 degrees and the timer should be set for 30-35 minutes." +
+            "Place the baking plate (with the cake batter) inside the oven. " +
+            "Close the oven door and press the red start button. " +
+            "Once the door is closed and the red button is pressed, the oven will begin to work. " +
+            "The internal light will turn on, providing a visual indicator that it's operating." +
+            "The outcome of the baking process depends on the settings: " +
+            "If both the temperature and time are set correctly, the cake will be baked successfully. " +
+            "If either setting is too low, nothing will happen. " +
+            "If both the temperature and time are set too high, the cake will burn, and the baking plate will need to be reset." +
+            "To check the status of the baking plate, refer to its documentation component." +
+            $"current temperature is at: {uiTempText.text} Degree." + $"current time is at:{uiTimeText.text} min";
     }
 
     public void BakeOven()
@@ -85,7 +102,19 @@ public class OvenParentBehaviour : MonoBehaviour
             ovenLight.SetActive(true); // Turn on the oven light
 
             if (ovenBakeCollider.IsBakePlateInOven()) {
-                bakePlate.BakeCake(); // Call the bake method on the bake plate
+
+                // Cake is burned
+                if ((180 < inputTemp) && (35 < inputTime))
+                {
+                    bakePlate.BakeCake(); 
+                }
+
+                // Cake is baked successfully
+                else if (((inputTemp<=180) && (170 <= inputTemp)) && ((inputTime <= 35) && (30 <= inputTime)))
+                {
+                    bakePlate.BakeCake(); // Call the bake method on the bake plate
+                }
+                
 
             }
         }

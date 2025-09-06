@@ -15,6 +15,8 @@ public class FunctionCaller : MonoBehaviour {
 
     public RobotArmManager robotArmManager;
 
+    public VideoClipManager videoClipManager;
+
     public Dictionary<string, object> CallFunction(string functionName, Dictionary<string, object> parameters) {
         switch (functionName) {
             case "getObjectInformation":
@@ -58,6 +60,9 @@ public class FunctionCaller : MonoBehaviour {
             case "scanRobotArmStatus":
                 return ScanRobotArmStatus();
 
+            case "playVideoClip":
+                string videoName = parameters["videoName"] as string;
+                return videoClipManager.PlayVideoClip(videoName);
 
             default:
                 return new Dictionary<string, object> {
@@ -227,7 +232,10 @@ public class FunctionCaller : MonoBehaviour {
             // Child Object Name
             List<string> childNames = new List<string>();
             foreach (Transform child in foundObject.transform) {
-                childNames.Add(child.name);
+                if (child.gameObject.layer != LayerMask.NameToLayer("Internal_EditorOnly_LLM_Ignore")) {
+                    childNames.Add(child.name);
+                }
+                
             }
             result["children"] = childNames;
 

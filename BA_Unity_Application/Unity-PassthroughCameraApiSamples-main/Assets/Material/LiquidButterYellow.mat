@@ -128,9 +128,9 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _LiquidColorBack: {r: 1.15, g: 1.1059226, b: 0.15, a: 0.24705882}
-    - _LiquidColorForward: {r: 1, g: 0.9559226, b: 0, a: 0.24705882}
+    - _LiquidColorBack: {r: 1.15, g: 0.86579883, b: 0.15, a: 0.5372549}
+    - _LiquidColorForward: {r: 1, g: 0.71579885, b: 0, a: 0.5372549}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _WaveCenter: {r: -0.28279996, g: 2.267215, b: 1.7084501, a: 0}
-    - _WaveParams: {r: 0.00092028064, g: 0.23439546, b: 12, a: 0}
+    - _WaveCenter: {r: 1.598, g: 1.9300001, b: 0.561, a: 0}
+    - _WaveParams: {r: 0, g: 0, b: 12, a: 0}
   m_BuildTextureStacks: []

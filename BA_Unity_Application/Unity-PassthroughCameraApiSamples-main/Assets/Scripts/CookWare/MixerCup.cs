@@ -88,26 +88,56 @@ public class MixerCup : MonoBehaviour
                     interactableObjectLabel.text = "Mixed cake batter";
 
                     cupDocumentation.title = "Mixed cake batter in Mixercup";
-                    cupDocumentation.description = "The MixerCup contains the final mixed cake batter. The next step is to pour the batter onto the BakePlate by grabbing and tilting the MixerCup. For details on baking, refer to the documentation for the BakePlate or Oven objects.";
-
+                    cupDocumentation.description = "This is the Mixer Cup, used to prepare cake batter on a mixer stand. " +
+                    "To start, the user must add three ingredients—flour, egg, and butter—in a specific order:" +
+                    "Order 1: Flour -> Egg -> Butter. Order 2: Flour -> Butter -> Egg. " +
+                    "Adding ingredients works as follows: Flour: Tilt the flour bag directly over the cup. " +
+                    "Egg & Butter: These ingredients cannot be added directly to the cup. " +
+                    "The user must first place them into a bowl, then pour the contents of the bowl into the cup. " +
+                    "Note that only one ingredient can be in the bowl at a time. " +
+                    "If an ingredient is already in the cup, attempting to add it again will have no effect. " +
+                    "Once all ingredients have been added, the user can place the cup on the mixer stand to begin mixing the batter. " +
+                    "After the batter is created, the user has two options to empty the cup: " +
+                    "Tilt the cup over the baking plate to pour the batter. " +
+                    "Grab the cup and hit it against the semi-transparent hitbox above the trash can to reset its status. " +
+                    "If the user needs a visual guide, use the playVideoClip function." +
+                    "Currently the mixercup contains mixed cake batter. The user can pour this in bakeplate";
 
 
 
                 }
+                /*
                 else {
-                    kitchenMixerStandDocumentation.description = "The MixerCup is in place and the mixer head is down, but the cup does not contain the complete unmixed cake batter (flour, egg, and butter). The mixer will not operate until all ingredients are present in the cup.";
-                }
+                    kitchenMixerStandDocumentation.description = "This is the Mixer Cup, used to prepare cake batter on a mixer stand. " +
+                    "To start, the user must add three ingredients—flour, egg, and butter—in a specific order:" +
+                    "Order 1: Flour -> Egg -> Butter. Order 2: Flour -> Butter -> Egg. " +
+                    "Adding ingredients works as follows: Flour: Tilt the flour bag directly over the cup. " +
+                    "Egg & Butter: These ingredients cannot be added directly to the cup. " +
+                    "The user must first place them into a bowl, then pour the contents of the bowl into the cup. " +
+                    "Note that only one ingredient can be in the bowl at a time. " +
+                    "If an ingredient is already in the cup, attempting to add it again will have no effect. " +
+                    "Once all ingredients have been added, the user can place the cup on the mixer stand to begin mixing the batter. " +
+                    "After the batter is created, the user has two options to empty the cup: " +
+                    "Tilt the cup over the baking plate to pour the batter. " +
+                    "Grab the cup and hit it against the semi-transparent hitbox above the trash can to reset its status. " +
+                    "If the user needs a visual guide, use the playVideoClip function." +
+                    "Currently the mixercup is placed in mixerstand, however not all material are added in cup.";
+                }*/
 
             }
+            /*
             else {
                 kitchenMixerStandDocumentation.description = "A MixerCup is in the holder, but the mixer head is up. To start mixing, the user must push the mixer head down.";
             }
+            */
 
-
-        } else {
+        } 
+        /*
+        
+        else {
             kitchenMixerStandDocumentation.description = "The MixerStand is currently empty. To operate the mixer, a MixerCup containing the unmixed cake batter must be placed in the holder.";
         }
-        
+        */
         //AddBeatedEggLiquid(); // Call this method to check for egg pouring
         //AddMeltedButterLiquid(); // Call this method to check for butter pouring
     }
@@ -120,7 +150,20 @@ public class MixerCup : MonoBehaviour
 
 
             cupDocumentation.title = "Pouring Flour in Mixercup";
-            cupDocumentation.description = "The user is currently pouring flour into the MixerCup. This action must be completed before other ingredients can be added.";
+            cupDocumentation.description = "This is the Mixer Cup, used to prepare cake batter on a mixer stand. " +
+            "To start, the user must add three ingredients—flour, egg, and butter—in a specific order:" +
+            "Order 1: Flour -> Egg -> Butter. Order 2: Flour -> Butter -> Egg. " +
+            "Adding ingredients works as follows: Flour: Tilt the flour bag directly over the cup. " +
+            "Egg & Butter: These ingredients cannot be added directly to the cup. " +
+            "The user must first place them into a bowl, then pour the contents of the bowl into the cup. " +
+            "Note that only one ingredient can be in the bowl at a time. " +
+            "If an ingredient is already in the cup, attempting to add it again will have no effect. " +
+            "Once all ingredients have been added, the user can place the cup on the mixer stand to begin mixing the batter. " +
+            "After the batter is created, the user has two options to empty the cup: " +
+            "Tilt the cup over the baking plate to pour the batter. " +
+            "Grab the cup and hit it against the semi-transparent hitbox above the trash can to reset its status. " +
+            "If the user needs a visual guide, use the playVideoClip function." +
+            "Currently the user is pouring flour in mixercup.";
 
 
 
@@ -143,7 +186,20 @@ public class MixerCup : MonoBehaviour
         interactableObjectLabel.text = "Flour in cup";
 
         cupDocumentation.title = "Flour in Mixercup";
-        cupDocumentation.description = "The MixerCup is now filled with flour. The next step is to add the other ingredients: melted butter and a beaten egg. Once all ingredients are added, the cup can be placed in the MixerStand to be mixed.";
+        cupDocumentation.description = "This is the Mixer Cup, used to prepare cake batter on a mixer stand. " +
+            "To start, the user must add three ingredients—flour, egg, and butter—in a specific order:" +
+            "Order 1: Flour -> Egg -> Butter. Order 2: Flour -> Butter -> Egg. " +
+            "Adding ingredients works as follows: Flour: Tilt the flour bag directly over the cup. " +
+            "Egg & Butter: These ingredients cannot be added directly to the cup. " +
+            "The user must first place them into a bowl, then pour the contents of the bowl into the cup. " +
+            "Note that only one ingredient can be in the bowl at a time. " +
+            "If an ingredient is already in the cup, attempting to add it again will have no effect. " +
+            "Once all ingredients have been added, the user can place the cup on the mixer stand to begin mixing the batter. " +
+            "After the batter is created, the user has two options to empty the cup: " +
+            "Tilt the cup over the baking plate to pour the batter. " +
+            "Grab the cup and hit it against the semi-transparent hitbox above the trash can to reset its status. " +
+            "If the user needs a visual guide, use the playVideoClip function." +
+            "Currently the mixercup contains Flour in cup. ";
 
 
 
@@ -165,7 +221,20 @@ public class MixerCup : MonoBehaviour
             isFlourReadyToMix = true;
 
             cupDocumentation.title = "Unmixed cake batter Mixercup";
-            cupDocumentation.description = "The MixerCup contains all the necessary ingredients for the cake batter (flour, beaten egg, and melted butter), but it is not yet mixed. The user should now place the MixerCup into the MixerStand and push the mixer head down to mix the batter.";
+            cupDocumentation.description = "This is the Mixer Cup, used to prepare cake batter on a mixer stand. " +
+            "To start, the user must add three ingredients—flour, egg, and butter—in a specific order:" +
+            "Order 1: Flour -> Egg -> Butter. Order 2: Flour -> Butter -> Egg. " +
+            "Adding ingredients works as follows: Flour: Tilt the flour bag directly over the cup. " +
+            "Egg & Butter: These ingredients cannot be added directly to the cup. " +
+            "The user must first place them into a bowl, then pour the contents of the bowl into the cup. " +
+            "Note that only one ingredient can be in the bowl at a time. " +
+            "If an ingredient is already in the cup, attempting to add it again will have no effect. " +
+            "Once all ingredients have been added, the user can place the cup on the mixer stand to begin mixing the batter. " +
+            "After the batter is created, the user has two options to empty the cup: " +
+            "Tilt the cup over the baking plate to pour the batter. " +
+            "Grab the cup and hit it against the semi-transparent hitbox above the trash can to reset its status. " +
+            "If the user needs a visual guide, use the playVideoClip function." +
+            "Currently the mixercup contains Flour, Butter and Egg in cup. Its ready to use mixerstand to create cake batter.";
 
 
         }
@@ -173,8 +242,20 @@ public class MixerCup : MonoBehaviour
             interactableObjectLabel.text = "Flour, Egg in cup";
 
             cupDocumentation.title = "Flour, Egg in Mixercup";
-            cupDocumentation.description = "The MixerCup contains flour and a beaten egg. It still needs melted butter to complete the unmixed cake batter.";
-
+            cupDocumentation.description = "This is the Mixer Cup, used to prepare cake batter on a mixer stand. " +
+            "To start, the user must add three ingredients—flour, egg, and butter—in a specific order:" +
+            "Order 1: Flour -> Egg -> Butter. Order 2: Flour -> Butter -> Egg. " +
+            "Adding ingredients works as follows: Flour: Tilt the flour bag directly over the cup. " +
+            "Egg & Butter: These ingredients cannot be added directly to the cup. " +
+            "The user must first place them into a bowl, then pour the contents of the bowl into the cup. " +
+            "Note that only one ingredient can be in the bowl at a time. " +
+            "If an ingredient is already in the cup, attempting to add it again will have no effect. " +
+            "Once all ingredients have been added, the user can place the cup on the mixer stand to begin mixing the batter. " +
+            "After the batter is created, the user has two options to empty the cup: " +
+            "Tilt the cup over the baking plate to pour the batter. " +
+            "Grab the cup and hit it against the semi-transparent hitbox above the trash can to reset its status. " +
+            "If the user needs a visual guide, use the playVideoClip function." +
+            "Currently the mixercup contains Flour, Egg in cup. Still need butter as material.";
         }
 
     }
@@ -196,14 +277,40 @@ public class MixerCup : MonoBehaviour
             isFlourReadyToMix = true;
 
             cupDocumentation.title = "Unmixed cake batter Mixercup";
-            cupDocumentation.description = "The MixerCup contains all the necessary ingredients for the cake batter (flour, beaten egg, and melted butter), but it is not yet mixed. The user should now place the MixerCup into the MixerStand and push the mixer head down to mix the batter.";
+            cupDocumentation.description = "This is the Mixer Cup, used to prepare cake batter on a mixer stand. " +
+            "To start, the user must add three ingredients—flour, egg, and butter—in a specific order:" +
+            "Order 1: Flour -> Egg -> Butter. Order 2: Flour -> Butter -> Egg. " +
+            "Adding ingredients works as follows: Flour: Tilt the flour bag directly over the cup. " +
+            "Egg & Butter: These ingredients cannot be added directly to the cup. " +
+            "The user must first place them into a bowl, then pour the contents of the bowl into the cup. " +
+            "Note that only one ingredient can be in the bowl at a time. " +
+            "If an ingredient is already in the cup, attempting to add it again will have no effect. " +
+            "Once all ingredients have been added, the user can place the cup on the mixer stand to begin mixing the batter. " +
+            "After the batter is created, the user has two options to empty the cup: " +
+            "Tilt the cup over the baking plate to pour the batter. " +
+            "Grab the cup and hit it against the semi-transparent hitbox above the trash can to reset its status. " +
+            "If the user needs a visual guide, use the playVideoClip function." +
+            "Currently the mixercup contains Flour, Butter and Egg in cup. Its ready to use mixerstand to create cake batter.";
 
         }
         else
         {
             interactableObjectLabel.text = "Flour, Butter in cup";
             cupDocumentation.title = "Flour, Butter in Mixercup";
-            cupDocumentation.description = "The MixerCup contains flour and melted butter. It still needs a beaten egg to complete the unmixed cake batter.";
+            cupDocumentation.description = "This is the Mixer Cup, used to prepare cake batter on a mixer stand. " +
+            "To start, the user must add three ingredients—flour, egg, and butter—in a specific order:" +
+            "Order 1: Flour -> Egg -> Butter. Order 2: Flour -> Butter -> Egg. " +
+            "Adding ingredients works as follows: Flour: Tilt the flour bag directly over the cup. " +
+            "Egg & Butter: These ingredients cannot be added directly to the cup. " +
+            "The user must first place them into a bowl, then pour the contents of the bowl into the cup. " +
+            "Note that only one ingredient can be in the bowl at a time. " +
+            "If an ingredient is already in the cup, attempting to add it again will have no effect. " +
+            "Once all ingredients have been added, the user can place the cup on the mixer stand to begin mixing the batter. " +
+            "After the batter is created, the user has two options to empty the cup: " +
+            "Tilt the cup over the baking plate to pour the batter. " +
+            "Grab the cup and hit it against the semi-transparent hitbox above the trash can to reset its status. " +
+            "If the user needs a visual guide, use the playVideoClip function." +
+            "Currently the mixercup contains Flour, Butter in cup. Still need butter as material.";
 
         }
 
@@ -230,7 +337,20 @@ public class MixerCup : MonoBehaviour
             beatedEggLiquid.SetFillingRate(1 - eggAmountInCup);
 
             cupDocumentation.title = "Pouring Beaten Egg liquid in MixerCup";
-            cupDocumentation.description = "The user is currently pouring a beaten egg into the MixerCup, which already contains flour. This action must be completed. Afterwards, melted butter needs to be added.";
+            cupDocumentation.description = "This is the Mixer Cup, used to prepare cake batter on a mixer stand. " +
+            "To start, the user must add three ingredients—flour, egg, and butter—in a specific order:" +
+            "Order 1: Flour -> Egg -> Butter. Order 2: Flour -> Butter -> Egg. " +
+            "Adding ingredients works as follows: Flour: Tilt the flour bag directly over the cup. " +
+            "Egg & Butter: These ingredients cannot be added directly to the cup. " +
+            "The user must first place them into a bowl, then pour the contents of the bowl into the cup. " +
+            "Note that only one ingredient can be in the bowl at a time. " +
+            "If an ingredient is already in the cup, attempting to add it again will have no effect. " +
+            "Once all ingredients have been added, the user can place the cup on the mixer stand to begin mixing the batter. " +
+            "After the batter is created, the user has two options to empty the cup: " +
+            "Tilt the cup over the baking plate to pour the batter. " +
+            "Grab the cup and hit it against the semi-transparent hitbox above the trash can to reset its status. " +
+            "If the user needs a visual guide, use the playVideoClip function." +
+            "Currently the mixercup contains Flour and part of egg.";
 
             interactableObjectLabel.text = "Flour and part of egg in cup";
 
@@ -250,7 +370,20 @@ public class MixerCup : MonoBehaviour
             beatedEggLiquid.SetFillingRate(1 - eggAmountInCup);
 
             cupDocumentation.title = "Pouring Beaten Egg liquid in MixerCup";
-            cupDocumentation.description = "The user is currently pouring a beaten egg into the MixerCup, which already contains flour and butter. Once this action is complete, the cup will contain the unmixed cake batter, ready to be mixed in the MixerStand.";
+            cupDocumentation.description = "This is the Mixer Cup, used to prepare cake batter on a mixer stand. " +
+            "To start, the user must add three ingredients—flour, egg, and butter—in a specific order:" +
+            "Order 1: Flour -> Egg -> Butter. Order 2: Flour -> Butter -> Egg. " +
+            "Adding ingredients works as follows: Flour: Tilt the flour bag directly over the cup. " +
+            "Egg & Butter: These ingredients cannot be added directly to the cup. " +
+            "The user must first place them into a bowl, then pour the contents of the bowl into the cup. " +
+            "Note that only one ingredient can be in the bowl at a time. " +
+            "If an ingredient is already in the cup, attempting to add it again will have no effect. " +
+            "Once all ingredients have been added, the user can place the cup on the mixer stand to begin mixing the batter. " +
+            "After the batter is created, the user has two options to empty the cup: " +
+            "Tilt the cup over the baking plate to pour the batter. " +
+            "Grab the cup and hit it against the semi-transparent hitbox above the trash can to reset its status. " +
+            "If the user needs a visual guide, use the playVideoClip function." +
+            "Currently the mixercup contains Flour, butter and part of egg.";
 
             interactableObjectLabel.text = "Flour, butter and part of egg in cup";
 
@@ -288,7 +421,20 @@ public class MixerCup : MonoBehaviour
             meltedButterLiquid.SetFillingRate(1 - butterAmountInCup);
 
             cupDocumentation.title = "Pouring butter liquid in MixerCup";
-            cupDocumentation.description = "The user is currently pouring melted butter into the MixerCup, which already contains flour. This action must be completed. Afterwards, a beaten egg needs to be added.";
+            cupDocumentation.description = "This is the Mixer Cup, used to prepare cake batter on a mixer stand. " +
+            "To start, the user must add three ingredients—flour, egg, and butter—in a specific order:" +
+            "Order 1: Flour -> Egg -> Butter. Order 2: Flour -> Butter -> Egg. " +
+            "Adding ingredients works as follows: Flour: Tilt the flour bag directly over the cup. " +
+            "Egg & Butter: These ingredients cannot be added directly to the cup. " +
+            "The user must first place them into a bowl, then pour the contents of the bowl into the cup. " +
+            "Note that only one ingredient can be in the bowl at a time. " +
+            "If an ingredient is already in the cup, attempting to add it again will have no effect. " +
+            "Once all ingredients have been added, the user can place the cup on the mixer stand to begin mixing the batter. " +
+            "After the batter is created, the user has two options to empty the cup: " +
+            "Tilt the cup over the baking plate to pour the batter. " +
+            "Grab the cup and hit it against the semi-transparent hitbox above the trash can to reset its status. " +
+            "If the user needs a visual guide, use the playVideoClip function." +
+            "Currently the mixercup contains Flour and part of butter.";
 
             interactableObjectLabel.text = "Flour and part of butter in cup";
 
@@ -308,7 +454,20 @@ public class MixerCup : MonoBehaviour
             meltedButterLiquid.SetFillingRate(1 - butterAmountInCup);
 
             cupDocumentation.title = "Pouring butter in MixerCup";
-            cupDocumentation.description = "The user is currently pouring melted butter into the MixerCup, which already contains flour and a beaten egg. Once this action is complete, the cup will contain the unmixed cake batter, ready to be mixed in the MixerStand.";
+            cupDocumentation.description = "This is the Mixer Cup, used to prepare cake batter on a mixer stand. " +
+            "To start, the user must add three ingredients—flour, egg, and butter—in a specific order:" +
+            "Order 1: Flour -> Egg -> Butter. Order 2: Flour -> Butter -> Egg. " +
+            "Adding ingredients works as follows: Flour: Tilt the flour bag directly over the cup. " +
+            "Egg & Butter: These ingredients cannot be added directly to the cup. " +
+            "The user must first place them into a bowl, then pour the contents of the bowl into the cup. " +
+            "Note that only one ingredient can be in the bowl at a time. " +
+            "If an ingredient is already in the cup, attempting to add it again will have no effect. " +
+            "Once all ingredients have been added, the user can place the cup on the mixer stand to begin mixing the batter. " +
+            "After the batter is created, the user has two options to empty the cup: " +
+            "Tilt the cup over the baking plate to pour the batter. " +
+            "Grab the cup and hit it against the semi-transparent hitbox above the trash can to reset its status. " +
+            "If the user needs a visual guide, use the playVideoClip function." +
+            "Currently the mixercup contains Flour, egg and part of butter.";
 
             interactableObjectLabel.text = "Flour, egg and part of butter in cup";
 
@@ -362,7 +521,20 @@ public class MixerCup : MonoBehaviour
         cupAnimator.Play("init", 0, 1);
 
         cupDocumentation.title = "Empty Mixercup";
-        cupDocumentation.description = "This is an empty MixerCup, used for preparing cake batter. The process is: 1. Add flour. 2. Add a beaten egg and melted butter. 3. Place the cup in the MixerStand and operate it to mix the batter. 4. Pour the mixed batter onto the BakePlate.";
+        cupDocumentation.description = "This is the Mixer Cup, used to prepare cake batter on a mixer stand. " +
+            "To start, the user must add three ingredients—flour, egg, and butter—in a specific order:" +
+            "Order 1: Flour -> Egg -> Butter. Order 2: Flour -> Butter -> Egg. " +
+            "Adding ingredients works as follows: Flour: Tilt the flour bag directly over the cup. " +
+            "Egg & Butter: These ingredients cannot be added directly to the cup. " +
+            "The user must first place them into a bowl, then pour the contents of the bowl into the cup. " +
+            "Note that only one ingredient can be in the bowl at a time. " +
+            "If an ingredient is already in the cup, attempting to add it again will have no effect. " +
+            "Once all ingredients have been added, the user can place the cup on the mixer stand to begin mixing the batter. " +
+            "After the batter is created, the user has two options to empty the cup: " +
+            "Tilt the cup over the baking plate to pour the batter. " +
+            "Grab the cup and hit it against the semi-transparent hitbox above the trash can to reset its status. " +
+            "If the user needs a visual guide, use the playVideoClip function." +
+            "Currently the mixercup is empty.";
 
 
         mixedFlourParticle.SetActive(false);

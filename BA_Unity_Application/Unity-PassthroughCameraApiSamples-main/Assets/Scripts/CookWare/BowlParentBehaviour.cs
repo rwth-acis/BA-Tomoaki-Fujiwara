@@ -67,7 +67,21 @@ public class BowlParentBehaviour : MonoBehaviour
                 interactableObjectLabel.text = "Melted Butter in Bowl";
 
                 documentation.title = "Melted Butter in Bowl";
-                documentation.description = "The bowl contains melted butter, an ingredient for the cake batter. The user can grab the bowl to pour the butter into the MixerCup, provided the MixerCup already contains flour. To pour this ingredient, the user need to tilt the bowl. This action will empty the bowl.";
+                documentation.description = 
+                    "This is a bowl used to indirectly add eggs and butter to the mixer cup for making cake batter." +
+                    "The user must add flour to the mixer cup first. After that, they can use this bowl to add either an egg or butter. " +
+                    "The bowl can only hold one ingredient at a time, so the user must use it at least twice." +
+                    "Adding Ingredients To add butter: Grab the butter and bring it into contact with the bowl." +
+                    "Liquid butter will be added to the bowl." +
+                    "Tilt the bowl over the mixer cup to pour the butter in. The bowl will then become empty." +
+                    "To add an egg: Grab the egg and bring it into contact with the bowl." +
+                    "The egg will be added to the bowl." +
+                    "The user must then use a fork to beat the egg before pouring it into the mixer cup." +
+                    "Tilt the bowl over the mixer cup to pour the beaten egg in. The bowl will then become empty." +
+                    "Resetting the Bowl To empty the bowl and reset its status, " +
+                    "the user can grab it and hit it against the semi-transparent hitbox above the trash can." +
+                    "If mixer cup does not has flour inside, nothing will happen."+
+                    "Currently the bowl has melted butter inside. It can be poured into mixer cup if the mixer cup has flour and the butter is not added yet.";
 
 
 
@@ -86,7 +100,22 @@ public class BowlParentBehaviour : MonoBehaviour
 
 
                 documentation.title = "Egg in Bowl";
-                documentation.description = "The bowl contains a raw egg. The user can beat the egg by using a fork on it. Beating the egg will turn it into a liquid, which is an ingredient for the cake batter.";
+                documentation.description = 
+                    "This is a bowl used to indirectly add eggs and butter to the mixer cup for making cake batter." +
+                    "The user must add flour to the mixer cup first. After that, they can use this bowl to add either an egg or butter. " +
+                    "The bowl can only hold one ingredient at a time, so the user must use it at least twice." +
+                    "Adding Ingredients To add butter: Grab the butter and bring it into contact with the bowl." +
+                    "Liquid butter will be added to the bowl." +
+                    "Tilt the bowl over the mixer cup to pour the butter in. The bowl will then become empty." +
+                    "To add an egg: Grab the egg and bring it into contact with the bowl." +
+                    "The egg will be added to the bowl." +
+                    "The user must then use a fork to beat the egg before pouring it into the mixer cup." +
+                    "Tilt the bowl over the mixer cup to pour the beaten egg in. The bowl will then become empty." +
+                    "Resetting the Bowl To empty the bowl and reset its status, " +
+                    "the user can grab it and hit it against the semi-transparent hitbox above the trash can." +
+                    "If mixer cup does not has flour inside, nothing will happen." +
+                    "Currently the bowl contains egg. But this egg need to be beated by using fork. So the user should grab a fork and hit against this bowl."+
+                    "After that the egg is beated and be able to poured.";
 
 
             }
@@ -127,7 +156,21 @@ public class BowlParentBehaviour : MonoBehaviour
 
 
         documentation.title = "Empty Bowl";
-        documentation.description = "This is an empty bowl. The user can place either a raw egg or butter inside. Placing butter will cause it to melt. Placing an egg will allow it to be beaten with a fork.";
+        documentation.description =
+               "This is a bowl used to indirectly add eggs and butter to the mixer cup for making cake batter." +
+                    "The user must add flour to the mixer cup first. After that, they can use this bowl to add either an egg or butter. " +
+                    "The bowl can only hold one ingredient at a time, so the user must use it at least twice." +
+                    "Adding Ingredients To add butter: Grab the butter and bring it into contact with the bowl." +
+                    "Liquid butter will be added to the bowl." +
+                    "Tilt the bowl over the mixer cup to pour the butter in. The bowl will then become empty." +
+                    "To add an egg: Grab the egg and bring it into contact with the bowl." +
+                    "The egg will be added to the bowl." +
+                    "The user must then use a fork to beat the egg before pouring it into the mixer cup." +
+                    "Tilt the bowl over the mixer cup to pour the beaten egg in. The bowl will then become empty." +
+                    "Resetting the Bowl To empty the bowl and reset its status, " +
+                    "the user can grab it and hit it against the semi-transparent hitbox above the trash can." +
+                    "If mixer cup does not has flour inside, nothing will happen." +
+                    "Currently the bowl has melted butter inside. It can be poured into mixer cup if the mixer cup has flour and the butter is not added yet.";
 
     }
 
@@ -142,7 +185,21 @@ public class BowlParentBehaviour : MonoBehaviour
         beatedEggLiquid.SetFillingRate(1.0f);
 
         documentation.title = "Beated Egg in Bowl";
-        documentation.description = "The bowl contains a beaten egg, an ingredient for the cake batter. The user can grab the bowl to pour the beaten egg into the MixerCup, provided the MixerCup already contains flour. To pour this ingredient, the user need to tilt the bowl. This action will empty the bowl.";
+        documentation.description =
+            "This is a bowl used to indirectly add eggs and butter to the mixer cup for making cake batter." +
+                    "The user must add flour to the mixer cup first. After that, they can use this bowl to add either an egg or butter. " +
+                    "The bowl can only hold one ingredient at a time, so the user must use it at least twice." +
+                    "Adding Ingredients To add butter: Grab the butter and bring it into contact with the bowl." +
+                    "Liquid butter will be added to the bowl." +
+                    "Tilt the bowl over the mixer cup to pour the butter in. The bowl will then become empty." +
+                    "To add an egg: Grab the egg and bring it into contact with the bowl." +
+                    "The egg will be added to the bowl." +
+                    "The user must then use a fork to beat the egg before pouring it into the mixer cup." +
+                    "Tilt the bowl over the mixer cup to pour the beaten egg in. The bowl will then become empty." +
+                    "Resetting the Bowl To empty the bowl and reset its status, " +
+                    "the user can grab it and hit it against the semi-transparent hitbox above the trash can." +
+                    "If mixer cup does not has flour inside, nothing will happen." +
+                    "Currently the bowl has beated egg inside. It can be poured into mixer cup if the mixer cup has flour and the egg is not added yet.";
 
 
     }

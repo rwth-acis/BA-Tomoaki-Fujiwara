@@ -13,7 +13,9 @@ public class MixerCupParentBehaviour : MonoBehaviour
     public MixerCup mixerCup;
 
 
-    public Grabbable grabbableScript;   
+    public Grabbable grabbableScript;
+
+    public Transform CupPlaceCoordinate;
 
     public bool isCupInHolder = false;
     
@@ -27,7 +29,7 @@ public class MixerCupParentBehaviour : MonoBehaviour
         else if (other.gameObject.name == "MixerCupHolder")
         {
             grabbableScript.enabled = false;
-            transform.localPosition = Vector3.zero;
+            transform.position = CupPlaceCoordinate.position;
             transform.localRotation = Quaternion.Euler(90, 0, 180);
 
 

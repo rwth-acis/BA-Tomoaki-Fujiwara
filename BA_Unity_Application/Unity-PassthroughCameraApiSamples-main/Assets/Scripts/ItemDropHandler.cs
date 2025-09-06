@@ -17,7 +17,7 @@ public class ItemDropHandler : MonoBehaviour
     [Tooltip("The duration of the height adjustment animation in seconds.")]
     public float adjustDuration = 0.5f;
 
-    public Vector3 droppedRotation = new Vector3(0, 0, 0);
+    private Vector3 droppedRotation;
 
 
     private Coroutine _adjustCoroutine;
@@ -28,6 +28,8 @@ public class ItemDropHandler : MonoBehaviour
 
     public void Awake()
     {
+        droppedRotation = transform.eulerAngles;
+
         // Get the Grabbable component to handle item interactions
         grabbable = GetComponent<Grabbable>();
         grabInteractable = GetComponent<GrabInteractable>();
@@ -44,10 +46,17 @@ public class ItemDropHandler : MonoBehaviour
         StartHeightAdjustment();
     }
 
-    public void SetComponentOn() { 
-        grabbable.enabled = true;
-        grabInteractable.enabled = true;
-        handGrabInteractable.enabled = true;
+    public void SetComponentOn() {
+        if (grabInteractable != null) {
+            grabbable.enabled = true;
+        }
+        if (grabInteractable != null) {
+            grabInteractable.enabled = true;
+        }
+        if (handGrabInteractable != null) {
+            handGrabInteractable.enabled = true;
+        }
+            
         Debug.Log("TurnComponentOn");
     }
 

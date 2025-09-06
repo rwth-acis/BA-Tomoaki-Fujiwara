@@ -39,8 +39,18 @@ public class BakePlate : MonoBehaviour
         interactableObjectLabel.text = "Batter in Bake Plate";
 
         documentation.title = "Batter in Bake Plate";
-        documentation.description = "The BakePlate now contains unbaked cake batter and is ready for the oven. The next step is to place this BakePlate inside a preheated oven. For specific baking instructions, consult the documentation for the Oven object.";
-
+        documentation.description = "This is a baking plate used to bake a cake. " +
+            "The user can grab it and place it inside the oven." +
+            "To bake a cake, the user must first pour the mixed cake batter onto this plate. " +
+            "After that, they can place the plate in the oven and start it." +
+            "The outcome depends on the oven settings:" +
+            "Successful Baking: " +
+            "The cake will be baked if the temperature is set to 170-180 degrees and the timer is set for 30-35 minutes." +
+            "No Effect: If either the temperature or time is set too low, nothing will happen." +
+            "Burned Cake: " +
+            "If both the temperature and time are set too high, the cake will burn, and the baking plate will need to be reset." +
+            "To empty the plate and reset its status, the user can grab it and hit it against the semi-transparent hitbox above the trash can." +
+            "currently the cake batter is poured in bake plate. The user can place this bake plate and start the oven.";
 
     }
 
@@ -57,8 +67,52 @@ public class BakePlate : MonoBehaviour
             isBakePlateReady = false; // Cake is baked
 
             documentation.title = "Baked Sponge Cake in Plate";
-            documentation.description = "A sponge cake has been successfully baked on the BakePlate. The user can now remove the cake from the plate. The next step is to decorate it with cream and strawberries.";
+            documentation.description = "This is a baking plate used to bake a cake. " +
+            "The user can grab it and place it inside the oven." +
+            "To bake a cake, the user must first pour the mixed cake batter onto this plate. " +
+            "After that, they can place the plate in the oven and start it." +
+            "The outcome depends on the oven settings:" +
+            "Successful Baking: " +
+            "The cake will be baked if the temperature is set to 170-180 degrees and the timer is set for 30-35 minutes." +
+            "No Effect: If either the temperature or time is set too low, nothing will happen." +
+            "Burned Cake: " +
+            "If both the temperature and time are set too high, the cake will burn, and the baking plate will need to be reset." +
+            "To empty the plate and reset its status, the user can grab it and hit it against the semi-transparent hitbox above the trash can." +
+            "currently the cake batter is baked successful. The user can empty the bakeplate by trash can to reset the bakeplate.";
 
+
+        }
+        else
+        {
+            //Debug.LogWarning("Bake plate is not ready to bake.");
+        }
+    }
+
+    public void BurnedCake()
+    {
+        // Logic to bake the cake
+        if ((isBakePlateReady) && (isFlourInBakePlate))
+        {
+            Debug.Log("Baking the cake in the bake plate.");
+            bakePlateAnimator.Play("BurnedCake", 0);
+
+            interactableObjectLabel.text = "Burned Cake in Plate";
+
+            isBakePlateReady = false; // Cake is baked
+
+            documentation.title = "Burned Sponge Cake in Plate";
+            documentation.description = "This is a baking plate used to bake a cake. " +
+            "The user can grab it and place it inside the oven." +
+            "To bake a cake, the user must first pour the mixed cake batter onto this plate. " +
+            "After that, they can place the plate in the oven and start it." +
+            "The outcome depends on the oven settings:" +
+            "Successful Baking: " +
+            "The cake will be baked if the temperature is set to 170-180 degrees and the timer is set for 30-35 minutes." +
+            "No Effect: If either the temperature or time is set too low, nothing will happen." +
+            "Burned Cake: " +
+            "If both the temperature and time are set too high, the cake will burn, and the baking plate will need to be reset." +
+            "To empty the plate and reset its status, the user can grab it and hit it against the semi-transparent hitbox above the trash can." +
+            "currently the cake in bakeplate is burned. The user need to reset the status of bakeplate by grabbing bake plate and hit against blue semi-transparent hitbox over trash can.";
 
 
         }
@@ -79,7 +133,18 @@ public class BakePlate : MonoBehaviour
         interactableObjectLabel.text = "Empty BakePlate";
 
         documentation.title = "Empty BakePlate";
-        documentation.description = "This is an empty BakePlate, used for baking a cake. The first step is to fill it with mixed cake batter from the MixerCup. Once filled, it can be placed in the oven for baking. Refer to the Oven's documentation for baking instructions.";
+        documentation.description = "This is a baking plate used to bake a cake. " +
+            "The user can grab it and place it inside the oven." +
+            "To bake a cake, the user must first pour the mixed cake batter onto this plate. " +
+            "After that, they can place the plate in the oven and start it." +
+            "The outcome depends on the oven settings:" +
+            "Successful Baking: " +
+            "The cake will be baked if the temperature is set to 170-180 degrees and the timer is set for 30-35 minutes." +
+            "No Effect: If either the temperature or time is set too low, nothing will happen." +
+            "Burned Cake: " +
+            "If both the temperature and time are set too high, the cake will burn, and the baking plate will need to be reset." +
+            "To empty the plate and reset its status, the user can grab it and hit it against the semi-transparent hitbox above the trash can." +
+            "currently the bakeplate is empty.";
 
 
     }

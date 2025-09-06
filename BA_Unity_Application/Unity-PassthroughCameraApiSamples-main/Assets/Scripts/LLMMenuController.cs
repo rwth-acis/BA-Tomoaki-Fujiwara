@@ -71,7 +71,7 @@ public class LLMMenuController : MonoBehaviour {
     transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, step);
         */
 
-        targetPosition = sceneCamera.transform.position + sceneCamera.transform.forward * 0.4f;
+        targetPosition = sceneCamera.transform.position + sceneCamera.transform.forward * 0.6f;
         //targetRotation = Quaternion.LookRotation(transform.position - sceneCamera.transform.position);
         //targetRotation = Quaternion.LookRotation(sceneCamera.worldtransform.position);
         targetRotation = Quaternion.LookRotation(sceneCamera.transform.forward);
