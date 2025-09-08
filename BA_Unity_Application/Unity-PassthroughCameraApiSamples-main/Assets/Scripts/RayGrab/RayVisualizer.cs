@@ -3,66 +3,54 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RayVisualizer : MonoBehaviour {
-    // Line Renderer コンポーネントへの参照
+    // Reference to the Line Renderer component.
     [SerializeField]
     private LineRenderer lineRenderer;
 
-    // Ray の最大長
+    // Maximum length of the ray.
     [SerializeField]
     private float maxRayLength = 100f;
 
-    // Ray を発射するコントローラーの種類 (右または左)
+    // The controller type (e.g., right or left hand) that will emit the ray.
     [SerializeField]
-    private OVRInput.Controller controllerType = OVRInput.Controller.RTouch; // デフォルトは右コントローラー
+    private OVRInput.Controller controllerType = OVRInput.Controller.RTouch; // Default is the right controller.
 
     void Awake() {
-        // Line Renderer がアタッチされていることを確認
+        // Ensure the Line Renderer component is attached.
         if (lineRenderer == null) {
             lineRenderer = GetComponent<LineRenderer>();
             if (lineRenderer == null) {
-                Debug.LogError("Line Renderer コンポーネントが見つかりません。このスクリプトと同じGameObjectにLine Rendererを追加してください。", this);
-                enabled = false; // スクリプトを無効にする
+                Debug.LogError("Line Renderer component not found. Please add a Line Renderer to the same GameObject as this script.", this);
+                enabled = false; // Disable the script.
                 return;
             }
         }
 
-        // Line Renderer の初期設定 (Optional: Unityエディタで設定済みの場合不要)
-        lineRenderer.positionCount = 2; // 始点と終点の2点
-        lineRenderer.useWorldSpace = true; // ワールド座標を使用
+        // Initial setup for the Line Renderer.
+        lineRenderer.positionCount = 2; // Two points for start and end.
+        lineRenderer.useWorldSpace = true; // Use world coordinates.
     }
 
     void Update() {
-        // コントローラーの位置と向きを取得
-        Vector3 controllerPosition = OVRInput.GetLocalControllerPosition(controllerType);
-        Quaternion controllerRotation = OVRInput.GetLocalControllerRotation(controllerType);
-
-        // Ray の始点 (コントローラーの位置)
-        Vector3 rayOrigin = transform.position; // このスクリプトがアタッチされているオブジェクトの位置
-
-        // Ray の方向 (コントローラーのフォワード方向)
-        // OVRInput.GetLocalControllerRotation はローカル回転を返すため、
-        // グローバルなフォワード方向を得るには transform.forward を利用するか、
-        // controllerRotation * Vector3.forward を transform.TransformDirection で変換する必要があります。
-        // ここでは、スクリプトがコントローラーにアタッチされている前提でtransform.forwardを使用します。
+        // This script assumes it is attached to the controller object itself.
+        // The ray's origin will be this object's position, and the direction will be its forward vector.
+        Vector3 rayOrigin = transform.position;
         Vector3 rayDirection = transform.forward;
 
-        // Raycast を実行
+        // Perform the Raycast.
         RaycastHit hit;
         Vector3 rayEndPoint;
 
         if (Physics.Raycast(rayOrigin, rayDirection, out hit, maxRayLength)) {
-            // 何かに当たった場合、当たった点までRayを描画
+            // If the ray hits something, set the end point to the hit point.
             rayEndPoint = hit.point;
-
-            // Debug.Log を使ってRayが当たったオブジェクトの名前を表示 (Optional)
-            // Debug.Log($"Ray Hit: {hit.collider.name}");
         } else {
-            // 何にも当たらなかった場合、最大長までRayを描画
+            // If the ray does not hit anything, set the end point to the maximum length.
             rayEndPoint = rayOrigin + rayDirection * maxRayLength;
         }
 
-        // Line Renderer の点を更新
-        lineRenderer.SetPosition(0, rayOrigin);    // 始点
-        lineRenderer.SetPosition(1, rayEndPoint);  // 終点
+        // Update the positions of the Line Renderer.
+        lineRenderer.SetPosition(0, rayOrigin);    // Start point.
+        lineRenderer.SetPosition(1, rayEndPoint);  // End point.
     }
 }

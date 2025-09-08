@@ -106,7 +106,7 @@ public class OvenParentBehaviour : MonoBehaviour
                 // Cake is burned
                 if ((180 < inputTemp) && (35 < inputTime))
                 {
-                    bakePlate.BakeCake(); 
+                    bakePlate.BurnedCake(); 
                 }
 
                 // Cake is baked successfully

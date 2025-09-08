@@ -70,48 +70,40 @@ public class RayGrabbing : MonoBehaviour {
             }
         }
 
-        // If currently grabbing an object, handle scaling
+        // If currently grabbing an object, handle scaling and rotation
         if (grabbedObject != null)
         {
             // Get 2D joystick input
             Vector2 joystickInput = OVRInput.Get(scaleAxis, controllerType);
 
-            Debug.Log($"Joystick Input: {joystickInput}");
-
             // Get horizontal and vertical input
             float horizontalInput = joystickInput.x;
             float verticalInput = joystickInput.y;
 
-            Debug.Log($"Horizontal Input: {horizontalInput}, Vertical Input: {verticalInput}");
-
             // Only apply scaling if vertical input is dominant
             if (Mathf.Abs(verticalInput) > Mathf.Abs(horizontalInput))
             {
-
                 if (verticalInput >= 0.1f)
                 {
-                    grabbedObject.ScaleObjectLarger();
+                    grabbedObject.ScaleObjectLarger(verticalInput);
                 }
                 else if (verticalInput <= -0.1f)
                 {
-                    grabbedObject.ScaleObjectSmaller();
-
+                    grabbedObject.ScaleObjectSmaller(verticalInput);
                 }
             }
+            // Only apply rotation if horizontal input is dominant
             else if (Mathf.Abs(horizontalInput) > Mathf.Abs(verticalInput))
             {
                 if (horizontalInput >= 0.1f)
                 {
-                    grabbedObject.RotateObjectRight();
+                    grabbedObject.RotateObjectRight(horizontalInput);
                 }
                 else if (horizontalInput <= -0.1f)
                 {
-                    grabbedObject.RotateObjectLeft();
-
+                    grabbedObject.RotateObjectLeft(horizontalInput);
                 }
             }
-
         }
-
     }
 }

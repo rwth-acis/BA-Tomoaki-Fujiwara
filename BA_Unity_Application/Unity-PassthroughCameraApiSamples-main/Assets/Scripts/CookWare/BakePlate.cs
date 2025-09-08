@@ -41,6 +41,7 @@ public class BakePlate : MonoBehaviour
         documentation.title = "Batter in Bake Plate";
         documentation.description = "This is a baking plate used to bake a cake. " +
             "The user can grab it and place it inside the oven." +
+            "But this bakeplate is only for baking cake and not for other ingredient like potato." +
             "To bake a cake, the user must first pour the mixed cake batter onto this plate. " +
             "After that, they can place the plate in the oven and start it." +
             "The outcome depends on the oven settings:" +
@@ -69,6 +70,7 @@ public class BakePlate : MonoBehaviour
             documentation.title = "Baked Sponge Cake in Plate";
             documentation.description = "This is a baking plate used to bake a cake. " +
             "The user can grab it and place it inside the oven." +
+            "But this bakeplate is only for baking cake and not for other ingredient like potato." +
             "To bake a cake, the user must first pour the mixed cake batter onto this plate. " +
             "After that, they can place the plate in the oven and start it." +
             "The outcome depends on the oven settings:" +
@@ -103,6 +105,7 @@ public class BakePlate : MonoBehaviour
             documentation.title = "Burned Sponge Cake in Plate";
             documentation.description = "This is a baking plate used to bake a cake. " +
             "The user can grab it and place it inside the oven." +
+            "But this bakeplate is only for baking cake and not for other ingredient like potato." +
             "To bake a cake, the user must first pour the mixed cake batter onto this plate. " +
             "After that, they can place the plate in the oven and start it." +
             "The outcome depends on the oven settings:" +
@@ -135,6 +138,7 @@ public class BakePlate : MonoBehaviour
         documentation.title = "Empty BakePlate";
         documentation.description = "This is a baking plate used to bake a cake. " +
             "The user can grab it and place it inside the oven." +
+            "But this bakeplate is only for baking cake and not for other ingredient like potato." +
             "To bake a cake, the user must first pour the mixed cake batter onto this plate. " +
             "After that, they can place the plate in the oven and start it." +
             "The outcome depends on the oven settings:" +

@@ -5,7 +5,7 @@ using Oculus.Interaction.Grab;
 using Oculus.Interaction.GrabAPI;
 using Oculus.Interaction.HandGrab;
 using Oculus.Interaction;
-
+using i5.VirtualAgents;
 
 
 public class CutboardCollider : MonoBehaviour
@@ -27,7 +27,7 @@ public class CutboardCollider : MonoBehaviour
 
 
 
-            if (other.gameObject.name == "PotatoUncut")
+            if (other.gameObject.name == "PotatoUncut(Visual)")
             {   
                 //currentOnBoard = "Potato";
                 currentOnBoard = other.gameObject.transform.parent.name;
@@ -38,6 +38,9 @@ public class CutboardCollider : MonoBehaviour
                 other.gameObject.GetComponent<HandGrabInteractable>().enabled = false;
                 other.gameObject.GetComponent<GrabInteractable>().enabled = false;
 
+                // Unable the Item -> Can be picked up
+                // Prevent the agent pick up the potato when it's on the cutboard
+                other.gameObject.transform.parent.GetComponent<Item>().CanBePickedUp = false;
 
                 // Set the parent of the potato to the PotatoCutBoardCoordinate
                 Transform parentTransform = other.gameObject.transform.parent;
@@ -64,7 +67,7 @@ public class CutboardCollider : MonoBehaviour
             }
 
 
-            if (other.gameObject.name == "EggplantUncut")
+            if (other.gameObject.name == "EggplantUncut(Visual)")
             {
                 //currentOnBoard = "Eggplant";
                 currentOnBoard = other.gameObject.transform.parent.name;
@@ -75,6 +78,10 @@ public class CutboardCollider : MonoBehaviour
                 other.gameObject.GetComponent<HandGrabInteractable>().enabled = false;
                 other.gameObject.GetComponent<GrabInteractable>().enabled = false;
 
+
+                // Unable the Item -> Can be picked up
+                // Prevent the agent pick up the potato when it's on the cutboard
+                other.gameObject.transform.parent.GetComponent<Item>().CanBePickedUp = false;
 
                 // Set the parent of the eggplant to the PotatoCutBoardCoordinate
                 Transform parentTransform = other.gameObject.transform.parent;
@@ -100,7 +107,7 @@ public class CutboardCollider : MonoBehaviour
                 }
             }
 
-            if (other.gameObject.name == "OnionUncut")
+            if (other.gameObject.name == "OnionUncut(Visual)")
             {
                 //currentOnBoard = "Eggplant";
                 currentOnBoard = other.gameObject.transform.parent.name;
@@ -111,6 +118,9 @@ public class CutboardCollider : MonoBehaviour
                 other.gameObject.GetComponent<HandGrabInteractable>().enabled = false;
                 other.gameObject.GetComponent<GrabInteractable>().enabled = false;
 
+                // Unable the Item -> Can be picked up
+                // Prevent the agent pick up the potato when it's on the cutboard
+                other.gameObject.transform.parent.GetComponent<Item>().CanBePickedUp = false;
 
                 // Set the parent of the eggplant to the PotatoCutBoardCoordinate
                 Transform parentTransform = other.gameObject.transform.parent;
@@ -136,7 +146,7 @@ public class CutboardCollider : MonoBehaviour
                 }
             }
 
-            if (other.gameObject.name == "CarrotUncut")
+            if (other.gameObject.name == "CarrotUncut(Visual)")
             {
                 //currentOnBoard = "Eggplant";
                 currentOnBoard = other.gameObject.transform.parent.name;
@@ -188,17 +198,16 @@ public class CutboardCollider : MonoBehaviour
 
 
 
-            if ((other.gameObject.name == "PotatoCut03") && (currentOnBoard == other.gameObject.transform.parent.name))
+            if ((other.gameObject.name == "PotatoCut03(Visual)") && (currentOnBoard == other.gameObject.transform.parent.name))
             {
                 currentOnBoard = "";
 
                 // Set the parent of the potato to free
                 Transform parentTransform = other.gameObject.transform.parent;
 
-
                 if (parentTransform != null)
                 {
-
+                    parentTransform.GetComponent<Item>().CanBePickedUp = true;
                     parentTransform.SetParent(null);
 
                     // Unable the collider of the potato cut
@@ -208,7 +217,22 @@ public class CutboardCollider : MonoBehaviour
                 }
             }
 
-            if ((other.gameObject.name == "EggplantCut06") && (currentOnBoard == other.gameObject.transform.parent.name))
+            if ((other.gameObject.name == "EggplantCut06(Visual)") && (currentOnBoard == other.gameObject.transform.parent.name))
+            {
+                currentOnBoard = "";
+
+                // Set the parent of the potato to free
+                Transform parentTransform = other.gameObject.transform.parent;
+                if (parentTransform != null)
+                {
+                    parentTransform.GetComponent<Item>().CanBePickedUp = true;
+                    parentTransform.SetParent(null);
+                    parentTransform.GetComponent<Collider>().enabled = false;
+
+                }
+            }
+
+            if ((other.gameObject.name == "OnionCut04(Visual)") && (currentOnBoard == other.gameObject.transform.parent.name))
             {
                 currentOnBoard = "";
 
@@ -217,28 +241,15 @@ public class CutboardCollider : MonoBehaviour
                 if (parentTransform != null)
                 {
 
+                    parentTransform.GetComponent<Item>().CanBePickedUp = true;
                     parentTransform.SetParent(null);
+                    parentTransform.GetComponent<Collider>().enabled = false;
 
 
                 }
             }
 
-            if ((other.gameObject.name == "OnionCut04") && (currentOnBoard == other.gameObject.transform.parent.name))
-            {
-                currentOnBoard = "";
-
-                // Set the parent of the potato to free
-                Transform parentTransform = other.gameObject.transform.parent;
-                if (parentTransform != null)
-                {
-
-                    parentTransform.SetParent(null);
-
-
-                }
-            }
-
-            if ((other.gameObject.name == "CarrotCut05") && (currentOnBoard == other.gameObject.transform.parent.name))
+            if ((other.gameObject.name == "CarrotCut05(Visual)") && (currentOnBoard == other.gameObject.transform.parent.name))
             {
                 currentOnBoard = "";
 

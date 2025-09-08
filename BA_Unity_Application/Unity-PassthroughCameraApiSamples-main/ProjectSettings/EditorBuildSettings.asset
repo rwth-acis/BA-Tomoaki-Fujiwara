@@ -6,11 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/AddVideoClip.unity
-    guid: 3c17c7a4a51f27949a7ebfa51b310879
-  - enabled: 1
-    path: Assets/Scenes/MachineArchive/31.08.MaschineScene.unity
-    guid: 6bd4fb9f9f860d04d9d52b94efe05273
+    path: Assets/Scenes/Kitchen_Mesh 1.unity
+    guid: 41e8020b6061d364eaf1315393b80e71
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: f2bf97b3acdb64248a707c407c9fc54e, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a971eac5e950046e586c5e153e32d05c, type: 2}

@@ -43,8 +43,8 @@ TagManager:
   - Maschine
   - SelectableObjectsComponent
   - Player
-  - 
-  - 
+  - MixercupPourInCollider
+  - Internal_EditorOnly_Dont_Include_Foto
   - 
   - 
   - 

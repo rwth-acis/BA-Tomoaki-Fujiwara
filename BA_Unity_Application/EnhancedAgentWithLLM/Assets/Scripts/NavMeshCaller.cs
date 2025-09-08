@@ -28,8 +28,8 @@ public class NavMeshCaller : MonoBehaviour
 
 
             //This is a test
-            //setUpCameraRig.SetActive(false);
-            //playerCameraRig.SetActive(true);
+            setUpCameraRig.SetActive(false);
+            playerCameraRig.SetActive(true);
         }
     }
 }

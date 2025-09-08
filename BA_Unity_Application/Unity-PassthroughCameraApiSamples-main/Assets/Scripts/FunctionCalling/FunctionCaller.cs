@@ -308,6 +308,19 @@ public class FunctionCaller : MonoBehaviour {
             {
                 continue;
             }
+            else if (LayerMask.LayerToName(obj.layer) == "SelectableObjectsComponent")
+            {
+                continue;
+            }
+
+            else if (LayerMask.LayerToName(obj.layer) == "ParticleCollideIgnore")
+            {
+                continue;
+            }
+            else if (LayerMask.LayerToName(obj.layer) == "Water")
+            {
+                continue;
+            }
 
             Dictionary<string, object> objectInfo = new Dictionary<string, object>();
             objectInfo["name"] = obj.name;

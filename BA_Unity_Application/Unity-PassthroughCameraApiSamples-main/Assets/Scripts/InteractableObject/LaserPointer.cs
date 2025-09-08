@@ -14,7 +14,8 @@ public class LaserPointer : MonoBehaviour, IHandGrabUseDelegate
 
 
 
-    public void Respawn() { 
+    public void Respawn() {
+        Debug.Log("Try to Respawn");
         transform.position = startPosition.position;
     }
 
@@ -53,15 +54,17 @@ public class LaserPointer : MonoBehaviour, IHandGrabUseDelegate
             return;
         }
 
+        Debug.Log("Try to Reset Selected");
+
        
         GameObject[] allObjects = GameObject.FindObjectsOfType<GameObject>();
         foreach (GameObject obj in allObjects) {
             if (obj.layer == selectedLayer) {
 
-                var unselectable = obj.GetComponent<HighLightObject>();
+                var unselectable = obj.GetComponent<SelectObject>();
                 if (unselectable != null) {
                     // This will unselect the object
-                    unselectable.Highlight();
+                    unselectable.UnselectObject();
                 }
             }
         }

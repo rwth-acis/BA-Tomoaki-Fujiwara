@@ -34,6 +34,13 @@ public class SelectObject : MonoBehaviour
         }
     }
 
+    public void UnselectObject()
+    {
+        isSelected = false;
+        testChangeColorObject.layer = LayerMask.NameToLayer("Selectable");
+        DisableEmissionOnAllMaterials();
+    }
+
 
     /// <summary>
     /// Finds all materials on the target object and its children, then enables their emission.

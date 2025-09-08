@@ -78,9 +78,10 @@ public class BowlParentBehaviour : MonoBehaviour
                     "The egg will be added to the bowl." +
                     "The user must then use a fork to beat the egg before pouring it into the mixer cup." +
                     "Tilt the bowl over the mixer cup to pour the beaten egg in. The bowl will then become empty." +
-                    "Resetting the Bowl To empty the bowl and reset its status, " +
+                    "Resetting the Bowl: To empty the bowl and reset its status, " +                  
                     "the user can grab it and hit it against the semi-transparent hitbox above the trash can." +
-                    "If mixer cup does not has flour inside, nothing will happen."+
+                    "So if the user want to reset or make the bowl empty, tell user to do this action." +
+                    "If mixer cup does not has flour inside, nothing will happen." +
                     "Currently the bowl has melted butter inside. It can be poured into mixer cup if the mixer cup has flour and the butter is not added yet.";
 
 
@@ -111,8 +112,9 @@ public class BowlParentBehaviour : MonoBehaviour
                     "The egg will be added to the bowl." +
                     "The user must then use a fork to beat the egg before pouring it into the mixer cup." +
                     "Tilt the bowl over the mixer cup to pour the beaten egg in. The bowl will then become empty." +
-                    "Resetting the Bowl To empty the bowl and reset its status, " +
+                    "Resetting the Bowl: To empty the bowl and reset its status, " +
                     "the user can grab it and hit it against the semi-transparent hitbox above the trash can." +
+                    "So if the user want to reset or make the bowl empty, tell user to do this action." +
                     "If mixer cup does not has flour inside, nothing will happen." +
                     "Currently the bowl contains egg. But this egg need to be beated by using fork. So the user should grab a fork and hit against this bowl."+
                     "After that the egg is beated and be able to poured.";
@@ -167,8 +169,9 @@ public class BowlParentBehaviour : MonoBehaviour
                     "The egg will be added to the bowl." +
                     "The user must then use a fork to beat the egg before pouring it into the mixer cup." +
                     "Tilt the bowl over the mixer cup to pour the beaten egg in. The bowl will then become empty." +
-                    "Resetting the Bowl To empty the bowl and reset its status, " +
+                    "Resetting the Bowl: To empty the bowl and reset its status, " +
                     "the user can grab it and hit it against the semi-transparent hitbox above the trash can." +
+                    "So if the user want to reset or make the bowl empty, tell user to do this action." +
                     "If mixer cup does not has flour inside, nothing will happen." +
                     "Currently the bowl has melted butter inside. It can be poured into mixer cup if the mixer cup has flour and the butter is not added yet.";
 
@@ -196,8 +199,9 @@ public class BowlParentBehaviour : MonoBehaviour
                     "The egg will be added to the bowl." +
                     "The user must then use a fork to beat the egg before pouring it into the mixer cup." +
                     "Tilt the bowl over the mixer cup to pour the beaten egg in. The bowl will then become empty." +
-                    "Resetting the Bowl To empty the bowl and reset its status, " +
+                    "Resetting the Bowl: To empty the bowl and reset its status, " +
                     "the user can grab it and hit it against the semi-transparent hitbox above the trash can." +
+                    "So if the user want to reset or make the bowl empty, tell user to do this action." +
                     "If mixer cup does not has flour inside, nothing will happen." +
                     "Currently the bowl has beated egg inside. It can be poured into mixer cup if the mixer cup has flour and the egg is not added yet.";
 
