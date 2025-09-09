@@ -1176,8 +1176,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleSpeed: 0.01
-  minScale: 0.1
-  maxScale: 2
+  minScale: 1
+  maxScale: 1
   rotationSpeed: 1
 --- !u!1001 &15684703
 PrefabInstance:
@@ -7511,7 +7511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff0035b83cd85248af46267012b42c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetHeight: 1.8
+  heightAboveFloor: 1.2
   adjustDuration: 0.5
 --- !u!114 &95372897
 MonoBehaviour:
@@ -18919,6 +18919,131 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5805240707573970943, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
   m_PrefabInstance: {fileID: 292980419}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &300982943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 300982948}
+  - component: {fileID: 300982947}
+  - component: {fileID: 300982946}
+  - component: {fileID: 300982945}
+  - component: {fileID: 300982944}
+  m_Layer: 0
+  m_Name: CookingStove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!65 &300982944
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300982943}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.70000005, y: 0.49256343, z: 0.8499999}
+  m_Center: {x: 0, y: -0.24628165, z: 0.42499995}
+--- !u!23 &300982945
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300982943}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a5fbe0e4b7e9b564f888bbe9dae2298f, type: 2}
+  - {fileID: -1881783718365406921, guid: b42793ba9084618438d0a39687f85f74, type: 3}
+  - {fileID: 2100000, guid: a4b283c4c7feeee4896c89ea5b5cc51e, type: 2}
+  - {fileID: 2100000, guid: fb24b06476a06834697283397c2e48c6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &300982946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300982943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a193439786ddf8f4cb6bccea40633f19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleSpeed: 0.01
+  minScale: 1.5
+  maxScale: 1.5
+  rotationSpeed: 1
+--- !u!33 &300982947
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300982943}
+  m_Mesh: {fileID: 4300004, guid: b42793ba9084618438d0a39687f85f74, type: 3}
+--- !u!4 &300982948
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300982943}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7072302, y: 0, z: 0, w: -0.7069834}
+  m_LocalPosition: {x: -0.532, y: 0, z: -0.154}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 180, z: 180}
 --- !u!1 &301870961 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5898061533943007312, guid: b309b96fc3fd37a4886512744a17378b, type: 3}
@@ -29943,7 +30068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff0035b83cd85248af46267012b42c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetHeight: 1.8
+  heightAboveFloor: 1.2
   adjustDuration: 0.5
 --- !u!114 &449906940
 MonoBehaviour:
@@ -30904,8 +31029,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleSpeed: 0.01
-  minScale: 0.1
-  maxScale: 2
+  minScale: 1
+  maxScale: 1
   rotationSpeed: 1
 --- !u!1 &475096367
 GameObject:
@@ -59426,9 +59551,9 @@ RectTransform:
   - {fileID: 277963512}
   m_Father: {fileID: 1807484693}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -69}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 114}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &759590044
@@ -74834,7 +74959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff0035b83cd85248af46267012b42c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetHeight: 1.8
+  heightAboveFloor: 1.2
   adjustDuration: 0.5
 --- !u!114 &891031733
 MonoBehaviour:
@@ -81323,7 +81448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff0035b83cd85248af46267012b42c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetHeight: 1.8
+  heightAboveFloor: 1.2
   adjustDuration: 0.5
 --- !u!114 &977101074
 MonoBehaviour:
@@ -84199,7 +84324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff0035b83cd85248af46267012b42c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetHeight: 1.8
+  heightAboveFloor: 1.2
   adjustDuration: 0.5
 --- !u!114 &1007531527
 MonoBehaviour:
@@ -88919,7 +89044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff0035b83cd85248af46267012b42c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetHeight: 1.8
+  heightAboveFloor: 1.2
   adjustDuration: 0.5
 --- !u!114 &1037354845
 MonoBehaviour:
@@ -120202,7 +120327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff0035b83cd85248af46267012b42c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetHeight: 1.8
+  heightAboveFloor: 1.2
   adjustDuration: 0.5
 --- !u!114 &1356177608
 MonoBehaviour:
@@ -125857,7 +125982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff0035b83cd85248af46267012b42c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetHeight: 1.8
+  heightAboveFloor: 1.2
   adjustDuration: 0.5
 --- !u!114 &1433631519
 MonoBehaviour:
@@ -163156,8 +163281,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleSpeed: 0.01
-  minScale: 0.1
-  maxScale: 2
+  minScale: 1
+  maxScale: 1
   rotationSpeed: 1
 --- !u!1 &1738300780
 GameObject:
@@ -174007,7 +174132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff0035b83cd85248af46267012b42c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetHeight: 1.8
+  heightAboveFloor: 1.2
   adjustDuration: 0.5
 --- !u!114 &1837515448
 MonoBehaviour:
@@ -182414,7 +182539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff0035b83cd85248af46267012b42c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetHeight: 1.8
+  heightAboveFloor: 1.2
   adjustDuration: 0.5
 --- !u!114 &1945755660
 MonoBehaviour:
@@ -184862,8 +184987,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleSpeed: 0.01
-  minScale: 0.1
-  maxScale: 2
+  minScale: 1
+  maxScale: 1
   rotationSpeed: 1
 --- !u!1001 &1988037107
 PrefabInstance:
@@ -187413,7 +187538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff0035b83cd85248af46267012b42c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetHeight: 1.8
+  heightAboveFloor: 1.2
   adjustDuration: 0.5
 --- !u!114 &2027521370
 MonoBehaviour:
@@ -212232,7 +212357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff0035b83cd85248af46267012b42c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetHeight: 1.8
+  heightAboveFloor: 1.2
   adjustDuration: 0.5
 --- !u!114 &919132148647656502
 MonoBehaviour:
@@ -299945,7 +300070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff0035b83cd85248af46267012b42c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetHeight: 1.8
+  heightAboveFloor: 1.2
   adjustDuration: 0.5
 --- !u!114 &7559640673842066516
 MonoBehaviour:
@@ -329973,6 +330098,7 @@ SceneRoots:
   - {fileID: 14911593}
   - {fileID: 1986700370}
   - {fileID: 1735629465}
+  - {fileID: 300982948}
   - {fileID: 1611152330}
   - {fileID: 989313551}
   - {fileID: 1492702130}

@@ -26,7 +26,7 @@ public class SceneObjectPositioner : MonoBehaviour
     }
 
     /// <summary>
-    /// A method that positions objects as children of the current room's floor anchor.
+    /// A method that positions objects on the floor of the current room.
     /// </summary>
     private void PositionObjectsInRoom()
     {
@@ -48,15 +48,41 @@ public class SceneObjectPositioner : MonoBehaviour
             return;
         }
 
+        // The floor anchor's position is the center of the floor.
+        Vector3 floorPosition = floorAnchor.transform.position;
+
         // Loop through all the objects in the list.
         foreach (GameObject obj in objectsToPosition)
         {
             if (obj != null)
             {
-                // Make the object a child of the floor anchor.
-                // This moves the object to a position relative to the floor anchor.
+                // Default target position is the center of the floor.
+                Vector3 targetPosition = floorPosition;
+
+                // Try to adjust the height so the object's bottom rests on the floor.
+                Collider objCollider = obj.GetComponent<Collider>();
+                if (objCollider != null)
+                {
+                    // Calculate the distance from the object's pivot to its bottom edge.
+                    // This assumes the object is initially at or near world origin.
+                    float pivotToBottomDistance = obj.transform.position.y - objCollider.bounds.min.y;
+                    
+                    // Adjust the target Y position by this distance.
+                    targetPosition.y += pivotToBottomDistance;
+                }
+                else
+                {
+                    Debug.LogWarning($"'{obj.name}' does not have a Collider. Positioning it at the floor's pivot. It might be submerged or floating.", obj);
+                }
+
+                // Set the object's position.
+                obj.transform.position = targetPosition;
+
+                // Optionally, parent it to the floor for organization.
+                // We set the position first, then parent it while maintaining the world position.
                 obj.transform.SetParent(floorAnchor.transform, true);
-                Debug.Log($"Set '{obj.name}' as a child of floor anchor '{floorAnchor.name}'.");
+
+                Debug.Log($"Positioned '{obj.name}' on the floor anchor '{floorAnchor.name}'.");
             }
         }
     }

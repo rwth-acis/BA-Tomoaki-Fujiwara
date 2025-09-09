@@ -6,13 +6,14 @@ using Oculus.Interaction.Grab;
 using Oculus.Interaction.GrabAPI;
 using Oculus.Interaction.Input;
 using Oculus.Interaction.HandGrab;
+using Meta.XR.MRUtilityKit; // Required for using MRUK
 
 // Ensures this script is attached to a GameObject that has an Item component
 [RequireComponent(typeof(Item))]
 public class ItemDropHandler : MonoBehaviour
 {
-    [Tooltip("The target height (world Y-coordinate) for the item to rise to when dropped.")]
-    public float targetHeight = 1.8f;
+    [Tooltip("The height above the reference floor for the item to rise to when dropped. In MRUK scenes, this is relative to the scanned floor. In other scenes, it's relative to Y=0.")]
+    public float heightAboveFloor = 1.2f;
 
     [Tooltip("The duration of the height adjustment animation in seconds.")]
     public float adjustDuration = 0.5f;
@@ -76,7 +77,7 @@ public class ItemDropHandler : MonoBehaviour
     }
 
     /// <summary>
-    /// A coroutine that smoothly moves the item to the specified height.
+    /// A coroutine that smoothly moves the item to a calculated height above the floor.
     /// </summary>
     private IEnumerator SmoothMoveCoroutine()
     {
@@ -84,8 +85,31 @@ public class ItemDropHandler : MonoBehaviour
         yield return null;
 
         Vector3 startPosition = transform.position;
-        // The target position maintains the current X and Z coordinates, only changing the Y coordinate
-        Vector3 targetPosition = new Vector3(startPosition.x, targetHeight, startPosition.z);
+
+        // --- Dynamic Height Calculation ---
+        float referenceFloorY = 0.0f; // Default to world origin floor (Y=0)
+
+        // If MRUK is available, try to get the actual floor height
+        if (MRUK.Instance != null)
+        {
+            MRUKRoom currentRoom = MRUK.Instance.GetCurrentRoom();
+            if (currentRoom != null)
+            {
+                MRUKAnchor floorAnchor = currentRoom.GetFloorAnchor();
+                if (floorAnchor != null)
+                {
+                    referenceFloorY = floorAnchor.transform.position.y;
+                }
+                else
+                {
+                    Debug.LogWarning("ItemDropHandler: MRUK Floor Anchor not found. Defaulting to Y=0.", this);
+                }
+            }
+        }
+
+        // Calculate the final target height based on the reference floor and the desired offset.
+        float finalTargetHeight = referenceFloorY + heightAboveFloor;
+        Vector3 targetPosition = new Vector3(startPosition.x, finalTargetHeight, startPosition.z);
 
         float elapsedTime = 0f;
 

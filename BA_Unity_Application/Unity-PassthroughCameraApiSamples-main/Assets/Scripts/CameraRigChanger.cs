@@ -76,7 +76,7 @@ public class CameraRigChanger : MonoBehaviour {
                 cookingCameraRig.transform.position = setupCameraRig.transform.position;
                 cookingCameraRigTrackingSpace.localPosition = setupCameraRigTrackingSpace.localPosition;
                 //agent.position = cookingCameraRigTrackingSpace.position;
-                ResetAgentVelocity();
+                //ResetAgentVelocity();
             }
             else
             {
