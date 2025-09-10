@@ -12,6 +12,7 @@ public class BrokenPartFixableByCamera : MonoBehaviour
     public Image fixingBarImage;
 
     public bool isBroken = false;
+    public string partName = "Unnamed Part";
 
     private float currentFixedAmount = 0.0f;
 

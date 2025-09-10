@@ -3139,6 +3139,7 @@ MonoBehaviour:
   brokeParticle: {fileID: 1738435620}
   fixingBarImage: {fileID: 709027381}
   isBroken: 0
+  partName: Unnamed Part
   isCameraInPlace: 0
   boxCollider: {fileID: 0}
 --- !u!23 &80681171
@@ -13140,6 +13141,7 @@ MonoBehaviour:
   brokeParticle: {fileID: 1053936528}
   fixingBarImage: {fileID: 1484917810}
   isBroken: 0
+  partName: LowerUpper
   isSpannerInPlace: 0
   boxCollider: {fileID: 0}
 --- !u!1 &240456852
@@ -16834,6 +16836,7 @@ MonoBehaviour:
   brokeParticle: {fileID: 898463725}
   fixingBarImage: {fileID: 963028373}
   isBroken: 0
+  partName: LowerArm
   isSpannerInPlace: 0
   boxCollider: {fileID: 0}
 --- !u!1 &360984406
@@ -19064,6 +19067,7 @@ MonoBehaviour:
   brokeParticle: {fileID: 2033720996}
   fixingBarImage: {fileID: 459307771}
   isBroken: 0
+  partName: Hand Grabber
   isRobotArmHandGrabberInPlace: 0
   boxCollider: {fileID: 0}
 --- !u!1 &434885617
@@ -38270,7 +38274,7 @@ MonoBehaviour:
   uiText: {fileID: 0}
   functionCaller: {fileID: 714332482}
   apiKey: AIzaSyBX_xWhb5__6kQAAZENsigtFaup9LKoOlE
-  apiEndpoint: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+  apiEndpoint: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent
   currentScene: 1
   outputFormat: 0
   jpgQuality: 100
@@ -38802,6 +38806,7 @@ MonoBehaviour:
   brokeParticle: {fileID: 210645300}
   fixingBarImage: {fileID: 856855994}
   isBroken: 0
+  partName: Unnamed Part
   isMillingCutterInPlace: 0
   boxCollider: {fileID: 0}
 --- !u!1 &727031301
@@ -39819,9 +39824,9 @@ RectTransform:
   - {fileID: 277963512}
   m_Father: {fileID: 1807484693}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: -69}
   m_SizeDelta: {x: 0, y: 114}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &759590044
@@ -68118,6 +68123,7 @@ MonoBehaviour:
   brokeParticle: {fileID: 1708058329}
   fixingBarImage: {fileID: 793034220}
   isBroken: 0
+  partName: Lathe Tool
   isToolTurretInPlace: 0
   boxCollider: {fileID: 0}
 --- !u!4 &1176763232
@@ -76346,6 +76352,7 @@ MonoBehaviour:
   brokeParticle: {fileID: 1857819077}
   fixingBarImage: {fileID: 2021699158}
   isBroken: 0
+  partName: Foundation
   isSpannerInPlace: 0
   boxCollider: {fileID: 0}
 --- !u!1001 &1456495800
@@ -94726,6 +94733,7 @@ MonoBehaviour:
   brokeParticle: {fileID: 2121682866}
   fixingBarImage: {fileID: 194178731}
   isBroken: 0
+  partName: Lathe Spindle
   isLatheSpindlePlace: 0
   boxCollider: {fileID: 0}
 --- !u!4 &1698982352 stripped

@@ -75,7 +75,7 @@ public class BrokenPartFixableBySpanner : MonoBehaviour
         // Notify the LLM that the part has been fixed.
         if (GeminiAPI.unityAndGeminiInstance != null)
         {
-            string notificationMessage = $"System Notification: The part '{partName}' has been successfully repaired.";
+            string notificationMessage = $"System Notification: The part '{partName}' has been successfully repaired. The robot arm have no problem now.";
             GeminiAPI.unityAndGeminiInstance.SendChatRequest(notificationMessage);
             Debug.Log($"Sent notification to LLM: {notificationMessage}");
         }
