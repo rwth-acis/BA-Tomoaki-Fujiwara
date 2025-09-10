@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class BrokenPart : MonoBehaviour
+public class BrokenPartFixableByCamera : MonoBehaviour
 {
 
     //public GameObject visualCollider;
@@ -15,26 +15,26 @@ public class BrokenPart : MonoBehaviour
 
     private float currentFixedAmount = 0.0f;
 
-    public bool isSpannerInPlace = false;
+    public bool isCameraInPlace = false;
 
     public BoxCollider boxCollider;
 
 
     void Update() {
         
-        if (isSpannerInPlace) {
+        if (isCameraInPlace) {
             FixingJoint();
         
         }
         
     }
 
-    public void SpannerInPlace() { 
-        isSpannerInPlace=true;
+    public void CameraInPlace() { 
+        isCameraInPlace=true;
     }
 
-    public void SpannerOutOfPlace() { 
-        isSpannerInPlace=false;
+    public void CameraOutOfPlace() { 
+        isCameraInPlace=false;
     }
 
 

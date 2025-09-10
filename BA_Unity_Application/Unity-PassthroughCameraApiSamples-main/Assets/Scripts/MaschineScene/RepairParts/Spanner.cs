@@ -7,11 +7,11 @@ public class Spanner : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("BrokenPart"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("BrokenPartFixableBySpanner"))
         {
             Debug.Log("Spanner hit brokenPart");
             // Call the method on the BrokenPart script to repair the part
-            BrokenPart brokenPart = other.GetComponent<BrokenPart>();
+            BrokenPartFixableBySpanner brokenPart = other.GetComponent<BrokenPartFixableBySpanner>();
             if (brokenPart != null)
             {
                 brokenPart.SpannerInPlace();
@@ -20,11 +20,11 @@ public class Spanner : MonoBehaviour
     }
 
     public void OnTriggerExit(Collider other) {
-        if (other.CompareTag("BrokenPart"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("BrokenPartFixableBySpanner"))
         {
             Debug.Log("Spanner hit brokenPart");
             // Call the method on the BrokenPart script to stop repairing the part
-            BrokenPart brokenPart = other.GetComponent<BrokenPart>();
+            BrokenPartFixableBySpanner brokenPart = other.GetComponent<BrokenPartFixableBySpanner>();
             if (brokenPart != null)
             {
                 brokenPart.SpannerOutOfPlace();
@@ -33,9 +33,4 @@ public class Spanner : MonoBehaviour
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

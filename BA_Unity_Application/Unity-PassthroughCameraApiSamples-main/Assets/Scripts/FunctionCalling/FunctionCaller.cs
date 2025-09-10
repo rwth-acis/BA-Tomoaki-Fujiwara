@@ -14,6 +14,8 @@ public class FunctionCaller : MonoBehaviour {
     public ModifyAgentNavigationController agentController;
 
     public RobotArmManager robotArmManager;
+    public ProLatheMachine proLatheMachine;
+    public ProMill proMill;
 
     public VideoClipManager videoClipManager;
 
@@ -59,6 +61,12 @@ public class FunctionCaller : MonoBehaviour {
 
             case "scanRobotArmStatus":
                 return ScanRobotArmStatus();
+
+            case "scanLatheMachineStatus":
+                return ScanLatheMachineStatus();
+
+            case "scanMillStatus":
+                return ScanMillStatus();
 
             case "playVideoClip":
                 string videoName = parameters["videoName"] as string;
@@ -398,6 +406,16 @@ public class FunctionCaller : MonoBehaviour {
     public Dictionary<string, object> ScanRobotArmStatus()
     {
         return robotArmManager.ScanRobotArmStatus();
+    }
+
+    public Dictionary<string, object> ScanLatheMachineStatus()
+    {
+        return proLatheMachine.ScanLatheMachineStatus();
+    }
+
+    public Dictionary<string, object> ScanMillStatus()
+    {
+        return proMill.ScanMillStatus();
     }
 }
 

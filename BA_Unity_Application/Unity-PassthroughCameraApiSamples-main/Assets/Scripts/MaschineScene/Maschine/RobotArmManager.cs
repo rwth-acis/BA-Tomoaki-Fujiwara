@@ -17,12 +17,14 @@ public class RobotArmManager : MonoBehaviour
     public Convyor2 convyor2;
 
 
-    public BrokenPart foundationBrokenPart;
-    public BrokenPart lowerArmBrokenPart;
-    public BrokenPart lowerUpperArmBrokenPart;
-    public BrokenPart handGrabberBrokenPart;
+    public BrokenPartFixableBySpanner foundationBrokenPart;
+    public BrokenPartFixableBySpanner lowerArmBrokenPart;
+    public BrokenPartFixableBySpanner lowerUpperArmBrokenPart;
+    public BrokenPartFixableByRobotArmHandGrabber handGrabberBrokenPart;
 
-
+    public BrokenPartFixableByMillingCutter millingCutterBrokenPart;
+    public BrokenPartFixableByLatheSpindle latheSpindleBrokenPart;
+    public BrokenPartFixableByToolTurret toolTurretBrokenPart;
 
     public GameObject foundationBrokenMarker;
     public GameObject lowerArmBrokenMarker;
@@ -45,6 +47,22 @@ public class RobotArmManager : MonoBehaviour
             return new Dictionary<string, object> {
                 { "status", "error" },
                 { "message", "The robot arm is carrying wheel, please wait until the current process finish." }
+            };
+        }
+
+        if (latheSpindleBrokenPart.brokenStatus())
+        {
+            return new Dictionary<string, object> {
+                { "status", "error" },
+                { "message", "The lathe spindle is broken, please repair it first." }
+            };
+        }
+
+        if (toolTurretBrokenPart.brokenStatus())
+        {
+            return new Dictionary<string, object> {
+                { "status", "error" },
+                { "message", "The lathe tool turret is broken, please repair it first." }
             };
         }
 
@@ -102,6 +120,7 @@ public class RobotArmManager : MonoBehaviour
 
     public void StartProLathe() {
         proLatheMachine.StartLatheMachine();
+        proLatheMachine.PutWheelOnIt();
     }
 
     public Dictionary<string, object> PutWheelInFlipTable()
@@ -134,6 +153,8 @@ public class RobotArmManager : MonoBehaviour
         robotArmStatus = RobotArmStatus.Running;
         robotArmAnimator.Play("RobotArm_PlaceWheelInTable");
 
+        proLatheMachine.RemoveWheelOnIt();
+
         return new Dictionary<string, object> {
                 { "status", "success" },
                 { "message", "The robot arm has carryed wheel to flip table machine." }
@@ -144,6 +165,7 @@ public class RobotArmManager : MonoBehaviour
     public void StartFlipTable()
     {
         flipTableMachine.StartFlipTable();
+        flipTableMachine.PutWheelOnIt();
     }
 
     public Dictionary<string, object> PutWheelInMillingMachine()
@@ -155,6 +177,14 @@ public class RobotArmManager : MonoBehaviour
             return new Dictionary<string, object> {
                 { "status", "error" },
                 { "message", "The robot arm is carrying wheel, please wait until the current process finish." }
+            };
+        }
+
+        if (millingCutterBrokenPart.brokenStatus())
+        {
+            return new Dictionary<string, object> {
+                { "status", "error" },
+                { "message", "The lathe tool turret is broken, please repair it first." }
             };
         }
 
@@ -171,6 +201,8 @@ public class RobotArmManager : MonoBehaviour
             };
         }
 
+        flipTableMachine.RemoveWheelOnIt();
+
         robotArmStatus = RobotArmStatus.Running;
         robotArmAnimator.Play("RobotArm_PlaceWheelInMill");
 
@@ -184,6 +216,7 @@ public class RobotArmManager : MonoBehaviour
     public void StartProMill()
     {
         proMill.StartProMill();
+        proMill.PutWheelOnIt();
     }
 
     public Dictionary<string, object> PutWheelConvyor2()
@@ -195,6 +228,16 @@ public class RobotArmManager : MonoBehaviour
             return new Dictionary<string, object> {
                 { "status", "error" },
                 { "message", "The robot arm is carrying wheel, please wait until the current process finish." }
+            };
+        }
+
+        // Check if there is a wheel on the ProMill machine
+        if (!proMill.hasWheelOnIt)
+        {
+            Debug.Log("No wheel on the ProMill machine.");
+            return new Dictionary<string, object> {
+                { "status", "error" },
+                { "message", "There is no wheel on the milling machine to pick up." }
             };
         }
 
@@ -212,6 +255,8 @@ public class RobotArmManager : MonoBehaviour
 
         robotArmStatus = RobotArmStatus.Running;
         robotArmAnimator.Play("RobotArm_PlaceWheelOnBand");
+
+        proMill.RemoveWheelOnIt();
 
         return new Dictionary<string, object> {
                 { "status", "success" },
@@ -285,6 +330,11 @@ public class RobotArmManager : MonoBehaviour
         {
             handGrabberBrokenMarker.SetActive(true);
             brokenParts = brokenParts + " Hand Grabber ";
+
+            return new Dictionary<string, object> {
+                { "status", "success" },
+                { "message", "There is an error in robot arm at part {brokenParts}. To fix this the user should grab another hand grabber and replace with this error part." }
+        };
         }
 
         if (brokenParts == "")

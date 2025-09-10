@@ -7,6 +7,9 @@ public class MaschineSceneManager : MonoBehaviour
     public int finishedWheelNumber = 0;
 
     public RobotArmManager robotArmManager;
+    public BrokenPartFixableByMillingCutter millingCutterBrokenPart;
+    public BrokenPartFixableByLatheSpindle latheSpindleBrokenPart;
+    public BrokenPartFixableByToolTurret toolTurretBrokenPart;
 
     public void DeliveryFinishedWheel()
     {
@@ -22,12 +25,13 @@ public class MaschineSceneManager : MonoBehaviour
         {
             // Break Lower upper arm
             robotArmManager.PartsBreakeLowerUpperArm();
-
+            toolTurretBrokenPart.BrokeTheJoint();
         }
         else if (finishedWheelNumber == 3)
         {
             // Break LowerArm
             robotArmManager.PartsBreakeLowerArm();
+            millingCutterBrokenPart.BrokeTheJoint();
 
         }
 
@@ -35,7 +39,7 @@ public class MaschineSceneManager : MonoBehaviour
         {
             // Break hand grab
             robotArmManager.PartsBreakeHandGrabber();
-
+            latheSpindleBrokenPart.BrokeTheJoint();
         }
 
         else if (finishedWheelNumber == 5)

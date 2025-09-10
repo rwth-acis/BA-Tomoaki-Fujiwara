@@ -241,6 +241,20 @@ public class GeminiAPI : MonoBehaviour
                     description = "scan the any errors of the robot arm that hinder the robot arm movement. If the error exists, the error section will be marked, so the user can use the spanner to fix the error.",
                     parameters = new Parameters { type = "object" }
                 });
+
+                functionDeclarations.Add(new FunctionDeclaration
+                {
+                    name = "scanLatheMachineStatus",
+                    description = "scan the any errors of the lathe machine that hinder the robot arm movement. If the error exists, the error section will be marked, so the user can use the object to fix the error.",
+                    parameters = new Parameters { type = "object" }
+                });
+
+                functionDeclarations.Add(new FunctionDeclaration
+                {
+                    name = "scanMillStatus",
+                    description = "scan the any errors of the milling machine that hinder the robot arm movement. If the error exists, the error section will be marked, so the user can use the object to fix the error.",
+                    parameters = new Parameters { type = "object" }
+                });
                 /*
                 functionDeclarations.Add(new FunctionDeclaration
                 {

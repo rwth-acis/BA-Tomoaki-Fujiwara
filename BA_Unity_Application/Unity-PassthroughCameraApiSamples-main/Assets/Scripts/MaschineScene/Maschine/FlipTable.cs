@@ -32,6 +32,11 @@ public class FlipTable : MonoBehaviour
         hasWheelOnIt = true;
     }
 
+    public void RemoveWheelOnIt()
+    {
+        hasWheelOnIt = false;
+    }
+
     public bool HasWheelOnIt()
     {
         return hasWheelOnIt;

@@ -45,11 +45,11 @@ TagManager:
   - Player
   - MixercupPourInCollider
   - Internal_EditorOnly_Dont_Include_Foto
-  - 
-  - 
-  - 
-  - 
-  - 
+  - BrokenPartFixableBySpanner
+  - BrokenPartFixableByToolTurret
+  - BrokenPartFixableByLatheSpindle
+  - BrokenPartFixableByMillingCutter
+  - BrokenPartFixableByRobotArmHandGrabber
   - 
   - 
   - 
