@@ -151,7 +151,7 @@ public class GeminiAPI : MonoBehaviour
         functionDeclarations.Add(new FunctionDeclaration
         {
             name = "pointVirtualAgentArmToTarget",
-            description = "Commands the agent to first turn towards a target object and then point its arm at it for a few seconds.",
+            description = "When a user asks you to show, point to, or identify a specific object, you must call this function.\r\n\r\n**Instructions:**\r\n1.  Always call the `pointVirtualAgentArmToTarget` function when the user asks you to locate an object.\r\n2.  The `objectName` parameter must be the name of the object the user wants to identify.\r\n3.  If the user's request is a bit vague, try your best to infer the most likely object name.\r\n\r\n**Example Interactions:**\r\n\r\n* **User:** \"Where is the sword?\"\r\n    **Assistant:** `pointVirtualAgentArmToTarget(objectName: \"sword\")`\r\n\r\n* **User:** \"Can you show me the treasure chest?\"\r\n    **Assistant:** `pointVirtualAgentArmToTarget(objectName: \"treasure chest\")`\r\n\r\n* **User:** \"Point at the exit.\"\r\n    **Assistant:** `pointVirtualAgentArmToTarget(objectName: \"exit\")`\r\n\r\nBy following these guidelines, you will be able to perform your core task of helping users navigate and identify objects in the environment.",
             parameters = new Parameters
             {
                 type = "object",
@@ -167,17 +167,18 @@ public class GeminiAPI : MonoBehaviour
         switch (currentScene)
         {
             case SceneContext.Kitchen:
+                /*
                 functionDeclarations.Add(new FunctionDeclaration
                 {
                     name = "get_Faucet_Water_Status",
                     description = "This will get the water status from kitchen faucet. Faucet has cold water handle and hot water handle. The water status is represented by combination of rotations from handles.",
                     parameters = new Parameters { type = "object" }
-                });
+                });*/
 
                 functionDeclarations.Add(new FunctionDeclaration
                 {
                     name = "carryItemToUser",
-                    description = "Commands the agent to pick up a specified item and carry it to the user.",
+                    description = "When the user asks you to bring an object, you must call the `carryItemToUser` function with the correct `objectName`.\r\n\r\nExample Interactions:\r\nUser: \"Can you bring me the book?\"\r\nAssistant: carryItemToUser(objectName: \"book\")\r\n\r\nUser: \"Please go get the coffee cup.\"\r\nAssistant: carryItemToUser(objectName: \"coffee cup\")\r\n\r\nUser: \"Bring the scissors here.\"\r\nAssistant: carryItemToUser(objectName: \"scissors\")\r\n\r\nYou should infer the `objectName` from the user's request, but if the item is not clear, ask for clarification.",
                     parameters = new Parameters
                     {
                         type = "object",
@@ -192,7 +193,7 @@ public class GeminiAPI : MonoBehaviour
                 functionDeclarations.Add(new FunctionDeclaration
                 {
                     name = "playVideoClip",
-                    description = "Displays a video clip to demonstrate a specific tutorial step. This function requires one argument: the name of the video clip to be played.",
+                    description = "When the user asks for a demonstration of a specific step, you must call the `playVideoClip` function with the appropriate `videoName`.\r\n\r\nAvailable videos: 'AddButterInBowl', 'AddEggInBowl', 'BakeCake', 'BeatTheEgg', 'MixTheBatter', 'PourBatterInPlate', 'PourButterInCup', 'PourEggInCup', 'PourFlourInCup'.\r\n\r\nExample interactions:\r\nUser: \"How do I add butter to the bowl?\"\r\nAssistant: playVideoClip(videoName: \"AddButterInBowl\")\r\n\r\nUser: \"Can you show me how to mix the batter?\"\r\nAssistant: playVideoClip(videoName: \"MixTheBatter\")\r\n\r\nUser: \"What's the next step after adding the egg?\"\r\nAssistant: (If the next step is to mix the batter) playVideoClip(videoName: \"MixTheBatter\")",
                     parameters = new Parameters
                     {
                         type = "object",

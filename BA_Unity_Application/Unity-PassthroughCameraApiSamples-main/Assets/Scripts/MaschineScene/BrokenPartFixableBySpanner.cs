@@ -12,6 +12,7 @@ public class BrokenPartFixableBySpanner : MonoBehaviour
     public Image fixingBarImage;
 
     public bool isBroken = false;
+    public string partName = "Unnamed Part";
 
     private float currentFixedAmount = 0.0f;
 
@@ -71,6 +72,17 @@ public class BrokenPartFixableBySpanner : MonoBehaviour
             boxCollider.enabled = true;
         }
 
+        // Notify the LLM that the part has been fixed.
+        if (GeminiAPI.unityAndGeminiInstance != null)
+        {
+            string notificationMessage = $"System Notification: The part '{partName}' has been successfully repaired.";
+            GeminiAPI.unityAndGeminiInstance.SendChatRequest(notificationMessage);
+            Debug.Log($"Sent notification to LLM: {notificationMessage}");
+        }
+        else
+        {
+            Debug.LogWarning("GeminiAPI instance not found. Could not send repair notification to LLM.");
+        }
     }
 
     public void FixingJoint()
