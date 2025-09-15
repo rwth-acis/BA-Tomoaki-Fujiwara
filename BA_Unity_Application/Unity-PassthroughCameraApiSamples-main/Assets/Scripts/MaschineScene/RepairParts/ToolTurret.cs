@@ -5,6 +5,17 @@ using UnityEngine;
 public class ToolTurret : MonoBehaviour
 {
 
+    private Vector3 initialLocalPosition;
+    private Quaternion initialLocalRotation;
+
+    void Start()
+    {
+
+        initialLocalPosition = transform.localPosition;
+        initialLocalRotation = transform.localRotation;
+    }
+
+
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("BrokenPartFixableByToolTurret"))
@@ -32,5 +43,11 @@ public class ToolTurret : MonoBehaviour
         }
     }
 
+    public void ResetPosition()
+    {
+
+        transform.localPosition = initialLocalPosition;
+        transform.localRotation = initialLocalRotation;
+    }
 
 }

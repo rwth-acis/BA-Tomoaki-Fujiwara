@@ -5,6 +5,16 @@ using UnityEngine;
 public class MillingCutter : MonoBehaviour
 {
 
+    private Vector3 initialLocalPosition;
+    private Quaternion initialLocalRotation;
+
+    void Start()
+    {
+
+        initialLocalPosition = transform.localPosition;
+        initialLocalRotation = transform.localRotation;
+    }
+
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("BrokenPartFixableByMillingCutter"))
@@ -30,6 +40,13 @@ public class MillingCutter : MonoBehaviour
                 brokenPart.MillingCutterOutOfPlace();
             }
         }
+    }
+
+    public void ResetPosition()
+    {
+
+        transform.localPosition = initialLocalPosition;
+        transform.localRotation = initialLocalRotation;
     }
 
 

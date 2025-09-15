@@ -5,6 +5,16 @@ using UnityEngine;
 public class Spanner : MonoBehaviour
 {
 
+    private Vector3 initialLocalPosition;
+    private Quaternion initialLocalRotation;
+
+    void Start()
+    {
+
+        initialLocalPosition = transform.localPosition;
+        initialLocalRotation = transform.localRotation;
+    }
+
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("BrokenPartFixableBySpanner"))
@@ -32,5 +42,12 @@ public class Spanner : MonoBehaviour
         }
     }
 
+
+    public void ResetPosition()
+    {
+
+        transform.localPosition = initialLocalPosition;
+        transform.localRotation = initialLocalRotation;
+    }
 
 }

@@ -321,6 +321,11 @@ public class FunctionCaller : MonoBehaviour {
                 continue;
             }
 
+            else if (LayerMask.LayerToName(obj.layer) == "MachineComponent_LLM_Ignore")
+            {
+                continue;
+            }
+
             else if (LayerMask.LayerToName(obj.layer) == "ParticleCollideIgnore")
             {
                 continue;

@@ -1052,7 +1052,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 23516320}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Process_ProMill__DoorRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1152,37 +1152,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24582700}
   m_CullTransparentMesh: 1
---- !u!1 &28153281
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 28153282}
-  m_Layer: 15
-  m_Name: TargetPosition04
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &28153282
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 28153281}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.000673, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2071148621}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &28984201
 GameObject:
   m_ObjectHideFlags: 0
@@ -1579,7 +1548,7 @@ GameObject:
   - component: {fileID: 37135298}
   - component: {fileID: 37135300}
   - component: {fileID: 37135299}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_61
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2289,7 +2258,7 @@ GameObject:
   - component: {fileID: 57146801}
   - component: {fileID: 57146803}
   - component: {fileID: 57146802}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_107
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3203,7 +3172,7 @@ GameObject:
   - component: {fileID: 81398544}
   - component: {fileID: 81398546}
   - component: {fileID: 81398545}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: DoorFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3369,7 +3338,7 @@ GameObject:
   - component: {fileID: 81865761}
   - component: {fileID: 81865763}
   - component: {fileID: 81865762}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_67
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4625,7 +4594,7 @@ GameObject:
   - component: {fileID: 96376934}
   - component: {fileID: 96376936}
   - component: {fileID: 96376935}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_109
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4706,7 +4675,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 98000540}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Process_ProMill__PanelSupport_74
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4742,7 +4711,7 @@ GameObject:
   - component: {fileID: 98630457}
   - component: {fileID: 98630459}
   - component: {fileID: 98630458}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5253,7 +5222,7 @@ GameObject:
   - component: {fileID: 118557528}
   - component: {fileID: 118557530}
   - component: {fileID: 118557529}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: Object_99
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5623,7 +5592,7 @@ GameObject:
   - component: {fileID: 124925008}
   - component: {fileID: 124925010}
   - component: {fileID: 124925009}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5770,7 +5739,7 @@ GameObject:
   - component: {fileID: 145511592}
   - component: {fileID: 145511594}
   - component: {fileID: 145511593}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Object_148
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6848,7 +6817,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 197350049}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: TargetPosition03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12636,7 +12605,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 212324631}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: ProcessMachine_FlipTable_148
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12674,7 +12643,7 @@ GameObject:
   - component: {fileID: 212523074}
   - component: {fileID: 212523076}
   - component: {fileID: 212523075}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_68
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13930,7 +13899,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 251128567}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: TargetPosition03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14908,7 +14877,7 @@ GameObject:
   - component: {fileID: 283251727}
   - component: {fileID: 283251729}
   - component: {fileID: 283251728}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_38
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15268,7 +15237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 301916366}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: geo_chrome_1_007_130
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15824,7 +15793,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 309125464}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: TargetPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16107,7 +16076,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 326850195}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: TargetPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16229,89 +16198,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 327301783}
   m_CullTransparentMesh: 1
---- !u!1 &330642071
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 330642072}
-  - component: {fileID: 330642074}
-  - component: {fileID: 330642073}
-  m_Layer: 15
-  m_Name: Object_24
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &330642072
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330642071}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1902561782}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &330642073
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330642071}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: -6111139067206785889, guid: ae6394eb8bde5fb46aa82c9ba3c23de4, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &330642074
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330642071}
-  m_Mesh: {fileID: -3304173957634012018, guid: ae6394eb8bde5fb46aa82c9ba3c23de4, type: 3}
 --- !u!1 &338741233
 GameObject:
   m_ObjectHideFlags: 0
@@ -16642,7 +16528,7 @@ GameObject:
   - component: {fileID: 354452020}
   - component: {fileID: 354452022}
   - component: {fileID: 354452021}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_37
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17461,37 +17347,6 @@ Transform:
   - {fileID: 2022493710}
   m_Father: {fileID: 1482583834}
   m_LocalEulerAnglesHint: {x: 0, y: 71.5, z: 0}
---- !u!1 &379430083
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 379430084}
-  m_Layer: 15
-  m_Name: TargetPosition01
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &379430084
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379430083}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.000625, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2071148621}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &387117645
 GameObject:
   m_ObjectHideFlags: 0
@@ -17590,7 +17445,7 @@ GameObject:
   - component: {fileID: 392526246}
   - component: {fileID: 392526248}
   - component: {fileID: 392526247}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_52
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17890,7 +17745,7 @@ GameObject:
   - component: {fileID: 401056386}
   - component: {fileID: 401056388}
   - component: {fileID: 401056387}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_61
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18585,6 +18440,7 @@ GameObject:
   - component: {fileID: 430331273}
   - component: {fileID: 430331272}
   - component: {fileID: 430331271}
+  - component: {fileID: 430331276}
   m_Layer: 0
   m_Name: '[RepairParts]RobotArmHandGrabber'
   m_TagString: Untagged
@@ -18736,6 +18592,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0014, y: 0.0014, z: 0.0014}
   m_Center: {x: 0, y: 0.0005, z: 0}
+--- !u!114 &430331276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430331269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ba2ac043a0776a4d846aaf6ba38a734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: 'Spare part: Hand Grabber'
+  description: 'This is a Hand Grabber, a spare part used to repair a hand of RobotArm.
+
+
+    If
+    the RobotArm Hand is broken, the user can grab this spare part and hit the machine''s
+    marker to replace it and complete the repair.'
+  type: 0
+  url: 
 --- !u!1 &431166868
 GameObject:
   m_ObjectHideFlags: 0
@@ -18922,7 +18799,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 432501799}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: geo_black_2_005_138
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19418,7 +19295,7 @@ GameObject:
   - component: {fileID: 445446253}
   - component: {fileID: 445446255}
   - component: {fileID: 445446254}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Object_147
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20212,7 +20089,7 @@ GameObject:
   - component: {fileID: 453632113}
   - component: {fileID: 453632115}
   - component: {fileID: 453632114}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_66
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20504,7 +20381,7 @@ GameObject:
   - component: {fileID: 463521660}
   - component: {fileID: 463521662}
   - component: {fileID: 463521661}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_106
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21441,7 +21318,7 @@ GameObject:
   - component: {fileID: 491377605}
   - component: {fileID: 491377607}
   - component: {fileID: 491377606}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_108
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22240,7 +22117,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 522434631}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Process_ProMill__C_Link_82
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22554,7 +22431,7 @@ GameObject:
   - component: {fileID: 531531212}
   - component: {fileID: 531531214}
   - component: {fileID: 531531213}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: Object_103
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22903,8 +22780,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ba2ac043a0776a4d846aaf6ba38a734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: 
-  description: 
+  title: Spanner
+  description: 'This is a spanner, a tool used for repairing machinery.
+
+
+    If
+    a machine part is broken and can be fixed with this spanner, the user can grab
+    this tool and hit the machine''s marker to repair it.'
   type: 0
   url: 
 --- !u!1 &536105266
@@ -24028,7 +23910,7 @@ GameObject:
   - component: {fileID: 584964766}
   - component: {fileID: 584964768}
   - component: {fileID: 584964767}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_55
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24111,7 +23993,7 @@ GameObject:
   - component: {fileID: 585805394}
   - component: {fileID: 585805396}
   - component: {fileID: 585805395}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_68
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24194,7 +24076,7 @@ GameObject:
   - component: {fileID: 592166904}
   - component: {fileID: 592166906}
   - component: {fileID: 592166905}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_63
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24961,7 +24843,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 602238097}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: geo_black_2_004_118
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24994,7 +24876,7 @@ GameObject:
   - component: {fileID: 603580313}
   - component: {fileID: 603580315}
   - component: {fileID: 603580314}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Object_146
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25886,7 +25768,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 631972307}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: TargetPosition01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26053,7 +25935,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 641912372}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TargetPosition03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31053,6 +30935,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractableObjectLabel Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5805240707573970943, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805240707939856552, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5805240707939856556, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -31060,6 +30950,14 @@ PrefabInstance:
     - target: {fileID: 5805240707939856556, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805240708164196242, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805240708661825080, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5805240708661825082, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
       propertyPath: m_text
@@ -31088,6 +30986,10 @@ PrefabInstance:
     - target: {fileID: 5805240708661825083, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -17.825
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805240709293969646, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31257,7 +31159,7 @@ GameObject:
   - component: {fileID: 652997312}
   - component: {fileID: 652997314}
   - component: {fileID: 652997313}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: Object_101
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36421,7 +36323,7 @@ GameObject:
   - component: {fileID: 668086505}
   - component: {fileID: 668086507}
   - component: {fileID: 668086506}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_59
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37367,7 +37269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 699338375}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: geo_chrome_1_009_134
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37433,7 +37335,7 @@ GameObject:
   - component: {fileID: 703259845}
   - component: {fileID: 703259847}
   - component: {fileID: 703259846}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_64
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37514,8 +37416,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 703678450}
-  m_Layer: 25
-  m_Name: Process_ProLathe__ToolChanger_140
+  - component: {fileID: 703678451}
+  m_Layer: 26
+  m_Name: '[Lathe_Tool]ToolTaret'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37540,6 +37443,77 @@ Transform:
   - {fileID: 1708058330}
   m_Father: {fileID: 1482583834}
   m_LocalEulerAnglesHint: {x: -57.41, y: 0, z: 0}
+--- !u!114 &703678451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703678449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ba2ac043a0776a4d846aaf6ba38a734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: lathe's tool turret
+  description: 'This is a lathe''s tool turret.
+
+
+    A lathe''s tool turret is a
+    device that holds multiple cutting tools and automatically switches between them.
+    This allows for the continuous and diverse machining of a wheel. It eliminates
+    the need for an operator to manually change tools, which shortens processing
+    time and improves productivity.
+
+
+    Functions of a Tool Turret
+
+    A tool
+    turret enables the following operations:
+
+
+    Outer and Inner Diameter Cutting:
+    Precisely cuts the outer rim and inner hub bore of the wheel.
+
+
+    Facing: Uses
+    a tool to smooth the circular end face, such as the wheel''s mounting surface.
+
+
+    Grooving:
+    Switches to a different tool to cut specific grooves for a wheel''s design or
+    function.
+
+
+    Drilling: Attaches a drill tool to create the center bore or
+    other holes in the wheel.
+
+
+    Threading: Replaces the tool to cut screw threads
+    into the wheel''s hub bore.
+
+
+    Advantages of a Tool Turret
+
+    The main advantage
+    of a tool turret is its automatic tool changing capability. By using multiple
+    tools on a single machine, it offers the following benefits:
+
+
+    Improved Work
+    Efficiency: Multiple steps can be performed in a single setup, which significantly
+    reduces production time.
+
+
+    High-Precision Finishing: The lack of tool-changing
+    errors ensures consistent quality during machining.
+
+
+    Handling Complex Shapes:
+    By combining multiple tools, a single machine can finish wheels with diverse
+    and complex shapes.'
+  type: 0
+  url: 
 --- !u!1 &704689823
 GameObject:
   m_ObjectHideFlags: 0
@@ -37551,7 +37525,7 @@ GameObject:
   - component: {fileID: 704689824}
   - component: {fileID: 704689826}
   - component: {fileID: 704689825}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: Object_104
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39789,7 +39763,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 758325546}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TargetPosition04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39878,7 +39852,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 766258629}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: ProcessMachine_FlipTable__Table_152
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39914,7 +39888,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 767635684}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: TargetPosition04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39945,8 +39919,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 768691153}
-  m_Layer: 15
-  m_Name: MillingCutter
+  - component: {fileID: 768691154}
+  m_Layer: 26
+  m_Name: '[Milling Tool]End Mill'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39972,42 +39947,59 @@ Transform:
   - {fileID: 210645301}
   m_Father: {fileID: 1998539873}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &768691154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768691152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ba2ac043a0776a4d846aaf6ba38a734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: End Mill
+  description: 'This is an end mill part from milling machine.
+
+
+    An end mill
+    is a versatile cutting tool used for a variety of tasks, including milling surfaces,
+    cutting grooves, drilling holes, and machining contours.
+
+
+    Mounted on a milling
+    machine, the end mill rotates at high speed and is fed into the workpiece (in
+    this case, a wheel). It gradually carves away material to create the desired
+    shape.
+
+
+    Examples of Machining with an End Mill
+
+    Milling a Flat Surface:
+    It precisely smooths the wheel''s mounting surface.
+
+
+    Groove Machining: It
+    carves grooves for design or function, such as between the spokes or creating
+    decorative recesses.
+
+
+    Hole Drilling: It drills cylindrical holes, like those
+    for wheel nuts.
+
+
+    This tool is unique because it has cutting edges on both
+    its cylindrical side and its tip, allowing it to machine in multiple directions.
+    Its versatility makes it one of the most fundamental cutting tools used with
+    a milling machine.'
+  type: 0
+  url: 
 --- !u!4 &773321675 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7770564537658312597, guid: 63c60a9a1c88bcb4f8f2f5dc4cbcd3dc, type: 3}
   m_PrefabInstance: {fileID: 513380792}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &776907312
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 776907313}
-  m_Layer: 15
-  m_Name: TargetPosition02
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &776907313
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 776907312}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.000418}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2071148621}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &777817946
 GameObject:
   m_ObjectHideFlags: 0
@@ -40435,7 +40427,7 @@ GameObject:
   - component: {fileID: 795830362}
   - component: {fileID: 795830364}
   - component: {fileID: 795830363}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_110
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41029,7 +41021,7 @@ GameObject:
   - component: {fileID: 812259643}
   - component: {fileID: 812259645}
   - component: {fileID: 812259644}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_67
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41551,7 +41543,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 814817482}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: geo_black_matte_1_143
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41986,7 +41978,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 836298950}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: TargetPosition02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42566,7 +42558,7 @@ GameObject:
   - component: {fileID: 848631096}
   - component: {fileID: 848631098}
   - component: {fileID: 848631097}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Handle_Foundation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42899,89 +42891,6 @@ MonoBehaviour:
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
---- !u!1 &867240858
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 867240859}
-  - component: {fileID: 867240861}
-  - component: {fileID: 867240860}
-  m_Layer: 15
-  m_Name: Object_26
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &867240859
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867240858}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1902561782}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &867240860
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867240858}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: -7006713757120664463, guid: ae6394eb8bde5fb46aa82c9ba3c23de4, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &867240861
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867240858}
-  m_Mesh: {fileID: 7760136439735019128, guid: ae6394eb8bde5fb46aa82c9ba3c23de4, type: 3}
 --- !u!1001 &867576482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49577,7 +49486,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 906922334}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: TargetPosition01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50193,7 +50102,7 @@ GameObject:
   - component: {fileID: 910501413}
   - component: {fileID: 910501415}
   - component: {fileID: 910501414}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: Object_91
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50390,6 +50299,7 @@ GameObject:
   - component: {fileID: 912035283}
   - component: {fileID: 912035282}
   - component: {fileID: 912035281}
+  - component: {fileID: 912035286}
   m_Layer: 15
   m_Name: '[RepairParts]Lathe_Tool_Turret'
   m_TagString: Untagged
@@ -50539,6 +50449,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.002, y: 0.008, z: 0.008}
   m_Center: {x: -0.001, y: 0, z: 0}
+--- !u!114 &912035286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912035279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ba2ac043a0776a4d846aaf6ba38a734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: 'Spare part: Lathe Tool Turret'
+  description: 'This is a Spindle of Lathe machine, a spare part used to repair a
+    lathe machine.
+
+
+    If the lathe machine''s spindle is broken, the user can
+    grab this spare part and hit the machine''s marker to replace it and complete
+    the repair.'
+  type: 0
+  url: 
 --- !u!1 &912243439
 GameObject:
   m_ObjectHideFlags: 0
@@ -54598,7 +54530,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1002939670}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: TargetPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55300,7 +55232,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1021251011}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: TargetPosition04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59642,37 +59574,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042359431}
   m_CullTransparentMesh: 1
---- !u!1 &1052694174
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1052694175}
-  m_Layer: 15
-  m_Name: TargetPosition03
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1052694175
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052694174}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: -0.000346}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2071148621}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1053890777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66344,8 +66245,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1124995525}
-  m_Layer: 25
-  m_Name: Process_ProLathe__Spindle_120
+  - component: {fileID: 1124995526}
+  m_Layer: 26
+  m_Name: '[Lathe_Tool]Spindle'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66376,6 +66278,39 @@ Transform:
   - {fileID: 2121682867}
   m_Father: {fileID: 1482583834}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1124995526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124995524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ba2ac043a0776a4d846aaf6ba38a734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: chuck, wheel holder from lathe
+  description: 'The part of a lathe that holds the wheel is called a chuck.
+
+    This
+    is a chuck part from lathe.
+
+    
+
+    For a wheel, a specialized type of chuck
+    is used. This is a 3-jaw chuck, which uses a set of jaws to grip the workpiece
+    firmly. These jaws can be adjusted to accommodate different sizes of wheels.
+
+    
+
+    
+
+    3-jaw
+    chuck: This is a self-centering chuck where all three jaws move simultaneously.
+    It is quick and easy to set up for round workpieces like wheels.'
+  type: 0
+  url: 
 --- !u!1 &1130862661
 GameObject:
   m_ObjectHideFlags: 0
@@ -68771,7 +68706,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1185572942}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: TargetPosition03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68918,6 +68853,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractableObjectLabel Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5805240707573970943, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805240707939856552, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5805240707939856556, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -68929,6 +68872,14 @@ PrefabInstance:
     - target: {fileID: 5805240707939856556, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.161
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805240708164196242, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805240708661825080, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5805240708661825082, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
       propertyPath: m_text
@@ -68957,6 +68908,10 @@ PrefabInstance:
     - target: {fileID: 5805240708661825083, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -17.825
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805240709293969646, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -69384,7 +69339,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1210378825}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: geo_metal_2_003_144
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69418,7 +69373,7 @@ GameObject:
   - component: {fileID: 1210381466}
   - component: {fileID: 1210381468}
   - component: {fileID: 1210381467}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69928,7 +69883,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1227904796}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: geo_reflective_glass_3_146
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70114,7 +70069,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1233084981}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: TargetPosition01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70263,7 +70218,7 @@ GameObject:
   - component: {fileID: 1235128449}
   - component: {fileID: 1235128451}
   - component: {fileID: 1235128450}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_53
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70571,7 +70526,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1244717465}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: TargetPosition04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71071,8 +71026,9 @@ GameObject:
   - component: {fileID: 1261484759}
   - component: {fileID: 1261484758}
   - component: {fileID: 1261484757}
+  - component: {fileID: 1261484762}
   m_Layer: 15
-  m_Name: '[RepairParts]MillingCutter'
+  m_Name: '[RepairParts, spare part]MillingCutter'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71219,6 +71175,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1261484762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261484755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ba2ac043a0776a4d846aaf6ba38a734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: 'Spare part: Milling machine'
+  description: 'This is a Milling Cutter, a spare part used to repair a milling machine.
+
+
+    If
+    the milling machine''s cutter is broken, the user can grab this spare part and
+    hit the machine''s marker to replace it and complete the repair.'
+  type: 0
+  url: 
 --- !u!1 &1264427055
 GameObject:
   m_ObjectHideFlags: 0
@@ -71650,7 +71627,7 @@ GameObject:
   - component: {fileID: 1286572786}
   - component: {fileID: 1286572788}
   - component: {fileID: 1286572787}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_56
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71799,7 +71776,7 @@ GameObject:
   - component: {fileID: 1288301648}
   - component: {fileID: 1288301650}
   - component: {fileID: 1288301649}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72608,7 +72585,7 @@ GameObject:
   - component: {fileID: 1336709036}
   - component: {fileID: 1336709038}
   - component: {fileID: 1336709037}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_65
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72689,7 +72666,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1337031671}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: Process_ProLathe__Finger1_135
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72712,136 +72689,6 @@ Transform:
   - {fileID: 699338375}
   m_Father: {fileID: 1704966951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1337682162
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1902561782}
-    m_Modifications:
-    - target: {fileID: 5805240707573970928, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: viewTargets.Array.data[0]
-      value: 
-      objectReference: {fileID: 2071148621}
-    - target: {fileID: 5805240707573970928, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: viewTargets.Array.data[1]
-      value: 
-      objectReference: {fileID: 379430084}
-    - target: {fileID: 5805240707573970928, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: viewTargets.Array.data[2]
-      value: 
-      objectReference: {fileID: 776907313}
-    - target: {fileID: 5805240707573970928, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: viewTargets.Array.data[3]
-      value: 
-      objectReference: {fileID: 1052694175}
-    - target: {fileID: 5805240707573970928, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: viewTargets.Array.data[4]
-      value: 
-      objectReference: {fileID: 28153282}
-    - target: {fileID: 5805240707573970942, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805240707573970942, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805240707573970942, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805240707573970942, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805240707573970942, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.00042
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805240707573970942, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805240707573970942, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805240707573970942, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805240707573970942, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805240707573970942, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805240707573970942, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805240707573970942, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 270
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805240707573970942, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805240707573970943, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: m_Name
-      value: InteractableObjectLabel Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805240707939856556, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 114.31
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805240707939856556, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 35.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805240708661825082, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: m_text
-      value: Camera
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805240708661825083, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805240708661825083, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805240708661825083, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 50.309998
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805240708661825083, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 15.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805240708661825083, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 57.155
-      objectReference: {fileID: 0}
-    - target: {fileID: 5805240708661825083, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -17.825
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
---- !u!4 &1337682163 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5805240707573970942, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
-  m_PrefabInstance: {fileID: 1337682162}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1340431861
 GameObject:
   m_ObjectHideFlags: 0
@@ -73410,7 +73257,7 @@ GameObject:
   - component: {fileID: 1354175086}
   - component: {fileID: 1354175088}
   - component: {fileID: 1354175087}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_57
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73599,7 +73446,6 @@ Transform:
   - {fileID: 430331270}
   - {fileID: 1704966951}
   - {fileID: 912035280}
-  - {fileID: 1902561782}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1368471049
@@ -74588,7 +74434,7 @@ GameObject:
   - component: {fileID: 1393829371}
   - component: {fileID: 1393829373}
   - component: {fileID: 1393829372}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74748,6 +74594,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractableObjectLabel Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5805240707573970943, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805240707939856552, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5805240707939856556, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -74759,6 +74613,14 @@ PrefabInstance:
     - target: {fileID: 5805240707939856556, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805240708164196242, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805240708661825080, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5805240708661825082, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
       propertyPath: m_text
@@ -74787,6 +74649,10 @@ PrefabInstance:
     - target: {fileID: 5805240708661825083, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -17.825
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805240709293969646, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -75320,7 +75186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1408813007}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: Process_ProLathe__Finger3_131
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76224,7 +76090,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1451792194}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TargetPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77901,7 +77767,7 @@ GameObject:
   - component: {fileID: 1477158475}
   - component: {fileID: 1477158477}
   - component: {fileID: 1477158476}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78169,8 +78035,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ba2ac043a0776a4d846aaf6ba38a734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: 
-  description: 
+  title: Lathe machine
+  description: "Processing Steps\r 1\n\r\nMachining with a Lathe (with a tool turret)\r\nThis
+    process involves cutting the rotating body of the wheel. Since multiple cutting
+    tools (bits) are mounted on the tool turret, several machining processes can
+    be performed continuously without the need for manual tool changes.\r\n\r\nRoughing
+    and Finishing of the Rim and Disc Surface:\r\nFirst, a hard bit is used to roughly
+    cut the material (roughing) to remove unnecessary parts.\r\nNext, the machine
+    automatically switches to a sharper bit to smooth the surface or shape it according
+    to the design (finishing).\r\n\r\nMachining the Hub Bore:\r\nThe inside of the
+    hub bore is cut with a drill or boring bar to achieve a precise diameter.\r\nIf
+    necessary, the bit is switched to a facing tool to flatten the surface that makes
+    contact with the hub.\r\n\r\nMachining the Outer Circumference of the Wheel:\r\nThe
+    outer circumference of the rim is machined to a precise diameter, or specific
+    design grooves are cut.\r\n\r\nThis process is specialized for circular machining,
+    allowing for a high-precision finish on parts directly related to the wheel's
+    appearance and its connection to the tire."
   type: 0
   url: 
 --- !u!95 &1482583836
@@ -79502,7 +79382,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1524765562}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: geo_chrome_1_006_119
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79735,7 +79615,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1532400503}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: geo_white_matte_5_147
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79936,7 +79816,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1547492146}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WheelSetPlace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79970,7 +79850,7 @@ GameObject:
   - component: {fileID: 1549108650}
   - component: {fileID: 1549108652}
   - component: {fileID: 1549108651}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: DoorFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80116,7 +79996,7 @@ GameObject:
   - component: {fileID: 1553427767}
   - component: {fileID: 1553427769}
   - component: {fileID: 1553427768}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_54
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80197,7 +80077,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1553752235}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: TargetPosition03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80423,7 +80303,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1558769115}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: geo_chrome_1_010_139
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80455,7 +80335,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1559218433}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Process_ProMill__PanelDisplay_88
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86820,7 +86700,7 @@ GameObject:
   - component: {fileID: 1628617714}
   - component: {fileID: 1628617716}
   - component: {fileID: 1628617715}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_112
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87481,7 +87361,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1641974201}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: TargetPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87733,7 +87613,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1653000274}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TargetPosition01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88239,7 +88119,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1658722712}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: TargetPosition02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93698,8 +93578,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ba2ac043a0776a4d846aaf6ba38a734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: 
-  description: 
+  title: FlipTable
+  description: 'Processing Steps 2
+
+
+    Flipping the Wheel Over
+
+    Once the lathe
+    machining is complete, the wheel is removed from the machine and flipped over.
+
+    Then,
+    a robotic arm grabs the flipped wheel and places it on the milling machine. This
+    step is essential for machining the backside of the wheel and other areas that
+    require milling.'
   type: 0
   url: 
 --- !u!95 &1673403491
@@ -93749,7 +93640,7 @@ GameObject:
   - component: {fileID: 1675412339}
   - component: {fileID: 1675412341}
   - component: {fileID: 1675412340}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94218,7 +94109,7 @@ GameObject:
   - component: {fileID: 1686948266}
   - component: {fileID: 1686948268}
   - component: {fileID: 1686948267}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_113
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94299,7 +94190,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1689132804}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Else
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94609,7 +94500,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1693340411}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: TargetPosition02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94776,6 +94667,7 @@ GameObject:
   - component: {fileID: 1704966954}
   - component: {fileID: 1704966953}
   - component: {fileID: 1704966952}
+  - component: {fileID: 1704966958}
   m_Layer: 15
   m_Name: '[RepairParts]Lathe_Spindle'
   m_TagString: Untagged
@@ -94971,6 +94863,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0015, y: 0.003, z: 0.004}
   m_Center: {x: -0.0005, y: 0.0004, z: 0}
+--- !u!114 &1704966958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704966950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ba2ac043a0776a4d846aaf6ba38a734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: 'Spare part: Lathe Spindle'
+  description: 'This is a Spindle of Lathe machine, a spare part used to repair a
+    lathe machine.
+
+
+    If the lathe machine''s spindle is broken, the user can
+    grab this spare part and hit the machine''s marker to replace it and complete
+    the repair.'
+  type: 0
+  url: 
 --- !u!1 &1705203422
 GameObject:
   m_ObjectHideFlags: 0
@@ -100087,7 +100001,7 @@ GameObject:
   - component: {fileID: 1720449270}
   - component: {fileID: 1720449272}
   - component: {fileID: 1720449271}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100529,7 +100443,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1724117530}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Process_ProMill__DoorLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101150,7 +101064,7 @@ GameObject:
   - component: {fileID: 1734954649}
   - component: {fileID: 1734954651}
   - component: {fileID: 1734954650}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_36
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106840,89 +106754,6 @@ Transform:
   - {fileID: 1925086930}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1760901366
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1760901367}
-  - component: {fileID: 1760901369}
-  - component: {fileID: 1760901368}
-  m_Layer: 15
-  m_Name: Object_25
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1760901367
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760901366}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1902561782}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1760901368
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760901366}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 4135620955923678129, guid: ae6394eb8bde5fb46aa82c9ba3c23de4, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1760901369
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760901366}
-  m_Mesh: {fileID: -6847192182520934925, guid: ae6394eb8bde5fb46aa82c9ba3c23de4, type: 3}
 --- !u!1 &1766330122
 GameObject:
   m_ObjectHideFlags: 0
@@ -107877,7 +107708,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1796677566}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: geo_material_3_ProMill_5_79
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107909,7 +107740,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1803810900}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: TargetPosition02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108805,6 +108636,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractableObjectLabel Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5805240707573970943, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805240707939856552, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5805240707939856556, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -108812,6 +108651,14 @@ PrefabInstance:
     - target: {fileID: 5805240707939856556, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805240708164196242, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805240708661825080, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5805240708661825082, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
       propertyPath: m_text
@@ -108840,6 +108687,10 @@ PrefabInstance:
     - target: {fileID: 5805240708661825083, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -17.825
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805240709293969646, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -110104,6 +109955,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractableObjectLabel Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5805240707573970943, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805240707939856552, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5805240707939856556, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -110111,6 +109970,14 @@ PrefabInstance:
     - target: {fileID: 5805240707939856556, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805240708164196242, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805240708661825080, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5805240708661825082, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
       propertyPath: m_text
@@ -110139,6 +110006,10 @@ PrefabInstance:
     - target: {fileID: 5805240708661825083, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -17.825
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805240709293969646, guid: 43d2e9c98cf19364d8f9b205cb3bb8ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -115653,7 +115524,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1887789763}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Process_ProMill_Case
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115918,7 +115789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1891331347}
   - component: {fileID: 1891331348}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: WheelPlace[Mill]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116110,157 +115981,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1601666892}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1902561781
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1902561782}
-  - component: {fileID: 1902561786}
-  - component: {fileID: 1902561785}
-  - component: {fileID: 1902561784}
-  - component: {fileID: 1902561783}
-  m_Layer: 15
-  m_Name: '[RepairParts]ConvyorCamera'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1902561782
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902561781}
-  serializedVersion: 2
-  m_LocalRotation: {x: 1, y: -0, z: -0, w: -0.000000021855705}
-  m_LocalPosition: {x: 0.32200003, y: 0.3595438, z: -1.8678248}
-  m_LocalScale: {x: 100, y: 100, z: 100}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1337682163}
-  - {fileID: 330642072}
-  - {fileID: 1760901367}
-  - {fileID: 867240859}
-  - {fileID: 2071148621}
-  m_Father: {fileID: 1366110427}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1902561783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902561781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9a7676b01585ce43908639a27765dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interactorFilters: []
-  _maxInteractors: -1
-  _maxSelectingInteractors: -1
-  _data: {fileID: 0}
-  _pointableElement: {fileID: 1902561784}
-  _rigidbody: {fileID: 1902561785}
-  _physicsGrabbable: {fileID: 0}
-  _resetGrabOnGrabsUpdated: 1
-  _scoringModifier:
-    _positionRotationWeight: 0.8
-  _slippiness: 0
-  _supportedGrabTypes: 3
-  _pinchGrabRules:
-    _thumbRequirement: 1
-    _indexRequirement: 1
-    _middleRequirement: 1
-    _ringRequirement: 0
-    _pinkyRequirement: 0
-    _unselectMode: 0
-  _palmGrabRules:
-    _thumbRequirement: 1
-    _indexRequirement: 2
-    _middleRequirement: 2
-    _ringRequirement: 2
-    _pinkyRequirement: 1
-    _unselectMode: 0
-  _movementProvider: {fileID: 0}
-  _handAligment: 1
-  _handGrabPoses: []
---- !u!114 &1902561784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902561781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43f86b14a27b52f4f9298c33015b5c26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
-  _maxGrabPoints: -1
-  _rigidbody: {fileID: 1902561785}
-  _kinematicWhileSelected: 1
-  _throwWhenUnselected: 1
---- !u!54 &1902561785
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902561781}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &1902561786
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902561781}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.001, y: 0.001, z: 0.001}
-  m_Center: {x: 0, y: 0.0005, z: 0}
 --- !u!1 &1902707677
 GameObject:
   m_ObjectHideFlags: 0
@@ -117019,7 +116739,7 @@ GameObject:
   - component: {fileID: 1911451591}
   - component: {fileID: 1911451593}
   - component: {fileID: 1911451592}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Handle_Foundation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117316,7 +117036,7 @@ GameObject:
   - component: {fileID: 1918376600}
   - component: {fileID: 1918376602}
   - component: {fileID: 1918376601}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117399,7 +117119,7 @@ GameObject:
   - component: {fileID: 1919913301}
   - component: {fileID: 1919913303}
   - component: {fileID: 1919913302}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: Object_90
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117918,8 +117638,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ba2ac043a0776a4d846aaf6ba38a734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: 
-  description: 
+  title: Mill Machine
+  description: 'Processing Steps 3
+
+
+    Machining with a Milling Machine (with an
+    end mill)
+
+    This process performs flat surface and specific point machining
+    that is difficult to achieve with a lathe. An end mill has cutting edges on both
+    its side and its tip, allowing for a wide variety of machining.
+
+    
+
+    Machining
+    the Bolt Holes:
+
+    An end mill is used to precisely drill new bolt holes along
+    the PCD (Pitch Circle Diameter).
+
+    It can also be used to enlarge existing
+    holes or flatten the seat around the holes.
+
+    
+
+    Offset Adjustment:
+
+    The
+    flat bottom of the end mill is used to precisely cut the wheel''s mounting surface
+    to adjust the offset.
+
+    
+
+    Machining of Design Grooves and Recesses:
+
+    An
+    end mill is used to carve complex grooves and shapes in specific locations, such
+    as the back of the spokes, which cannot be machined with a lathe.
+
+    
+
+    Engraving:
+
+    It''s
+    also possible to engrave logos or serial numbers onto the wheel using an end
+    mill.'
   type: 0
   url: 
 --- !u!95 &1925086932
@@ -117969,7 +117732,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1928019513}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: geo_orange_matte_4_145
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118211,7 +117974,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1942299515}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: TargetPosition04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118933,7 +118696,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1962926269}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: geo_chrome_1_008_132
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119050,7 +118813,7 @@ GameObject:
   - component: {fileID: 1972251292}
   - component: {fileID: 1972251294}
   - component: {fileID: 1972251293}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119133,7 +118896,7 @@ GameObject:
   - component: {fileID: 1976308297}
   - component: {fileID: 1976308299}
   - component: {fileID: 1976308298}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119297,7 +119060,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1983297131}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: TargetPosition01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120154,7 +119917,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1998539873}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: geo_black_tube_3_77
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120361,7 +120124,7 @@ GameObject:
   - component: {fileID: 2006303119}
   - component: {fileID: 2006303121}
   - component: {fileID: 2006303120}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_62
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120493,7 +120256,7 @@ GameObject:
   - component: {fileID: 2011424508}
   - component: {fileID: 2011424510}
   - component: {fileID: 2011424509}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_60
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121425,7 +121188,7 @@ GameObject:
   - component: {fileID: 2026167904}
   - component: {fileID: 2026167906}
   - component: {fileID: 2026167905}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_111
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126868,7 +126631,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2052594360}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TargetPosition02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126901,7 +126664,7 @@ GameObject:
   - component: {fileID: 2054050828}
   - component: {fileID: 2054050830}
   - component: {fileID: 2054050829}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_58
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126982,7 +126745,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2056963584}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Process_ProMill__X_Link_76
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127016,7 +126779,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2062861915}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: Process_ProLathe__Finger2_133
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127269,41 +127032,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2067598193}
   m_CullTransparentMesh: 1
---- !u!1 &2071148620
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2071148621}
-  m_Layer: 15
-  m_Name: TargetPosition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2071148621
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2071148620}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.00051, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 379430084}
-  - {fileID: 776907313}
-  - {fileID: 1052694175}
-  - {fileID: 28153282}
-  m_Father: {fileID: 1902561782}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2071397714
 GameObject:
   m_ObjectHideFlags: 0
@@ -127662,7 +127390,7 @@ GameObject:
   - component: {fileID: 2088141391}
   - component: {fileID: 2088141393}
   - component: {fileID: 2088141392}
-  m_Layer: 15
+  m_Layer: 6
   m_Name: Object_100
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133597,7 +133325,7 @@ GameObject:
   - component: {fileID: 2127136901}
   - component: {fileID: 2127136899}
   - component: {fileID: 2127136902}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RobotArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133804,7 +133532,7 @@ GameObject:
   - component: {fileID: 2133407071}
   - component: {fileID: 2133407073}
   - component: {fileID: 2133407072}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_51
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133887,7 +133615,7 @@ GameObject:
   - component: {fileID: 2139993947}
   - component: {fileID: 2139993949}
   - component: {fileID: 2139993948}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Object_39
   m_TagString: Untagged
   m_Icon: {fileID: 0}
