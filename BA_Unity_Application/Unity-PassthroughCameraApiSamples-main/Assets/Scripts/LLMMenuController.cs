@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LLMMenuController : MonoBehaviour {
-    public Camera sceneCamera;
+    public GameObject sceneCamera;
     private Vector3 targetPosition;
     private Quaternion targetRotation;
     private float step;

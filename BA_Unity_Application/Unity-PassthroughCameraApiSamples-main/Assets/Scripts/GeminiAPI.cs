@@ -106,6 +106,8 @@ public class GeminiAPI : MonoBehaviour
         var functionDeclarations = new List<FunctionDeclaration>();
 
         // --- Add functions common to all scenes ---
+
+        /*
         functionDeclarations.Add(new FunctionDeclaration
         {
             name = "setObjectColor",
@@ -120,18 +122,18 @@ public class GeminiAPI : MonoBehaviour
                 },
                 required = new string[] { "objectName", "color" }
             }
-        });
+        });*/
         functionDeclarations.Add(new FunctionDeclaration
         {
             name = "getObjectInformation",
-            description = "Get the object information through the object name. Such as parameter, child objetc etc.",
+            description = "Retrieves information about a specified object, including its current state, properties, and child objects. Use this function immediately after a player interacts with an object to get its updated information. This ensures you can provide accurate, real-time feedback and answer player questions about the object's status.",
             parameters = new Parameters
             {
                 type = "object",
                 properties = new Dictionary<string, Property>
-                {
-                    { "objectName", new Property { type = "string", description = "The name of the object." } }
-                },
+        {
+            { "objectName", new Property { type = "string", description = "The name of the object to get information for." } }
+        },
                 required = new string[] { "objectName" }
             }
         });
@@ -144,7 +146,7 @@ public class GeminiAPI : MonoBehaviour
         functionDeclarations.Add(new FunctionDeclaration
         {
             name = "getSelectedObjectName",
-            description = "The user could give a reference word like 'this' or 'that' or 'these' and select the objects. This will get the name list of all objects, that user selected. If the name list is empty, that means no objects are selected.",
+            description = "Retrieves a list of all objects currently selected by the user's laser pointer. Use this function when the user refers to an object with a vague term like 'this' or 'that.' Returns an empty if no objects are selected.",
             parameters = new Parameters { type = "object" }
         });
 

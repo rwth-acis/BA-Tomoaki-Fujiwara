@@ -112,7 +112,7 @@ namespace i5.VirtualAgents.Examples {
 
             taskSystem.Tasks.GoToAndPickUp(pickUpItem1);
 
-            float distanceInFront = 0.8f;
+            float distanceInFront = 0.3f;
             Vector3 dropPosition = user.transform.position + user.transform.forward * distanceInFront;
 
             taskSystem.Tasks.GoToAndDropItem(dropPosition, pickUpItem1);
@@ -149,7 +149,7 @@ namespace i5.VirtualAgents.Examples {
             taskSystem.ScheduleTask(pickUpTask);
 
 
-            float distanceInFront = 0.8f;
+            float distanceInFront = 0.3f;
             Vector3 dropPosition = user.transform.position + user.transform.forward * distanceInFront;
             taskSystem.Tasks.GoToAndDropItem(dropPosition);
         }
