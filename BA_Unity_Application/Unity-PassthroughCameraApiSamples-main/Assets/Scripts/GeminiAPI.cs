@@ -17,6 +17,7 @@ public class GeminiAPI : MonoBehaviour
     [SerializeField]
     public FunctionCaller functionCaller;
 
+    public GeminiAPIError geminiAPIError;
 
     public string apiKey = "AIzaSyBX_xWhb5__6kQAAZENsigtFaup9LKoOlE";
     public string apiEndpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent";
@@ -390,6 +391,9 @@ public class GeminiAPI : MonoBehaviour
             {
                 Debug.LogError($"Gemini Request Error: {www.error}");
                 Debug.LogError($"Gemini Response: {www.downloadHandler.text}");
+
+                geminiAPIError.ShowError(www.error, www.downloadHandler.text);
+
             }
             else
             {

@@ -56502,7 +56502,7 @@ MonoBehaviour:
   uiText: {fileID: 0}
   functionCaller: {fileID: 714332482}
   apiKey: AIzaSyBfSumswm9BPYfFzE3nHtF5tf4OZXIhbEc
-  apiEndpoint: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent
+  apiEndpoint: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
   currentScene: 0
   outputFormat: 0
   jpgQuality: 100
@@ -190169,6 +190169,126 @@ MonoBehaviour:
           DisplayName: 
         memberName: Stop
         _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.AudioSource, UnityEngine.AudioModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Play
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.AudioSource, UnityEngine.AudioModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Stop
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.AudioSource, UnityEngine.AudioModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Play
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.AudioSource, UnityEngine.AudioModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Stop
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.AudioSource, UnityEngine.AudioModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Play
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.AudioSource, UnityEngine.AudioModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Stop
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.AudioSource, UnityEngine.AudioModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Play
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: UnityEngine.AudioSource, UnityEngine.AudioModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Stop
+        _editorSelectedGizmoIndex: 0
     - enabled: 1
       typeName: UnityEngine.Rigidbody, UnityEngine.PhysicsModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
@@ -190823,6 +190943,382 @@ MonoBehaviour:
         memberName: UpdateTaskSystem
         _editorSelectedGizmoIndex: 0
     - enabled: 1
+      typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+        i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      inspectedMembers:
+      - enabled: 0
+        typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+          i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Awake
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+          i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: UpdateTaskSystem
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+          i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: AbortAllLayers
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+          i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Tasks
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+          i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: taskManagers
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: i5.VirtualAgents.TaskSystem, i5.VirtualAgents.Runtime, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: UpdateTaskSystem
+        _editorSelectedGizmoIndex: 0
+    - enabled: 0
+      typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+        i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      inspectedMembers:
+      - enabled: 0
+        typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+          i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Awake
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+          i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: UpdateTaskSystem
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+          i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: AbortAllLayers
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+          i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Tasks
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+          i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: taskManagers
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: i5.VirtualAgents.TaskSystem, i5.VirtualAgents.Runtime, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: UpdateTaskSystem
+        _editorSelectedGizmoIndex: 0
+    - enabled: 0
+      typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+        i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      inspectedMembers:
+      - enabled: 0
+        typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+          i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Awake
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+          i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: UpdateTaskSystem
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+          i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: AbortAllLayers
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+          i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Tasks
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+          i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: taskManagers
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: i5.VirtualAgents.TaskSystem, i5.VirtualAgents.Runtime, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: UpdateTaskSystem
+        _editorSelectedGizmoIndex: 0
+    - enabled: 0
+      typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+        i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      inspectedMembers:
+      - enabled: 0
+        typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+          i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Awake
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+          i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: UpdateTaskSystem
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+          i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: AbortAllLayers
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+          i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: Tasks
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
+          i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: taskManagers
+        _editorSelectedGizmoIndex: 0
+      - enabled: 0
+        typeName: i5.VirtualAgents.TaskSystem, i5.VirtualAgents.Runtime, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        attribute:
+          GizmoType: 0
+          ShowGizmoByDefault: 0
+          Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+          Tweakable: 1
+          Min: 0
+          Max: 1
+          Category: 
+          Description: 
+          DisplayName: 
+        memberName: UpdateTaskSystem
+        _editorSelectedGizmoIndex: 0
+    - enabled: 0
       typeName: i5.VirtualAgents.ScheduleBasedExecution.ScheduleBasedTaskSystem,
         i5.VirtualAgents.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       inspectedMembers:

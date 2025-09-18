@@ -173,7 +173,7 @@ public class BowlParentBehaviour : MonoBehaviour
                     "the user can grab it and hit it against the semi-transparent hitbox above the trash can." +
                     "So if the user want to reset or make the bowl empty, tell user to do this action." +
                     "If mixer cup does not has flour inside, nothing will happen." +
-                    "Currently the bowl has melted butter inside. It can be poured into mixer cup if the mixer cup has flour and the butter is not added yet.";
+                    "Currently the bowl is empty.";
 
     }
 
