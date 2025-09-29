@@ -16496,10 +16496,10 @@ RectTransform:
   - {fileID: 1229046381}
   m_Father: {fileID: 2138803079}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 40}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 25.85, y: -20}
+  m_SizeDelta: {x: 51.7, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &320543745
 MonoBehaviour:
@@ -22019,9 +22019,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1619849057}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 28, y: -12}
   m_SizeDelta: {x: 8, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &488145291
@@ -22270,9 +22270,9 @@ RectTransform:
   - {fileID: 1142610524}
   m_Father: {fileID: 1986503278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 20, y: 0}
   m_SizeDelta: {x: 40, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &492244890
@@ -39191,79 +39191,82 @@ MonoBehaviour:
   uiText: {fileID: 0}
   functionCaller: {fileID: 714332482}
   geminiAPIError: {fileID: 714332486}
-  apiKey: AIzaSyBX_xWhb5__6kQAAZENsigtFaup9LKoOlE
+  apiKey: 
   apiEndpoint: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
   currentScene: 1
   outputFormat: 0
   jpgQuality: 100
   initConversationPrompt: "You are an assistant AI for a VR robot arm simulator in
     Unity. Constantly monitor player actions and the state of objects within the
-    VR space, providing appropriate feedback and instructions in real-time.\r\n\r\n\r\nEvery
-    object in the VR world that can be manipulated has a description component attached
-    to it that describes the object and shows its current state. The text of this
-    description component changes to reflect the object's latest state whenever the
-    player interacts with it.\r\n\r\n\r\nThis scene contains several machine and
-    robot arm to process the wheel.\r\n\r\nThe robot arm will carry wheel from first
-    convyor to lathe machine, from lathe machine to fliptable machine, from flip
-    table machine to milling machine and from milling machine to second convyor.\r\n\r\nSo
-    the robot arm is the carryer of the wheel.\r\nLathe machine, fliptable and milling
-    will process the wheel.\r\nA wheel is processed in Order of lathe machine, fliptable
-    and milling machine. Then the wheel is processed fully.\r\nSecond convyor will
-    deliver the fully processed wheel.\r\n\r\nThe user will give you command and
-    you should use function calling to response the user command.\r\n\r\nFor user
-    provided command are following. \"PutWheelInLatheMachine\", \"PutWheelInFlipTable\",
-    \"PutWheelInMillingMachine\", \"PutWheellOnConvyor\", \"ScanTheRobotArm\", \"HowShouldIFixTheRobotArm\".
-    The command might not be given exact same as defined. But you should guess or
-    ask user to make it sure. \nThe user might give wrong sentence because of speech
-    to text function.\r\n\r\nThe command \"PutWheelInLatheMachine\" will operate
-    the robot arm to pickup the wheel from first convyor and put it on lathe machine.\r\nBut
-    if the wheel does not exist on convyor, the robot arm is still performance other
-    task or the lathe machine is working, the robot arm will not execute this task.
-    Throught Function Calling you will get error message with reasoning. If the task
-    is executed, you will get the success message through function calling.\r\n\r\nThe
-    command \"PutWheelInFlipTable\" will operate the robot arm to pickup the wheel
-    from Lathe and put it on fliptable.\r\nBut if the wheel does not exist on Lathe,
-    the robot arm is still performance other task or the fliptable is working, the
-    robot arm will not execute this task. Throught Function Calling you will get
-    error message with reasoning. If the task is executed, you will get the success
-    message through function calling.\r\n\r\nThe command \"PutWheelInMillingMachine\"
-    will operate the robot arm to pickup the wheel from Fliptable and put it on Milling
-    machine.\r\nBut if the wheel does not exist on fliptable, the robot arm is still
-    performance other task or the milling table is working, the robot arm will not
-    execute this task. Throught Function Calling you will get error message with
-    reasoning. If the task is executed, you will get the success message through
-    function calling.\r\n\r\nThe command \"PutWheellOnConvyor\" will operate the
-    robot arm to pickup the wheel from miling machine and put it on second convyor.\r\nBut
-    if the wheel does not exist on Milling, the robot arm is still performance other
-    task or the second convyor is working, the robot arm will not execute this task.
-    Throught Function Calling you will get error message with reasoning. If the task
-    is executed, you will get the success message through function calling.\r\n\r\nAfter
-    several fully processed wheel is delivered, the robot arm get errors. The different
-    joint or part of robot arm will break down. This error happens after the wheel
-    is delivered.\r\nThe broke parts will show a particle with black smoke. If the
-    user try to use command \"PutWheelInLatheMachine\", the task will be excecuted.
-    So you will not be known by function calling that the robot arm has problem.\r\nHowever
-    due to error the robot arm will not grab and carry the wheel to the lathe. So
-    the lathe will not start and wheel is staying on first conveyor.\r\n\r\nIf the
-    user notice an error and asks you for help, you can use \"scanRobotArmStatus\"
-    function to check the robot arm.\r\nIf the robot arm does not has any error,
-    through function calling will you get message that the robot arm does not has
-    error.\r\nIf the robot arm has error, the broken part will be highlighted, so
-    the user can repair the broken part.\r\nTo repair the broken part, the user need
-    to hold spanner and place the spanner in highlighted marker. If the spanner is
-    placed long enough, the broken part will be repaired, so the \"PutWheelInLatheMachine\"
-    perform correct. So if the user does not ask you to use \"scanRobotArmStatus\",
-    the highlighted marker will not be shown, which means the user can not repair
-    the broken part.\r\n\r\nThe user might asks you how to fix, then you should tell
-    user how to fix the robot arm.\r\nThe spanner object has documentation component,
-    which you can read by function calling 'getObjectInformation(objectName)'. On
-    the spanner documentation it describe how to fix the robot arm, so you can tell
-    the information from this object.\r\nIf the user asks more help to fix the machine,
-    you can call the function calling \"showVideoClipFromRepairRobotArm\". This will
-    spawn a video clip next to robot arm and show user how to repair the robot arm.\r\nIf
-    the user put the spanner in the wall or can not find the spanner anymore, you
-    can use the function calling \"respawnSpanner\" to reset the position of the
-    spanner.\r\n\r\n\nNow use the provided function calling 'getAllObjectsWithDocumentation'
+    VR space, providing appropriate feedback and instructions in real-time.\r\n\r\n\rImage
+    Analysis (New Priority): When the user sends an image in the chat, your first
+    priority is to analyze the image. You must describe and/or comment on the image's
+    content and state immediately, integrating this visual information into your
+    guidance.\n\nEvery object in the VR world that can be manipulated has a description
+    component attached to it that describes the object and shows its current state.
+    The text of this description component changes to reflect the object's latest
+    state whenever the player interacts with it.\r\n\r\n\r\nThis scene contains several
+    machine and robot arm to process the wheel.\r\n\r\nThe robot arm will carry wheel
+    from first convyor to lathe machine, from lathe machine to fliptable machine,
+    from flip table machine to milling machine and from milling machine to second
+    convyor.\r\n\r\nSo the robot arm is the carryer of the wheel.\r\nLathe machine,
+    fliptable and milling will process the wheel.\r\nA wheel is processed in Order
+    of lathe machine, fliptable and milling machine. Then the wheel is processed
+    fully.\r\nSecond convyor will deliver the fully processed wheel.\r\n\r\nThe user
+    will give you command and you should use function calling to response the user
+    command.\r\n\r\nFor user provided command are following. \"PutWheelInLatheMachine\",
+    \"PutWheelInFlipTable\", \"PutWheelInMillingMachine\", \"PutWheellOnConvyor\",
+    \"ScanTheRobotArm\", \"HowShouldIFixTheRobotArm\". The command might not be given
+    exact same as defined. But you should guess or ask user to make it sure. \nThe
+    user might give wrong sentence because of speech to text function.\r\n\r\nThe
+    command \"PutWheelInLatheMachine\" will operate the robot arm to pickup the wheel
+    from first convyor and put it on lathe machine.\r\nBut if the wheel does not
+    exist on convyor, the robot arm is still performance other task or the lathe
+    machine is working, the robot arm will not execute this task. Throught Function
+    Calling you will get error message with reasoning. If the task is executed, you
+    will get the success message through function calling.\r\n\r\nThe command \"PutWheelInFlipTable\"
+    will operate the robot arm to pickup the wheel from Lathe and put it on fliptable.\r\nBut
+    if the wheel does not exist on Lathe, the robot arm is still performance other
+    task or the fliptable is working, the robot arm will not execute this task. Throught
+    Function Calling you will get error message with reasoning. If the task is executed,
+    you will get the success message through function calling.\r\n\r\nThe command
+    \"PutWheelInMillingMachine\" will operate the robot arm to pickup the wheel from
+    Fliptable and put it on Milling machine.\r\nBut if the wheel does not exist on
+    fliptable, the robot arm is still performance other task or the milling table
+    is working, the robot arm will not execute this task. Throught Function Calling
+    you will get error message with reasoning. If the task is executed, you will
+    get the success message through function calling.\r\n\r\nThe command \"PutWheellOnConvyor\"
+    will operate the robot arm to pickup the wheel from miling machine and put it
+    on second convyor.\r\nBut if the wheel does not exist on Milling, the robot arm
+    is still performance other task or the second convyor is working, the robot arm
+    will not execute this task. Throught Function Calling you will get error message
+    with reasoning. If the task is executed, you will get the success message through
+    function calling.\r\n\r\nAfter several fully processed wheel is delivered, the
+    robot arm get errors. The different joint or part of robot arm will break down.
+    This error happens after the wheel is delivered.\r\nThe broke parts will show
+    a particle with black smoke. If the user try to use command \"PutWheelInLatheMachine\",
+    the task will be excecuted. So you will not be known by function calling that
+    the robot arm has problem.\r\nHowever due to error the robot arm will not grab
+    and carry the wheel to the lathe. So the lathe will not start and wheel is staying
+    on first conveyor.\r\n\r\nIf the user notice an error and asks you for help,
+    you can use \"scanRobotArmStatus\" function to check the robot arm.\r\nIf the
+    robot arm does not has any error, through function calling will you get message
+    that the robot arm does not has error.\r\nIf the robot arm has error, the broken
+    part will be highlighted, so the user can repair the broken part.\r\nTo repair
+    the broken part, the user need to hold spanner and place the spanner in highlighted
+    marker. If the spanner is placed long enough, the broken part will be repaired,
+    so the \"PutWheelInLatheMachine\" perform correct. So if the user does not ask
+    you to use \"scanRobotArmStatus\", the highlighted marker will not be shown,
+    which means the user can not repair the broken part.\r\n\r\nThe user might asks
+    you how to fix, then you should tell user how to fix the robot arm.\r\nThe spanner
+    object has documentation component, which you can read by function calling 'getObjectInformation(objectName)'.
+    On the spanner documentation it describe how to fix the robot arm, so you can
+    tell the information from this object.\r\nIf the user asks more help to fix the
+    machine, you can call the function calling \"showVideoClipFromRepairRobotArm\".
+    This will spawn a video clip next to robot arm and show user how to repair the
+    robot arm.\r\nIf the user put the spanner in the wall or can not find the spanner
+    anymore, you can use the function calling \"respawnSpanner\" to reset the position
+    of the spanner.\r\n\r\n\nNow use the provided function calling 'getAllObjectsWithDocumentation'
     to understand the scene information.\n"
 --- !u!4 &714332481
 Transform:
@@ -64331,9 +64334,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1229046381}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 19.85, y: -12}
   m_SizeDelta: {x: 24, y: 24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1099353411
@@ -65915,10 +65918,10 @@ RectTransform:
   - {fileID: 1619849057}
   m_Father: {fileID: 492244889}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 40}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 20, y: -20}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1142610525
 MonoBehaviour:
@@ -69638,7 +69641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa226c97094efa645a81d4da83e9eeee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCamera: {fileID: 7281697043354634661}
+  sceneCamera: {fileID: 8987585067786995367}
   canvasMenu: {fileID: 7728303809612819272}
 --- !u!1 &1254583693
 GameObject:
@@ -71401,10 +71404,10 @@ RectTransform:
   - {fileID: 140557806}
   m_Father: {fileID: 8482341791690815273}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 26.9}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 304, y: -13.45}
+  m_SizeDelta: {x: 608, y: 26.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1333087281
 MonoBehaviour:
@@ -80124,9 +80127,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1619849057}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 12, y: -12}
   m_SizeDelta: {x: 24, y: 24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1584833964
@@ -133862,10 +133865,10 @@ RectTransform:
   - {fileID: 320543744}
   m_Father: {fileID: 140557806}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 25.85, y: 0}
+  m_SizeDelta: {x: 51.7, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2138803080
 MonoBehaviour:
@@ -153651,11 +153654,6 @@ RectTransform:
   m_AnchoredPosition: {x: 116, y: 0}
   m_SizeDelta: {x: 232, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!20 &7281697043354634661 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 6221248932495809265, guid: 5ad93a49e02d45a4c979a7ba3aa44983, type: 3}
-  m_PrefabInstance: {fileID: 8987585067786995365}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7302697011914411336
 RectTransform:
   m_ObjectHideFlags: 0
@@ -158692,7 +158690,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: -0}
-  m_SizeDelta: {x: 608, y: 0}
+  m_SizeDelta: {x: 608, y: 228.9}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &8482341791690815274
 GameObject:
@@ -159476,9 +159474,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8482341793356923792}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 285, y: -10}
   m_SizeDelta: {x: 570, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8482341792605140551
@@ -159549,10 +159547,10 @@ RectTransform:
   - {fileID: 8482341792138125729}
   m_Father: {fileID: 8482341793443495250}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 328, y: -138.45}
+  m_SizeDelta: {x: 608, y: 228.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8482341792625556027
 GameObject:
@@ -159606,7 +159604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &8482341792663638396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159892,9 +159890,9 @@ RectTransform:
   - {fileID: 8482341792499390689}
   m_Father: {fileID: 8482341793217335219}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 280, y: -20}
   m_SizeDelta: {x: 520, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8482341792682525061
@@ -160169,9 +160167,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8482341792158006564}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 285, y: -10}
   m_SizeDelta: {x: 570, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8482341792726248070
@@ -160243,9 +160241,9 @@ RectTransform:
   - {fileID: 406988590066904905}
   m_Father: {fileID: 8482341793180660723}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 304, y: -148}
   m_SizeDelta: {x: 560, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8482341792768332174
@@ -160698,10 +160696,10 @@ RectTransform:
   - {fileID: 8482341793180660723}
   m_Father: {fileID: 8482341791690815273}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 190}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 304, y: -133.9}
+  m_SizeDelta: {x: 608, y: 190}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8482341793159998485
 GameObject:
@@ -160834,10 +160832,10 @@ RectTransform:
   - {fileID: 8482341792768332173}
   m_Father: {fileID: 8482341793159998484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 304, y: -96}
+  m_SizeDelta: {x: 608, y: 192}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8482341793180660727
 MonoBehaviour:
@@ -160924,9 +160922,9 @@ RectTransform:
   - {fileID: 406988588745056964}
   m_Father: {fileID: 8482341793180660723}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 304, y: -96}
   m_SizeDelta: {x: 560, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8482341793341449936
@@ -160971,9 +160969,9 @@ RectTransform:
   - {fileID: 406988590195859934}
   m_Father: {fileID: 8482341793180660723}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 304, y: -44}
   m_SizeDelta: {x: 560, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8482341793341449938
@@ -161009,9 +161007,9 @@ RectTransform:
   - {fileID: 8482341793520398291}
   m_Father: {fileID: 8482341793341449937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 280, y: -20}
   m_SizeDelta: {x: 520, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8482341793356923793
@@ -161168,9 +161166,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8482341792682525060}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 278.28, y: -10}
   m_SizeDelta: {x: 556.56, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8482341793436546781
@@ -161251,7 +161249,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 684.2, y: -466.4}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 644, y: 276.9}
   m_Pivot: {x: 1, y: 0}
 --- !u!1 &8482341793443495251
 GameObject:
@@ -162294,6 +162292,11 @@ PrefabInstance:
 --- !u!4 &8987585067786995366 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5075035018590283954, guid: 5ad93a49e02d45a4c979a7ba3aa44983, type: 3}
+  m_PrefabInstance: {fileID: 8987585067786995365}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8987585067786995367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7111586662605293238, guid: 5ad93a49e02d45a4c979a7ba3aa44983, type: 3}
   m_PrefabInstance: {fileID: 8987585067786995365}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &8989561612951431854

@@ -60,7 +60,7 @@ public class MixerCup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        interactableObjectLabel.text = "Empty cup";
+        interactableObjectLabel.text = "Empty mixer cup";
         mixedFlourParticle.SetActive(false);
     }
 
@@ -512,7 +512,7 @@ public class MixerCup : MonoBehaviour
         //cupAnimator.SetBool("isFlourAdded", isFlourAdded);
         //cupAnimator.SetBool("isEggAdded", isEggAdded);
         //cupAnimator.SetBool("isButterAdded", isButterAdded);
-        interactableObjectLabel.text = "Empty cup";
+        interactableObjectLabel.text = "Empty Mixer cup";
         liquidAmount = 0; // Reset liquid amount
 
         isFlourReadyToMix = false;

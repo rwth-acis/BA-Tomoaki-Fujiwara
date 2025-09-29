@@ -8,15 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kitchen_Mesh 2.unity
     guid: db717866c1790464ea40cc3285564878
-  - enabled: 1
-    path: Assets/Scenes/Kitchen_Mesh 1.unity
-    guid: 41e8020b6061d364eaf1315393b80e71
-  - enabled: 1
-    path: Assets/Scenes/MachineArchive/12.09Maschine 1.unity
-    guid: 2806f55917f60bb48a7a7f06d1858478
-  - enabled: 1
-    path: Assets/Scenes/MachineArchive/09.09Maschine.unity
-    guid: 199903c30b9db514ebad3b1ce329a3ae
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: f2bf97b3acdb64248a707c407c9fc54e, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a971eac5e950046e586c5e153e32d05c, type: 2}
